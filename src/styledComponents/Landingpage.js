@@ -1,0 +1,414 @@
+import styled from "styled-components";
+
+
+export const Container = styled.div`
+width:100%;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+${'' /* padding-bottom:100px; */}
+`
+export const Wrapper = styled.div`
+width:100%;
+max-width:100%;
+min-height:inherit;
+${'' /* border:1px solid red; */}
+padding-top:50px;
+display:flex;
+align-items:center;
+flex-direction:column;
+${'' /* gap:50px; */}
+`
+export const TopBannarContainer = styled.div`
+width:100%;
+max-width:95%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+min-height:500px;
+margin-bottom:50px;
+@media only screen and (max-width:900px){
+    flex-direction:column
+}
+`
+export const TopBannerImgContainer = styled.div`
+position:relative;
+height:50%;
+${'' /* border:1px solid red; */}
+display:flex;
+justify-content:flex-end;
+@media only screen and (max-width:900px){
+     height: 70%;
+     width:100%;
+    justify-content:center;
+    padding-top:20px;
+
+}
+`
+export const TopBannarImg = styled.img`
+height:80%;
+width:80%;
+@media only screen and (max-width:900px){
+     height: 100%;
+     width:100%;
+  
+
+}
+`
+export const SmilyImg = styled.img`
+position:absolute;
+right:-15px;
+bottom:-40px;
+animation: spin 5s linear infinite;
+border-radius:50%;
+height:20%;
+@keyframes spin{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@media only screen and (max-width:900px){
+    right: -10px;
+    bottom:-30px;
+    height:20%;
+}
+`
+
+export const TopBannarLeftPartContainer = styled.div`
+width:100%;
+display:flex;
+flex-direction:column;
+gap:50px;
+`
+export const TopBannarLeftPartHeading = styled.h1`
+font-size:40px;
+color:white;
+`
+export const BtnContainer  = styled.div`
+width:100%;
+max-width:150px;
+min-width:150px;
+background-color:black;
+border-radius:30px;
+
+`
+export const TopBannarLeftPartBTN = styled.button`
+width:100%;
+max-width:150px;
+min-width:150px;
+padding:10px 20px;
+display:flex;
+align-items:center;
+border-radius:30px;
+background-color:#FFC900;
+color:black;
+font-size:18px;
+gap:5px;
+border:none;
+transform: translate(-8px, -8px);
+cursor:pointer;
+transition: transform 0.5s;
+&:hover{
+transform: translate(-2px, -2px);
+}
+
+`
+export const TopBannarLeftPartElementWrapper = styled.div`
+width:100%;
+max-width:100%;
+display:flex;
+align-items:center;
+gap:10px;
+`
+export const TopBannarLeftPartElement = styled.span`
+width:100%;
+max-width:150px;
+font-size:30px;
+`
+
+// moving text 
+
+export const MovingTextContainer = styled.div`
+width:100%;
+height:70px;
+background:black;
+color:white;
+display:flex;
+align-items:center;
+font-size:35px;
+font-weight:600;
+
+`
+
+
+// bnner 2
+
+export const Banner_2_container = styled.div`
+background-color:pink;
+padding-bottom:100px;
+padding-top:100px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:10px;
+`
+export const Banner_2_heading = styled.div`
+font-size:50px;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
+max-width:90%;
+`
+export const Banner_2_headingElement = styled.h1`
+font-size:50px;
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
+max-width:90%;
+color:white;
+`
+export const Banner_2_ElementContainer = styled.div`
+width:100%;
+display:flex;
+gap:30px;
+justify-content:center;
+margin-top:50px;
+flex-wrap:wrap;
+align-items:center;
+@media only screen and (max-width:800px){
+    flex-direction:column
+}
+
+`
+export const Banner_2_ElementWrapper = styled.div`
+width:100%;
+max-width:20%;
+${'' /* border:1px solid black; */}
+display:flex;
+flex-direction:column;
+gap:30px;
+justify-content:center;
+align-items:center;
+padding:20px;
+@media only screen and (max-width:800px){
+     max-width:80%;
+}
+`
+export const Banner_2_ElementImg = styled.img`
+height:50%;
+width:50%;
+`
+export const Banner_2_ElementText = styled.p`
+justify-content:center;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:30px;
+text-align: justify;
+text-justify: inter-word;
+
+`
+
+
+
+// banner 3
+export const Banner_3_Maincontainer = styled.div`
+background-color:white;
+width:100%;
+min-height:400px;
+${'' /* padding:5px; */}
+${'' /* box-shadow:5px 5px 5px #d7d7d7,-2px -2px 5px #d7d7d7; */}
+display:flex;
+position:relative;
+@media only screen and (max-width:1000px){
+    flex-direction:column;
+}
+
+`
+export const Banner_3_container = styled.div`
+background-color:#FF90E8;
+width:100%;
+min-height:inherit;
+position:relative;
+
+
+`
+export const Banner_3_Wrapper = styled.div`
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+min-height:inherit;
+
+`
+export const Banner_3_Text = styled.div`
+width:100%;
+max-width:70%;
+font-size:30px;
+letter-spacing:2px;
+text-align:center;
+${'' /* font-family: 'Fredoka One', cursive; */}
+
+`
+export const Banner_3_StarImg = styled.img`
+position:absolute;
+right:50px;
+top:20px;
+animation:zoomOut 0.5s linear infinite;
+@media only screen and (max-width:650px){
+    height: 80px;
+};
+
+@keyframes zoomOut {
+    0%{height: 30%}
+    50%{height: 35%}
+    100%{height: 30%}
+}
+
+`
+export const Banner_3_HandImg = styled.img`
+position:absolute;
+left:40px;
+bottom:-80px;
+height:70%;
+z-index:10;
+animation:vibes 3s linear infinite;
+@media only screen and (max-width:750px){
+    height: 100px;
+    left:40px;
+    bottom:-50px;
+};
+
+@keyframes vibes{
+    0%{ transform: rotate(-35deg)}
+    25%{ transform: rotate(0deg)}
+    50%{ transform: rotate(65deg)}
+    75%{ transform: rotate(0deg)}
+    100%{ transform: rotate(-35deg)}
+}
+
+`
+
+
+// banner 4
+
+export const Banner_4_LeftContainer = styled.div`
+width:100%;
+max-width:100%;
+border:2px solid black;
+display:flex;
+align-items:center;
+`
+export const Banner_4_Img = styled.img`
+width:100%;
+
+`
+export const Banner_4_Arrow = styled.div`
+position:absolute;
+bottom:100px;
+right:150px;
+transform:translate(-50%, -50%);
+transform:rotate(125deg);
+@media only screen and (max-width:900px){
+    bottom:50px;
+    right:150px;
+}
+`
+export const Banner_4_ArrowSpan = styled.span`
+display:block;
+width:3.5vw;
+height:3.5vw;
+border-bottom:5px solid #fbb03f;
+border-right:5px solid #fbb03f;
+transform:rotate(45deg);
+margin:-30px;
+animation:animate 2s infinite;
+&:nth-child(2){
+    animation-delay: -0.4s;
+};
+&:nth-child(3){
+    animation-delay: -0.8s;
+};
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px)
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px)
+    }
+}
+
+
+`
+export const Banner_4_elements = styled.div`
+
+`
+export const Banner_4_elementWrapper = styled.div`
+display:${(props)=>props.bannarNO==5&& "flex"};
+gap:${(props)=>props.bannarNO==5&& "30px"};
+align-items:${(props)=>props.bannarNO==5&& "center"};
+justify-content:${(props)=>props.bannarNO==5&& "center"};
+`
+export const Banner_4_RightContainer = styled.div`
+width:100%;
+max-width:100%;
+border:2px solid black;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+position:relative;
+`
+
+export const FunStar = styled.img`
+position:absolute;
+right:50px;
+animation:vibe 2s linear infinite;
+bottom:50px;
+@keyframes vibe{
+    0%{ transform: rotate(-45deg)}
+    25%{ transform: rotate(0deg)}
+    50%{ transform: rotate(45deg)}
+    75%{ transform: rotate(0deg)}
+    100%{ transform: rotate(-45deg)}
+};
+@media only screen and (max-width:650px){
+   height: 100px;
+   width:100px;
+   top:0px;
+}
+`
+export const SunStar = styled.img`
+position:absolute;
+left:40px;
+bottom:20px;
+
+animation:zoomOut 0.5s linear infinite;
+@keyframes zoomOut {
+    0%{height: 30%; }
+    50%{height: 35%; }
+    100%{height: 30%; }
+};
+@media only screen and (max-width:650px){
+   height: 50%;
+   max-width:40%;
+   bottom:0px;
+   left:0px;
+   @keyframes zoomOut {
+    0%{height: 20%; }
+    50%{height: 25%; }
+    100%{height: 20%; }
+};
+}
+
+
+`
