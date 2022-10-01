@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c13b6f6e.css",
+    "main.js": "/static/js/main.cdb1c2f5.js",
+    "static/media/girls.jpg": "/static/media/girls.bfd0467407c2558ae16b.jpg",
+    "static/media/cupal.png": "/static/media/cupal.2741eaf8f1dac2487bcc.png",
+    "static/media/dog.png": "/static/media/dog.0bb9f3812255a0828972.png",
+    "static/media/star_fun.svg": "/static/media/star_fun.385634cc9a0746ace6f5d0967b83dfcb.svg",
+    "static/media/dil.svg": "/static/media/dil.7c4a0c831c5f5d67255f6ff558b5a0c5.svg",
+    "static/media/hand.svg": "/static/media/hand.61bed1659a3e3468b422b2b5b2359369.svg",
+    "static/media/nobadvibes.svg": "/static/media/nobadvibes.6049e9d8d938e6a9a52e7ad3a52370b3.svg",
+    "static/media/footershapes.svg": "/static/media/footershapes.dc91278e2117689b9097565fd7f4fdcc.svg",
+    "static/media/smile.svg": "/static/media/smile.39ae19bc2c0c3718f1570079d68580c1.svg",
+    "static/media/star.svg": "/static/media/star.5886cca856ec92d7c74a22e0cc56c8a9.svg",
+    "index.html": "/index.html",
+    "main.c13b6f6e.css.map": "/static/css/main.c13b6f6e.css.map",
+    "main.cdb1c2f5.js.map": "/static/js/main.cdb1c2f5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c13b6f6e.css",
+    "static/js/main.cdb1c2f5.js"
+  ]
+}
