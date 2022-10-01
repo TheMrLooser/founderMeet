@@ -68,7 +68,7 @@ export const Landingpage = () => {
                         <Banner_3_StarImg src={star}/>
                     </Banner_3_container>
                 </Banner_3_Maincontainer> 
-
+    
                 {/* Banner 4 */}
                 <Banner_3_Maincontainer>
                     <Banner_4_LeftContainer>
