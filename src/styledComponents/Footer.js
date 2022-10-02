@@ -25,8 +25,8 @@ max-width:30%;
 min-height:inherit;
 display:flex;
 flex-direction:column;
-display:${(props)=>props.hide=='hide' ? "none":'block'};
 @media only screen and (max-width:700px){
+    display:${(props)=>props.hide=='hide' ? "none":'block'};
     max-width:80%;
 
 }

@@ -14,23 +14,42 @@ width:100%;
 max-width:100%;
 min-height:inherit;
 ${'' /* border:1px solid red; */}
-padding-top:50px;
+padding-top:5px;
 display:flex;
 align-items:center;
 flex-direction:column;
 ${'' /* gap:50px; */}
 `
-export const TopBannarContainer = styled.div`
+
+export const TopBannarWrapper = styled.div`
 width:100%;
-max-width:95%;
+height:fit-content;
 display:flex;
 align-items:center;
-justify-content:space-between;
+justify-content:center;
+animation: changeBg 2s  infinite;
+@keyframes changeBg{
+    0% {  background:rgb(255, 241, 241) }
+    20% {  background:rgb(255, 176, 250)  }
+    40% { background:rgb(246, 152, 255)  }
+    60% { background:rgb(255, 253, 118)  }
+    80% { background:rgb(255, 221, 100)  }
+    100% { background:#fed9a1  }
+}
+
+`
+export const TopBannarContainer = styled.div`
+width:100%;
+max-width:80%;
+display:flex;
+align-items:center;
+justify-content:center;
 min-height:500px;
 margin-bottom:50px;
 @media only screen and (max-width:900px){
     flex-direction:column
-}
+};
+
 `
 export const TopBannerImgContainer = styled.div`
 position:relative;
@@ -76,33 +95,39 @@ height:20%;
 
 export const TopBannarLeftPartContainer = styled.div`
 width:100%;
+max-width:100%;
 display:flex;
 flex-direction:column;
 gap:50px;
+${'' /* border:1px solid red; */}
 `
 export const TopBannarLeftPartHeading = styled.h1`
 font-size:40px;
 color:white;
+${'' /* width:100%; */}
+${'' /* border:1px solid red; */}
 `
 export const BtnContainer  = styled.div`
 width:100%;
-max-width:150px;
-min-width:150px;
+max-width:200px;
+min-width:180px;
 background-color:black;
-border-radius:30px;
+border-radius:5px;
 
 `
 export const TopBannarLeftPartBTN = styled.button`
 width:100%;
-max-width:150px;
-min-width:150px;
-padding:10px 20px;
+max-width:200px;
+min-width:180px;
+padding:15px 20px;
 display:flex;
 align-items:center;
-border-radius:30px;
+justify-content:center;
+border-radius:5px;
 background-color:#FFC900;
 color:black;
-font-size:18px;
+font-size:22px;
+font-weight:600;
 gap:5px;
 border:none;
 transform: translate(-8px, -8px);
@@ -160,7 +185,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 width:100%;
-max-width:90%;
+max-width:100%;
 `
 export const Banner_2_headingElement = styled.h1`
 font-size:50px;
@@ -203,14 +228,15 @@ height:50%;
 width:50%;
 `
 export const Banner_2_ElementText = styled.p`
-justify-content:center;
+${'' /* justify-content:flex-start; */}
 display:flex;
 flex-direction:column;
 align-items:center;
 gap:30px;
 text-align: justify;
 text-justify: inter-word;
-
+font-size:20px;
+${'' /* border:1px solid red; */}
 `
 
 
@@ -219,6 +245,7 @@ text-justify: inter-word;
 export const Banner_3_Maincontainer = styled.div`
 background-color:white;
 width:100%;
+max-width:100%;
 min-height:400px;
 ${'' /* padding:5px; */}
 ${'' /* box-shadow:5px 5px 5px #d7d7d7,-2px -2px 5px #d7d7d7; */}
@@ -251,6 +278,9 @@ max-width:70%;
 font-size:30px;
 letter-spacing:2px;
 text-align:center;
+display:flex;
+flex-direction :column;
+gap:30px;
 ${'' /* font-family: 'Fredoka One', cursive; */}
 
 `
@@ -299,58 +329,57 @@ animation:vibes 3s linear infinite;
 export const Banner_4_LeftContainer = styled.div`
 width:100%;
 max-width:100%;
+min-height:200px;
 border:2px solid black;
 display:flex;
 align-items:center;
+justify-content:center;
+background-image:url('https://uploads-ssl.webflow.com/62b828ca8c56f580b8092140/62b828ca8c56f53c9a09215e_grid_yellower.svg');
+background-repeat: repeat;
+background-position: 50% 50%;
+background-size: 100px;
+${'' /* padding:20px; */}
 `
 export const Banner_4_Img = styled.img`
-width:100%;
+width:90%;
+height:90%;
+margin:20px;
 
 `
 export const Banner_4_Arrow = styled.div`
 position:absolute;
-bottom:100px;
-right:150px;
-transform:translate(-50%, -50%);
-transform:rotate(125deg);
+bottom:10px;
+right:10px;
+${'' /* transform:translate(50%, 50%); */}
+${'' /* border:1px solid red; */}
+z-index:10;
 @media only screen and (max-width:900px){
-    bottom:50px;
-    right:150px;
+    bottom:10px;
+    right:10px;
+    width:50px;
+    height:50px;
 }
 `
-export const Banner_4_ArrowSpan = styled.span`
-display:block;
-width:3.5vw;
-height:3.5vw;
-border-bottom:5px solid #fbb03f;
-border-right:5px solid #fbb03f;
-transform:rotate(45deg);
-margin:-30px;
-animation:animate 2s infinite;
-&:nth-child(2){
-    animation-delay: -0.4s;
-};
-&:nth-child(3){
-    animation-delay: -0.8s;
-};
+export const ArrowImg = styled.img`
+width:100%;
+height:100%;
+animation:animate 1s infinite;
 @keyframes animate {
     0%{
-        opacity: 0;
-        transform: rotate(45deg) translate(-20px,-20px)
+        transform:  translate(20px,20px)
     }
     50%{
-        opacity: 1;
+        transform:  translate(-40px,-40px)
     }
     100%{
-        opacity: 0;
-        transform: rotate(45deg) translate(20px,20px)
+        transform:  translate(20px,20px)
     }
+     
 }
-
-
 `
-export const Banner_4_elements = styled.div`
 
+export const Banner_4_elements = styled.div`
+margin-top:20px;
 `
 export const Banner_4_elementWrapper = styled.div`
 display:${(props)=>props.bannarNO==5&& "flex"};
@@ -362,6 +391,7 @@ export const Banner_4_RightContainer = styled.div`
 width:100%;
 max-width:100%;
 border:2px solid black;
+border-left:none;
 display:flex;
 flex-direction:column;
 align-items:center;

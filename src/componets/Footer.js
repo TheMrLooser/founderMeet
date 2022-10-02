@@ -17,7 +17,7 @@ export const Footer = () => {
                 <FooterElement> <FooterElementIcon><EmailIcon/></FooterElementIcon> info@gmail.com </FooterElement>
             </FooterElementContainer>
             <FooterElementContainer hide={'hide'}>
-                <FooterImg src={footerSnapImg} hide={'hide'}/>
+                <FooterImg src={footerSnapImg}/>
             </FooterElementContainer>
             <FooterElementContainer>
                 <FooterImg src={nobadWibesImg}/>

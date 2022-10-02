@@ -1,5 +1,5 @@
 import React from 'react'
-import {TopBannarLeftPartElement,TopBannarLeftPartElementWrapper, Container, TopBannarContainer, TopBannarImg, TopBannarLeftPartBTN, TopBannarLeftPartContainer, TopBannarLeftPartHeading, Wrapper, BtnContainer, SmilyImg, TopBannerImgContainer, Banner_2_container, Banner_2_heading, Banner_2_headingElement, Banner_2_ElementContainer, Banner_2_ElementWrapper, Banner_2_ElementImg, Banner_2_ElementText, MovingTextContainer, Banner_3_container, Banner_3_Wrapper, Banner_3_Maincontainer, Banner_3_Text, Banner_3_HandImg, Banner_3_StarImg, Banner_4_LeftContainer, Banner_4_RightContainer, Banner_4_Img, Banner_4_elements, Banner_4_elementWrapper, Banner_4_Arrow, Banner_4_ArrowSpan, FunStar, SunStar } from '../styledComponents/Landingpage'
+import {TopBannarLeftPartElement,TopBannarLeftPartElementWrapper, Container, TopBannarContainer, TopBannarImg, TopBannarLeftPartBTN, TopBannarLeftPartContainer, TopBannarLeftPartHeading, Wrapper, BtnContainer, SmilyImg, TopBannerImgContainer, Banner_2_container, Banner_2_heading, Banner_2_headingElement, Banner_2_ElementContainer, Banner_2_ElementWrapper, Banner_2_ElementImg, Banner_2_ElementText, MovingTextContainer, Banner_3_container, Banner_3_Wrapper, Banner_3_Maincontainer, Banner_3_Text, Banner_3_HandImg, Banner_3_StarImg, Banner_4_LeftContainer, Banner_4_RightContainer, Banner_4_Img, Banner_4_elements, Banner_4_elementWrapper, Banner_4_Arrow, Banner_4_ArrowSpan, FunStar, SunStar, TopBannarWrapper, ArrowImg } from '../styledComponents/Landingpage'
 import girls from '../images/girls.jpg';
 import smily from '../images/smile.svg';
 import dog from '../images/dog.png';
@@ -7,6 +7,7 @@ import star from '../images/star.svg'
 import hand from '../images/hand.svg'
 import cupal from '../images/cupal.png'
 import funstar from '../images/star_fun.svg'
+import arrow from '../images/arrows.svg'
 
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
@@ -15,20 +16,22 @@ export const Landingpage = () => {
      <>
         <Container>
             <Wrapper>
-                <TopBannarContainer>
-                    <TopBannarLeftPartContainer>
-                        <TopBannarLeftPartHeading className='font'>Matchmaking portal for <div>Linkedin users</div> </TopBannarLeftPartHeading>
-                        <BtnContainer><TopBannarLeftPartBTN>Let's Go <ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer>
-                        <TopBannarLeftPartElementWrapper>
-                            <TopBannarLeftPartElement>10K+ Members</TopBannarLeftPartElement>
-                            <TopBannarLeftPartElement>Smart Ai</TopBannarLeftPartElement>
-                            <TopBannarLeftPartElement>Perfect Match</TopBannarLeftPartElement>
-                        </TopBannarLeftPartElementWrapper>
-                    </TopBannarLeftPartContainer>
-                    <TopBannerImgContainer><TopBannarImg src={girls}/>
-                        <SmilyImg src={smily}/>
-                    </TopBannerImgContainer>
-                </TopBannarContainer>
+                <TopBannarWrapper>
+                    <TopBannarContainer>
+                        <TopBannarLeftPartContainer>
+                            <TopBannarLeftPartHeading className='font'>Matchmaking portal for <div>Linkedin users</div> </TopBannarLeftPartHeading>
+                            <BtnContainer><TopBannarLeftPartBTN>Let's Go <ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer>
+                            <TopBannarLeftPartElementWrapper>
+                                <TopBannarLeftPartElement>10K+ Members</TopBannarLeftPartElement>
+                                <TopBannarLeftPartElement>Smart Ai</TopBannarLeftPartElement>
+                                <TopBannarLeftPartElement>Perfect Match</TopBannarLeftPartElement>
+                            </TopBannarLeftPartElementWrapper>
+                        </TopBannarLeftPartContainer>
+                        <TopBannerImgContainer><TopBannarImg src={girls}/>
+                            <SmilyImg src={smily}/>
+                        </TopBannerImgContainer>
+                    </TopBannarContainer>
+                </TopBannarWrapper>
                 
                 <MovingTextContainer> <marquee style={{marginLeft: '20px', marginRight: '20px'}} behavior="scroll" scrollamount="12"> Now You Date &nbsp;• &nbsp;Now You Date &nbsp;• &nbsp;Now You Date &nbsp;• &nbsp;Now You Date &nbsp;• &nbsp;Now You Date &nbsp;• &nbsp;Now You Date &nbsp;• &nbsp;Now You Date &nbsp;• &nbsp;Now You Date  </marquee></MovingTextContainer>
 
@@ -76,7 +79,7 @@ export const Landingpage = () => {
                     </Banner_4_LeftContainer>
                     <Banner_4_RightContainer>
                         <Banner_2_heading className='font' style={{fontSize:'70px'}}>Get Dates, <br/> Get Benefits</Banner_2_heading>
-                        <Banner_2_ElementText style={{fontSize:'25px'}}> It's not just online dating, it's online dating with benefits
+                        <Banner_2_ElementText style={{fontSize:'30px',marginTop:'20px'}}> It's not just online dating, it's <br/>online dating with benefits
                             <Banner_4_elementWrapper>
                                 <Banner_4_elements><ArrowForwardIcon/> Verified users</Banner_4_elements>
                                 <Banner_4_elements><ArrowForwardIcon/> Chat, Message and Flirt options</Banner_4_elements>
@@ -85,9 +88,8 @@ export const Landingpage = () => {
                             </Banner_4_elementWrapper>
                         </Banner_2_ElementText>
                         <Banner_4_Arrow>
-                            <Banner_4_ArrowSpan/>
-                            <Banner_4_ArrowSpan/>
-                            <Banner_4_ArrowSpan/>
+                            <ArrowImg src={arrow}/>
+                           
                         </Banner_4_Arrow>
                     </Banner_4_RightContainer>
                 </Banner_3_Maincontainer>

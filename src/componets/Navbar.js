@@ -14,8 +14,9 @@ export const Navbar = () => {
                     <NavElement>Home</NavElement>
                     <NavElement>Login</NavElement>
                     <NavElement>Signup</NavElement>
+                    <NavElement display={'block'}><MenuIcon sx={{fontSize:'40px'}}/></NavElement>
                 </NavElementWrapper>
-                 <MenuIcon sx={{fontSize:'40px'}}/>
+                 
             </NavWrapper>
         </NavContainer>
     </>
