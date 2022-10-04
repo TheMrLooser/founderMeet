@@ -151,6 +151,10 @@ export const TopBannarLeftPartElement = styled.span`
 width:100%;
 max-width:150px;
 font-size:30px;
+@media only screen and (max-width:550px){
+font-size:20px;
+
+}
 `
 
 // moving text 

@@ -33,9 +33,17 @@ border-left: none;
 height:inherit;
 background-color:#FFC900;
 padding:0px 10px;
+
+@media only screen and (max-width:500px){
+    max-width:100px;
+}
 `
 export const LogoImg = styled.img`
 
+@media only screen and (max-width:500px){
+    width:100%;
+height:80%;
+}
 `
 export const LogoText = styled.span`
 

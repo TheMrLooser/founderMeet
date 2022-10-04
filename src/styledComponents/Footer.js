@@ -76,5 +76,6 @@ padding:20px 0px;
     gap:20px;
     justify-content:center;
     align-items:center;
+    padding-left:30px;
 }
 `
