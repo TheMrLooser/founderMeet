@@ -28,13 +28,15 @@ display:flex;
 align-items:center;
 justify-content:center;
 animation: changeBg 2s  infinite;
+padding-top:20px;
 @keyframes changeBg{
     0% {  background:rgb(255, 241, 241) }
-    20% {  background:rgb(255, 176, 250)  }
-    40% { background:rgb(246, 152, 255)  }
-    60% { background:rgb(255, 253, 118)  }
-    80% { background:rgb(255, 221, 100)  }
-    100% { background:#fed9a1  }
+    15% {  background:rgb(255, 176, 250)  }
+    30% { background:rgb(246, 152, 255)  }
+    45% { background:rgb(255, 253, 118)  }
+    60% { background:rgb(255, 221, 100)  }
+    75% { background:orange }
+    95% { background:white  }
 }
 
 `
@@ -186,6 +188,7 @@ align-items:center;
 justify-content:center;
 width:100%;
 max-width:100%;
+text-align:center;
 `
 export const Banner_2_headingElement = styled.h1`
 font-size:50px;
@@ -261,6 +264,7 @@ background-color:#FF90E8;
 width:100%;
 min-height:inherit;
 position:relative;
+padding:50px 0px;
 
 
 `
@@ -289,28 +293,43 @@ position:absolute;
 right:50px;
 top:20px;
 animation:zoomOut 0.5s linear infinite;
-@media only screen and (max-width:650px){
-    height: 80px;
+height:20%;
+@media only screen and (max-width:1000px){
+    height: 10%;
+    right:10px;
+    top:20px;
+    animation:zoomOut_1 0.5s linear infinite;
+    
 };
 
 @keyframes zoomOut {
-    0%{height: 30%}
-    50%{height: 35%}
-    100%{height: 30%}
+    0%{height: 20%}
+    50%{height: 25%}
+    100%{height: 20%}
+    
+}
+@keyframes zoomOut_1 {
+    0%{height: 8%}
+    50%{height: 11%}
+    100%{height: 8%}
+    
 }
 
 `
 export const Banner_3_HandImg = styled.img`
 position:absolute;
 left:40px;
-bottom:-80px;
-height:70%;
+bottom:-70px;
+height:50%;
 z-index:10;
 animation:vibes 3s linear infinite;
-@media only screen and (max-width:750px){
+@media only screen and (max-width:1000px){
     height: 100px;
-    left:40px;
-    bottom:-50px;
+    left:30px;
+    bottom:-40px;
+};
+@media only screen and (max-width:500px){
+    left:20px;
 };
 
 @keyframes vibes{
@@ -341,9 +360,11 @@ background-size: 100px;
 ${'' /* padding:20px; */}
 `
 export const Banner_4_Img = styled.img`
-width:90%;
-height:90%;
-margin:20px;
+width:85%;
+height:85%;
+margin-top:80px;
+margin-bottom:60px;
+
 
 `
 export const Banner_4_Arrow = styled.div`
@@ -353,9 +374,9 @@ right:10px;
 ${'' /* transform:translate(50%, 50%); */}
 ${'' /* border:1px solid red; */}
 z-index:10;
-@media only screen and (max-width:900px){
+@media only screen and (max-width:1050px){
     bottom:10px;
-    right:10px;
+    right:30px;
     width:50px;
     height:50px;
 }
@@ -380,6 +401,10 @@ animation:animate 1s infinite;
 
 export const Banner_4_elements = styled.div`
 margin-top:20px;
+text-align:left;
+@media only screen and (max-width:450px){
+    font-size:25px
+}
 `
 export const Banner_4_elementWrapper = styled.div`
 display:${(props)=>props.bannarNO==5&& "flex"};
@@ -397,6 +422,7 @@ flex-direction:column;
 align-items:center;
 justify-content:center;
 position:relative;
+padding:50px 0px;
 `
 
 export const FunStar = styled.img`
@@ -411,7 +437,7 @@ bottom:50px;
     75%{ transform: rotate(0deg)}
     100%{ transform: rotate(-45deg)}
 };
-@media only screen and (max-width:650px){
+@media only screen and (max-width:750px){
    height: 100px;
    width:100px;
    top:0px;
@@ -428,15 +454,15 @@ animation:zoomOut 0.5s linear infinite;
     50%{height: 35%; }
     100%{height: 30%; }
 };
-@media only screen and (max-width:650px){
+@media only screen and (max-width:750px){
    height: 50%;
    max-width:40%;
-   bottom:0px;
-   left:0px;
+   bottom:10px;
+   left:10px;
    @keyframes zoomOut {
-    0%{height: 20%; }
-    50%{height: 25%; }
-    100%{height: 20%; }
+    0%{height: 10%; }
+    50%{height: 15%; }
+    100%{height: 10%; }
 };
 }
 

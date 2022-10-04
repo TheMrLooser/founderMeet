@@ -6,7 +6,8 @@ min-height:40vh;
 display:flex;
 align-items:center;
 justify-content:center;
-background-color:#62D8B2;
+flex-direction:column;
+background-color:#23A094;
 padding-top:50px;
 `
 export const FooterWrapper = styled.div`
@@ -65,3 +66,15 @@ max-width:100%;
 display:${(props)=>props.hide=='hide' ? "none":'block'};
 `
 
+export const FooterCopyRightSection = styled.div`
+width:100%;
+display:flex;
+justify-content:space-around;
+padding:20px 0px;
+@media only screen and (max-width:700px){
+    flex-direction: column;
+    gap:20px;
+    justify-content:center;
+    align-items:center;
+}
+`

@@ -69,6 +69,7 @@ justify-content:center;
 @media only screen and (max-width:500px){
     display:${(props)=>props.display!='block'&&'none'};
     border:none;
+    margin-right:15px;
 
 }
 `

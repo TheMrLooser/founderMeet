@@ -36,8 +36,8 @@ export const Landingpage = () => {
                 <MovingTextContainer> <marquee style={{marginLeft: '20px', marginRight: '20px'}} behavior="scroll" scrollamount="12"> Now You Date &nbsp;• &nbsp;Now You Date &nbsp;• &nbsp;Now You Date &nbsp;• &nbsp;Now You Date &nbsp;• &nbsp;Now You Date &nbsp;• &nbsp;Now You Date &nbsp;• &nbsp;Now You Date &nbsp;• &nbsp;Now You Date  </marquee></MovingTextContainer>
 
                 <Banner_2_container>
-                    <Banner_2_heading className='font'> Find your perfect match</Banner_2_heading>
-                    <Banner_2_headingElement className='font'>Friendship, Dating, & Matrimony.</Banner_2_headingElement>
+                    <Banner_2_heading className='font'> Find your perfect match </Banner_2_heading>
+                    <Banner_2_heading className='font'>Friendship, Dating, & Matrimony.</Banner_2_heading>
                     <Banner_2_ElementContainer>
                         <Banner_2_ElementWrapper>
                             <Banner_2_ElementImg src={dog}/>
@@ -129,7 +129,7 @@ export const Landingpage = () => {
                 <Banner_3_Maincontainer style={{width:'100%',flexDirection:'column',gap:'50px',backgroundColor:'#ff7051',padding:'50px 0px',alignItems:'center',justifyContent:'center'}}>
 
                     <Banner_2_heading className='font'>Join the chase, join the fun! <br/>Get out there!</Banner_2_heading>
-                    <BtnContainer style={{maxWidth:'250px'}}><TopBannarLeftPartBTN style={{maxWidth:'250px'}}>FIND YOUR DATE NOW</TopBannarLeftPartBTN></BtnContainer>
+                    <BtnContainer style={{maxWidth:'300px'}}><TopBannarLeftPartBTN style={{maxWidth:'350px'}}>FIND YOUR DATE NOW</TopBannarLeftPartBTN></BtnContainer>
                     <FunStar src={funstar}/>
                     <SunStar src={star}/>
                 </Banner_3_Maincontainer>

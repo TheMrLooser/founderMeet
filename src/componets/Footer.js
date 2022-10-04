@@ -1,5 +1,5 @@
 import React from 'react'
-import { FooterContainer, FooterElement, FooterElementContainer, FooterElementIcon, FooterImg, FooterWrapper } from '../styledComponents/Footer'
+import { FooterContainer, FooterCopyRightSection, FooterElement, FooterElementContainer, FooterElementIcon, FooterImg, FooterWrapper } from '../styledComponents/Footer'
 import { Banner_2_heading } from '../styledComponents/Landingpage'
 import nobadWibesImg from '../images/nobadvibes.svg'
 import footerSnapImg from '../images/footershapes.svg'
@@ -11,10 +11,10 @@ export const Footer = () => {
    <>
     <FooterContainer>
         <FooterWrapper> 
-            <FooterElementContainer>
+            <FooterElementContainer >
                 <h2 className='font'>Have  Question?</h2>
                 <FooterElement> <FooterElementIcon><LocalPhoneIcon/></FooterElementIcon> 888888888888 </FooterElement>
-                <FooterElement> <FooterElementIcon><EmailIcon/></FooterElementIcon> info@gmail.com </FooterElement>
+                <FooterElement style={{backgroundColor:'#FF90E8'}}> <FooterElementIcon><EmailIcon/></FooterElementIcon> info@gmail.com </FooterElement>
             </FooterElementContainer>
             <FooterElementContainer hide={'hide'}>
                 <FooterImg src={footerSnapImg}/>
@@ -23,6 +23,11 @@ export const Footer = () => {
                 <FooterImg src={nobadWibesImg}/>
             </FooterElementContainer>
         </FooterWrapper>
+        <FooterCopyRightSection>
+            <p>Walt Disney World 1375 E Buena Vista Dr Orlando, Florida, United States</p> 
+            <p>Copyright © 2022 NowYouDate. All Rights Reserved.</p>
+            <p>Terms of Use | Privacy Policy | Support</p>
+        </FooterCopyRightSection>
     </FooterContainer>
    </>
   )
