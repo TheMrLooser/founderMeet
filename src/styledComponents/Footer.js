@@ -26,6 +26,7 @@ max-width:30%;
 min-height:inherit;
 display:flex;
 flex-direction:column;
+${'' /* border:1px solid red; */}
 @media only screen and (max-width:700px){
     display:${(props)=>props.hide=='hide' ? "none":'block'};
     max-width:80%;
@@ -61,8 +62,8 @@ background-color:white;
 `
 
 export const FooterImg = styled.img`
-width:100%;
-max-width:100%;
+width:70%;
+max-width:70%;
 display:${(props)=>props.hide=='hide' ? "none":'block'};
 `
 
@@ -71,6 +72,8 @@ width:100%;
 display:flex;
 justify-content:space-around;
 padding:20px 0px;
+font-size:10px;
+letter-spacing:2px;
 @media only screen and (max-width:700px){
     flex-direction: column;
     gap:20px;

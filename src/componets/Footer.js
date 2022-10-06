@@ -16,17 +16,17 @@ export const Footer = () => {
                 <FooterElement> <FooterElementIcon><LocalPhoneIcon/></FooterElementIcon> 888888888888 </FooterElement>
                 <FooterElement style={{backgroundColor:'#FF90E8'}}> <FooterElementIcon><EmailIcon/></FooterElementIcon> info@gmail.com </FooterElement>
             </FooterElementContainer>
-            <FooterElementContainer hide={'hide'}>
+            <FooterElementContainer hide={'hide'} style={{alignItems:'flex-end'}}>
                 <FooterImg src={footerSnapImg}/>
             </FooterElementContainer>
-            <FooterElementContainer>
+            <FooterElementContainer style={{alignItems:'flex-end'}}>
                 <FooterImg src={nobadWibesImg}/>
             </FooterElementContainer>
         </FooterWrapper>
         <FooterCopyRightSection>
             <p>Walt Disney World 1375 E Buena Vista Dr Orlando, Florida, United States</p> 
             <p>Copyright © 2022 NowYouDate. All Rights Reserved.</p>
-            <p>Terms of Use | Privacy Policy | Support</p>
+            <p> <span className='footerHoverColorChange'>Terms of Use</span> | <span className='footerHoverColorChange'> Privacy Policy </span> | <span className='footerHoverColorChange'> Support </span></p> 
         </FooterCopyRightSection>
     </FooterContainer>
    </>

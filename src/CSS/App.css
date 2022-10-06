@@ -4,6 +4,7 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  ;
 }
 
 .font{
@@ -14,4 +15,10 @@
   -webkit-text-stroke:1px black;
   letter-spacing:2px;
   color:white;
+}
+
+.footerHoverColorChange:hover{
+  color: #fbb03f;
+  cursor: pointer;
+
 }
