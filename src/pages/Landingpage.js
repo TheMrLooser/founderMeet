@@ -1,5 +1,5 @@
 import React from 'react'
-import {TopBannarLeftPartElement,TopBannarLeftPartElementWrapper, Container, TopBannarContainer, TopBannarImg, TopBannarLeftPartBTN, TopBannarLeftPartContainer, TopBannarLeftPartHeading, Wrapper, BtnContainer, SmilyImg, TopBannerImgContainer, Banner_2_container, Banner_2_heading, Banner_2_headingElement, Banner_2_ElementContainer, Banner_2_ElementWrapper, Banner_2_ElementImg, Banner_2_ElementText, MovingTextContainer, Banner_3_container, Banner_3_Wrapper, Banner_3_Maincontainer, Banner_3_Text, Banner_3_HandImg, Banner_3_StarImg, Banner_4_LeftContainer, Banner_4_RightContainer, Banner_4_Img, Banner_4_elements, Banner_4_elementWrapper, Banner_4_Arrow, Banner_4_ArrowSpan, FunStar, SunStar, TopBannarWrapper, ArrowImg } from '../styledComponents/Landingpage'
+import {TopBannarLeftPartElement,TopBannarLeftPartElementWrapper, Container, TopBannarContainer, TopBannarImg, TopBannarLeftPartBTN, TopBannarLeftPartContainer, TopBannarLeftPartHeading, Wrapper, BtnContainer, SmilyImg, TopBannerImgContainer, Banner_2_container, Banner_2_heading, Banner_2_headingElement, Banner_2_ElementContainer, Banner_2_ElementWrapper, Banner_2_ElementImg, Banner_2_ElementText, MovingTextContainer, Banner_3_container, Banner_3_Wrapper, Banner_3_Maincontainer, Banner_3_Text, Banner_3_HandImg, Banner_3_StarImg, Banner_4_LeftContainer, Banner_4_RightContainer, Banner_4_Img, Banner_4_elements, Banner_4_elementWrapper, Banner_4_Arrow, Banner_4_ArrowSpan, FunStar, SunStar, TopBannarWrapper, ArrowImg, BannerHeadingContainer } from '../styledComponents/Landingpage'
 import girls from '../images/girls.jpg';
 import smily from '../images/smile.svg';
 import dog from '../images/dog.png';
@@ -78,7 +78,7 @@ export const Landingpage = () => {
                         <Banner_4_Img src={cupal}/>
                     </Banner_4_LeftContainer>
                     <Banner_4_RightContainer>
-                        <Banner_2_heading className='font' style={{fontSize:'70px'}}>Get Dates, <br/> Get Benefits</Banner_2_heading>
+                        <BannerHeadingContainer><Banner_2_heading className='font' style={{fontSize:'70px',textAlign:'left'}}> Get Dates, <br/> Get Benefits</Banner_2_heading></BannerHeadingContainer>
                         <Banner_2_ElementText style={{fontSize:'30px',marginTop:'20px'}}> It's not just online dating, it's <br/>online dating with benefits
                             <Banner_4_elementWrapper>
                                 <Banner_4_elements><ArrowForwardIcon/> Verified users</Banner_4_elements>

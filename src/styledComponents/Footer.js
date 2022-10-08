@@ -16,6 +16,7 @@ min-height:inherit;
 display:flex;
 align-items:center;
 justify-content:center;
+${'' /* border:1px solid red; */}
 @media only screen and (max-width:700px){
     flex-direction:column;
 }
@@ -28,9 +29,21 @@ display:flex;
 flex-direction:column;
 ${'' /* border:1px solid red; */}
 @media only screen and (max-width:700px){
-    display:${(props)=>props.hide=='hide' ? "none":'block'};
-    max-width:80%;
+    display:${(props)=>props.hide=='hide' ? "none":''};
+    max-width:90%;
+    align-items:center;
 
+}
+`
+export const ImagesCOntainer = styled.div`
+width:100%;
+height:inherit;
+display:flex;
+align-items:center;
+justify-content:flex-end;
+@media screen and (max-width: 700px) {
+justify-content:center;
+   
 }
 `
 export const FooterElement = styled.div`
@@ -65,6 +78,7 @@ export const FooterImg = styled.img`
 width:70%;
 max-width:70%;
 display:${(props)=>props.hide=='hide' ? "none":'block'};
+
 `
 
 export const FooterCopyRightSection = styled.div`

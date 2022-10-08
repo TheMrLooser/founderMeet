@@ -27,17 +27,23 @@ height:fit-content;
 display:flex;
 align-items:center;
 justify-content:center;
-animation: changeBg 2s  infinite;
+animation: changeBg 5s  infinite;
 padding-top:20px;
 @keyframes changeBg{
-    0% {  background:rgb(255, 241, 241) }
-    15% {  background:rgb(255, 176, 250)  }
-    30% { background:rgb(246, 152, 255)  }
-    45% { background:rgb(255, 253, 118)  }
-    60% { background:rgb(255, 221, 100)  }
-    75% { background:orange }
-    95% { background:white  }
-}
+    3% {  background:rgb(255, 230, 116 , 0.5) }
+    10% {  background:rgb(255, 180, 85 , 0.5) }
+    20% { background: rgb(255, 233, 250 , 0.5) }
+    30% { background:rgb(255, 244, 203 , 0.5)  }
+    40% { background:rgb(255, 240, 182 , 0.5)  }
+    50% { background:rgb(255, 153, 193 , 0.5)  }
+    60% { background:rgb(255, 149, 213 , 0.5)  }
+    70% { background:rgb(255, 157, 235 , 0.5)  }
+    80% { background:rgb(255, 204, 4 , 0.5)  }
+    90% { background:rgb(255, 240, 64 , 0.5) }
+    95% { background:rgb(255, 255, 255 , 0.5) }
+    
+};
+ 
 
 `
 export const TopBannarContainer = styled.div`
@@ -194,6 +200,10 @@ width:100%;
 max-width:100%;
 text-align:center;
 `
+export const BannerHeadingContainer = styled.div`
+${'' /* border:1px solid red; */}
+
+`
 export const Banner_2_headingElement = styled.h1`
 font-size:50px;
 display:flex;
@@ -235,10 +245,10 @@ height:50%;
 width:50%;
 `
 export const Banner_2_ElementText = styled.p`
-${'' /* justify-content:flex-start; */}
+justify-content:flex-start;
 display:flex;
 flex-direction:column;
-align-items:center;
+${'' /* align-items:center; */}
 gap:30px;
 text-align: justify;
 text-justify: inter-word;
@@ -406,11 +416,13 @@ animation:animate 1s infinite;
 export const Banner_4_elements = styled.div`
 margin-top:20px;
 text-align:left;
+${'' /* border:1px solid red; */}
 @media only screen and (max-width:450px){
     font-size:25px
 }
 `
 export const Banner_4_elementWrapper = styled.div`
+${'' /* border:1px solid red; */}
 display:${(props)=>props.bannarNO==5&& "flex"};
 gap:${(props)=>props.bannarNO==5&& "30px"};
 align-items:${(props)=>props.bannarNO==5&& "center"};

@@ -1,6 +1,5 @@
 import React from 'react'
-import { FooterContainer, FooterCopyRightSection, FooterElement, FooterElementContainer, FooterElementIcon, FooterImg, FooterWrapper } from '../styledComponents/Footer'
-import { Banner_2_heading } from '../styledComponents/Landingpage'
+import { FooterContainer, FooterCopyRightSection, FooterElement, FooterElementContainer, FooterElementIcon, FooterImg, FooterWrapper, ImagesCOntainer } from '../styledComponents/Footer'
 import nobadWibesImg from '../images/nobadvibes.svg'
 import footerSnapImg from '../images/footershapes.svg'
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
@@ -12,15 +11,15 @@ export const Footer = () => {
     <FooterContainer>
         <FooterWrapper> 
             <FooterElementContainer >
-                <h2 className='font'>Have  Question?</h2>
+                 <div style={{width:'80%'}}><h2 className='font'>Have  Question?</h2></div>
                 <FooterElement> <FooterElementIcon><LocalPhoneIcon/></FooterElementIcon> 888888888888 </FooterElement>
                 <FooterElement style={{backgroundColor:'#FF90E8'}}> <FooterElementIcon><EmailIcon/></FooterElementIcon> info@gmail.com </FooterElement>
             </FooterElementContainer>
             <FooterElementContainer hide={'hide'} style={{alignItems:'flex-end'}}>
-                <FooterImg src={footerSnapImg}/>
+            <ImagesCOntainer><FooterImg src={footerSnapImg}/></ImagesCOntainer>
             </FooterElementContainer>
             <FooterElementContainer style={{alignItems:'flex-end'}}>
-                <FooterImg src={nobadWibesImg}/>
+                <ImagesCOntainer><FooterImg src={nobadWibesImg}/></ImagesCOntainer>
             </FooterElementContainer>
         </FooterWrapper>
         <FooterCopyRightSection>
