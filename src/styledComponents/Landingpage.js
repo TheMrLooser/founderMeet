@@ -30,7 +30,7 @@ justify-content:center;
 animation: changeBg 6s  infinite;
 padding-top:20px;
 @keyframes changeBg{
-    3% {  background:rgb(255, 230, 116 , 0.6) }
+    ${'' /* 3% {  background:rgb(255, 230, 116 , 0.6) }
     10% {  background:rgb(255, 180, 85 , 0.6) }
     20% { background: rgb(255, 233, 250 ,0.6) }
     30% { background:rgb(255, 244, 203 , 0.6)  }
@@ -39,8 +39,12 @@ padding-top:20px;
     60% { background:rgb(255, 149, 213 , 0.6)  }
     70% { background:rgb(255, 157, 235 , 0.6)  }
     80% { background:rgb(255,201,0)  }
-    ${'' /* 90% { background:rgb(255, 240, 64 , 0.5) } */}
-    95% { background:rgb(255, 255, 255 , 0.5) }
+    95% { background:rgb(255, 255, 255 , 0.5) } */}
+
+    10%{background: rgb(255, 165, 0)}
+    40%{background: rgb(255,201,0) }
+    80%{background: rgb(255,144,232) }
+    100%{background: rgb(255,255,255,0.5) }
     
 };
  

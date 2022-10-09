@@ -19,7 +19,7 @@ export const Landingpage = () => {
                 <TopBannarWrapper>
                     <TopBannarContainer>
                         <TopBannarLeftPartContainer>
-                            <TopBannarLeftPartHeading className='font'>Matchmaking portal for <br/>Linkedin users  </TopBannarLeftPartHeading>
+                            <TopBannarLeftPartHeading className='font'>Matchmaking portal for <br/>Linkedin users....  </TopBannarLeftPartHeading>
                             <BtnContainer><TopBannarLeftPartBTN>Let's Go <ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer>
                             <TopBannarLeftPartElementWrapper>
                                 <TopBannarLeftPartElement>10K+ Members</TopBannarLeftPartElement>
