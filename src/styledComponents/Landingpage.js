@@ -182,8 +182,8 @@ font-weight:600;
 
 export const Banner_2_container = styled.div`
 background-color:pink;
-padding-bottom:100px;
-padding-top:100px;
+padding-bottom:50px;
+padding-top:50px;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -439,6 +439,7 @@ align-items:center;
 justify-content:center;
 position:relative;
 padding:50px 0px;
+gap:40px;
 `
 
 export const FunStar = styled.img`

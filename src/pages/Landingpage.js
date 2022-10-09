@@ -19,7 +19,7 @@ export const Landingpage = () => {
                 <TopBannarWrapper>
                     <TopBannarContainer>
                         <TopBannarLeftPartContainer>
-                            <TopBannarLeftPartHeading className='font'>Matchmaking portal for <div>Linkedin users</div> </TopBannarLeftPartHeading>
+                            <TopBannarLeftPartHeading className='font'>Matchmaking portal for <br/>Linkedin users  </TopBannarLeftPartHeading>
                             <BtnContainer><TopBannarLeftPartBTN>Let's Go <ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer>
                             <TopBannarLeftPartElementWrapper>
                                 <TopBannarLeftPartElement>10K+ Members</TopBannarLeftPartElement>
@@ -61,7 +61,7 @@ export const Landingpage = () => {
 
                 </Banner_2_container>
 
-                <Banner_3_Maincontainer> 
+                <Banner_3_Maincontainer style={{minHeight:'200px'}}> 
                     <Banner_3_container>
                         <Banner_3_Wrapper>
                             
@@ -116,7 +116,7 @@ export const Landingpage = () => {
 
 
                 {/* bannar 6 */}
-                <Banner_3_Maincontainer style={{width:'100%',flexDirection:'column',gap:'50px',backgroundColor:'#62d8b2',padding:'50px 0px',alignItems:'center',justifyContent:'center'}}>
+                <Banner_3_Maincontainer style={{width:'100%',flexDirection:'column',gap:'50px',backgroundColor:'#62d8b2',padding:'50px 0px',alignItems:'center',justifyContent:'center',minHeight:'200px'}}>
 
                     <Banner_2_heading className='font'>CAREERS</Banner_2_heading>
                     <div>Intrested in joining us ?<br/> Take a look at the open position</div>
@@ -126,7 +126,7 @@ export const Landingpage = () => {
                 </Banner_3_Maincontainer>
 
                 {/* bannar 7 */}
-                <Banner_3_Maincontainer style={{width:'100%',flexDirection:'column',gap:'50px',backgroundColor:'#ff7051',padding:'50px 0px',alignItems:'center',justifyContent:'center'}}>
+                <Banner_3_Maincontainer style={{width:'100%',flexDirection:'column',gap:'50px',backgroundColor:'#ff7051',padding:'50px 0px',alignItems:'center',justifyContent:'center',minHeight:'200px'}}>
 
                     <Banner_2_heading className='font'>Join the chase, join the fun! <br/>Get out there!</Banner_2_heading>
                     <BtnContainer style={{maxWidth:'300px'}}><TopBannarLeftPartBTN style={{maxWidth:'350px'}}>FIND YOUR DATE NOW</TopBannarLeftPartBTN></BtnContainer>
