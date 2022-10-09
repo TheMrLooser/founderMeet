@@ -27,19 +27,19 @@ height:fit-content;
 display:flex;
 align-items:center;
 justify-content:center;
-animation: changeBg 5s  infinite;
+animation: changeBg 6s  infinite;
 padding-top:20px;
 @keyframes changeBg{
-    3% {  background:rgb(255, 230, 116 , 0.5) }
-    10% {  background:rgb(255, 180, 85 , 0.5) }
-    20% { background: rgb(255, 233, 250 , 0.5) }
-    30% { background:rgb(255, 244, 203 , 0.5)  }
-    40% { background:rgb(255, 240, 182 , 0.5)  }
-    50% { background:rgb(255, 153, 193 , 0.5)  }
-    60% { background:rgb(255, 149, 213 , 0.5)  }
-    70% { background:rgb(255, 157, 235 , 0.5)  }
-    80% { background:rgb(255, 204, 4 , 0.5)  }
-    90% { background:rgb(255, 240, 64 , 0.5) }
+    3% {  background:rgb(255, 230, 116 , 0.6) }
+    10% {  background:rgb(255, 180, 85 , 0.6) }
+    20% { background: rgb(255, 233, 250 ,0.6) }
+    30% { background:rgb(255, 244, 203 , 0.6)  }
+    40% { background:rgb(255, 240, 182 , 0.6)  }
+    50% { background:rgb(255, 153, 193 , 0.6)  }
+    60% { background:rgb(255, 149, 213 , 0.6)  }
+    70% { background:rgb(255, 157, 235 , 0.6)  }
+    80% { background:rgb(255,201,0)  }
+    ${'' /* 90% { background:rgb(255, 240, 64 , 0.5) } */}
     95% { background:rgb(255, 255, 255 , 0.5) }
     
 };
