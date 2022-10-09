@@ -186,8 +186,8 @@ font-weight:600;
 
 export const Banner_2_container = styled.div`
 background-color:pink;
-padding-bottom:50px;
-padding-top:50px;
+padding-bottom:100px;
+padding-top:100px;
 display:flex;
 flex-direction:column;
 justify-content:center;
