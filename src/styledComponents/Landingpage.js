@@ -80,6 +80,7 @@ justify-content:flex-end;
 export const TopBannarImg = styled.img`
 height:80%;
 width:80%;
+border:2px solid black;
 @media only screen and (max-width:900px){
      height: 100%;
      width:100%;
