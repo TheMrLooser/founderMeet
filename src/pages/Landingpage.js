@@ -26,7 +26,7 @@ export const Landingpage = () => {
                 <TopBannarWrapper>
                     <TopBannarContainer>
                         <TopBannarLeftPartContainer>
-                            <TopBannarLeftPartHeading className='font'>Matchmaking portal for <br/>Linkedin users  </TopBannarLeftPartHeading>
+                            <TopBannarLeftPartHeading className='font'>MatchMaking portal for <br/>Linkedin users  </TopBannarLeftPartHeading>
                             <BtnContainer><TopBannarLeftPartBTN>Let's Go <ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer>
                             <TopBannarLeftPartElementWrapper>
                                 <TopBannarLeftPartElement>10K+ Members</TopBannarLeftPartElement>
@@ -40,7 +40,7 @@ export const Landingpage = () => {
                     </TopBannarContainer>
                 </TopBannarWrapper>
                 
-                <MovingTextContainer> <marquee style={{marginLeft: '20px', marginRight: '20px'}} behavior="scroll" scrollamount="12"> Now You Date &nbsp;• &nbsp;Now You Date &nbsp;• &nbsp;Now You Date &nbsp;• &nbsp;Now You Date &nbsp;• &nbsp;Now You Date &nbsp;• &nbsp;Now You Date &nbsp;• &nbsp;Now You Date &nbsp;• &nbsp;Now You Date  </marquee></MovingTextContainer>
+                <MovingTextContainer> <marquee style={{marginLeft: '20px', marginRight: '20px'}} behavior="scroll" scrollamount="12"> Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match &nbsp;• &nbsp; Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match • &nbsp;Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match • &nbsp;Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match • &nbsp;Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match • &nbsp;Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match &nbsp;</marquee></MovingTextContainer>
 
                 <Banner_2_container>
                     <Banner_2_heading className='font'> Find your perfect match </Banner_2_heading>
@@ -48,24 +48,30 @@ export const Landingpage = () => {
                     <Banner_2_ElementContainer>
                         <Banner_2_ElementWrapper>
                             <Banner_2_ElementImg src={frndImg5}/>
-                            <h2>Friendship</h2>
-                            <Banner_2_ElementText>
-                                 Whether you’re new to a city or looking to expand your social circle, here we simplified ways to create meaningful friendships. Friendship is not all about you connect them on social media, be Bro or Buddy to each other, go out for some activity, create memories, exchange vibes.
-                            </Banner_2_ElementText>
+                            <div className='align-Center'>
+                                <h2>Friendship</h2>
+                                <Banner_2_ElementText>
+                                    Whether you’re new to a city or looking to expand your social circle, here we simplified ways to create meaningful friendships. Friendship is not all about you connect them on social media, be Bro or Buddy to each other, go out for some activity, create memories, exchange vibes.
+                                </Banner_2_ElementText>
+                            </div>
                         </Banner_2_ElementWrapper>
                         <Banner_2_ElementWrapper>
                             <Banner_2_ElementImg src={frndImg4}/>
-                            <h2>Dating</h2>
-                            <Banner_2_ElementText>
-                                Various online dating apps focus on quick dates with lesser digital satisfaction, and incidents of harassment and sexual misconduct. Although we known to be for transparency. Because there is more to life than just swiping. If dates goes wrong, at worst be a good friend.
-                            </Banner_2_ElementText>
+                            <div className='align-Center'>
+                                <h2>Dating</h2>
+                                <Banner_2_ElementText>
+                                    Various online dating apps focus on quick dates with lesser digital satisfaction, and incidents of harassment and sexual misconduct. Although we known to be for transparency. Because there is more to life than just swiping. If dates goes wrong, at worst be a good friend.
+                                </Banner_2_ElementText>
+                            </div>
                         </Banner_2_ElementWrapper>
                         <Banner_2_ElementWrapper>
                             <Banner_2_ElementImg src={frndImg3}/>
-                            <h2>Matrimony</h2>
-                            <Banner_2_ElementText>
-                                From getting awkward on the matrimonial sites to fear of rejection to self-doubt. This is where most people ended up with. Although we make education and professionalism our primary factor to match you with right person. Although we providing digital transparency.
-                            </Banner_2_ElementText>
+                            <div className='align-Center'>
+                                <h2>Matrimony</h2>
+                                <Banner_2_ElementText>
+                                    From getting awkward on the matrimonial sites to fear of rejection to self-doubt. This is where most people ended up with. Although we make education and professionalism our primary factor to match you with right person. Although we providing digital transparency.
+                                </Banner_2_ElementText>
+                            </div>
                         </Banner_2_ElementWrapper>
                     </Banner_2_ElementContainer>
 
@@ -141,7 +147,7 @@ export const Landingpage = () => {
                 <Banner_3_Maincontainer style={{width:'100%',flexDirection:'column',gap:'50px',backgroundColor:'#ff7051',padding:'50px 0px',alignItems:'center',justifyContent:'center',}}>
 
                     <Banner_2_heading className='font'>Join the chase, join the fun! <br/>Get out there!</Banner_2_heading>
-                    <BtnContainer style={{maxWidth:'300px'}}><TopBannarLeftPartBTN style={{maxWidth:'350px'}}>FIND YOUR DATE NOW</TopBannarLeftPartBTN></BtnContainer>
+                    <BtnContainer style={{maxWidth:'300px'}}><TopBannarLeftPartBTN style={{maxWidth:'350px'}}>FIND YOUR MATCH NOW</TopBannarLeftPartBTN></BtnContainer>
                     <FunStar src={funstar}/>
                     <SunStar src={star}/>
                 </Banner_3_Maincontainer>
