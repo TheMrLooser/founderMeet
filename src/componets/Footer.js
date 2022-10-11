@@ -23,8 +23,8 @@ export const Footer = () => {
             </FooterElementContainer>
         </FooterWrapper>
         <FooterCopyRightSection>
-            <p>Walt Disney World 1375 E Buena Vista Dr Orlando, Florida, United States</p> 
-            <p>Copyright © 2022 NowYouDate. All Rights Reserved.</p>
+            <p> Made in India 🧡</p> 
+            <p>Copyright © 2022 MatchMaking24. All Rights Reserved.</p>
             <p> <span className='footerHoverColorChange'>Terms of Use</span> | <span className='footerHoverColorChange'> Privacy Policy </span> | <span className='footerHoverColorChange'> Support </span></p> 
         </FooterCopyRightSection>
     </FooterContainer>

@@ -1,9 +1,15 @@
 import React from 'react'
 import {TopBannarLeftPartElement,TopBannarLeftPartElementWrapper, Container, TopBannarContainer, TopBannarImg, TopBannarLeftPartBTN, TopBannarLeftPartContainer, TopBannarLeftPartHeading, Wrapper, BtnContainer, SmilyImg, TopBannerImgContainer, Banner_2_container, Banner_2_heading, Banner_2_headingElement, Banner_2_ElementContainer, Banner_2_ElementWrapper, Banner_2_ElementImg, Banner_2_ElementText, MovingTextContainer, Banner_3_container, Banner_3_Wrapper, Banner_3_Maincontainer, Banner_3_Text, Banner_3_HandImg, Banner_3_StarImg, Banner_4_LeftContainer, Banner_4_RightContainer, Banner_4_Img, Banner_4_elements, Banner_4_elementWrapper, Banner_4_Arrow, Banner_4_ArrowSpan, FunStar, SunStar, TopBannarWrapper, ArrowImg, BannerHeadingContainer } from '../styledComponents/Landingpage'
-// import girls from '../images/girls.jpg';
 import topImg from '../images/MEET.jpg';
 import smily from '../images/smile.svg';
-import dog from '../images/dog.png';
+import frndImg5 from '../images/5.svg';
+import frndImg4 from '../images/4.svg';
+import frndImg3 from '../images/3.svg';
+
+import img01 from '../images/01.svg'
+import img02 from '../images/02.svg'
+import img003 from '../images/003.svg'
+
 import star from '../images/star.svg'
 import hand from '../images/hand.svg'
 import cupal from '../images/cupal.png'
@@ -41,21 +47,24 @@ export const Landingpage = () => {
                     <Banner_2_heading className='font'>Friendship, Dating, & Matrimony.</Banner_2_heading>
                     <Banner_2_ElementContainer>
                         <Banner_2_ElementWrapper>
-                            <Banner_2_ElementImg src={dog}/>
+                            <Banner_2_ElementImg src={frndImg5}/>
+                            <h2>Friendship</h2>
                             <Banner_2_ElementText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                 Whether you’re new to a city or looking to expand your social circle, here we simplified ways to create meaningful friendships. Friendship is not all about you connect them on social media, be Bro or Buddy to each other, go out for some activity, create memories, exchange vibes.
                             </Banner_2_ElementText>
                         </Banner_2_ElementWrapper>
                         <Banner_2_ElementWrapper>
-                            <Banner_2_ElementImg src={dog}/>
+                            <Banner_2_ElementImg src={frndImg4}/>
+                            <h2>Dating</h2>
                             <Banner_2_ElementText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Various online dating apps focus on quick dates with lesser digital satisfaction, and incidents of harassment and sexual misconduct. Although we known to be for transparency. Because there is more to life than just swiping. If dates goes wrong, at worst be a good friend.
                             </Banner_2_ElementText>
                         </Banner_2_ElementWrapper>
                         <Banner_2_ElementWrapper>
-                            <Banner_2_ElementImg src={dog}/>
+                            <Banner_2_ElementImg src={frndImg3}/>
+                            <h2>Matrimony</h2>
                             <Banner_2_ElementText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                From getting awkward on the matrimonial sites to fear of rejection to self-doubt. This is where most people ended up with. Although we make education and professionalism our primary factor to match you with right person. Although we providing digital transparency.
                             </Banner_2_ElementText>
                         </Banner_2_ElementWrapper>
                     </Banner_2_ElementContainer>
@@ -79,7 +88,8 @@ export const Landingpage = () => {
                         <Banner_4_Img src={cupal}/>
                     </Banner_4_LeftContainer>
                     <Banner_4_RightContainer>
-                        <BannerHeadingContainer><Banner_2_heading className='font' style={{fontSize:'70px',textAlign:'left', marginLeft:'20px'}}> Get Dates, <br/> Get Benefits</Banner_2_heading></BannerHeadingContainer>
+                        <div className='Banner4-wd550'>
+                        <BannerHeadingContainer><Banner_2_heading className='font' style={{fontSize:'70px',textAlign:'left', justifyContent:'flex-start'}}> Why to  <br/> Choose Us?</Banner_2_heading></BannerHeadingContainer>
                         <Banner_2_ElementText style={{fontSize:'30px',marginTop:'20px'}}> It's not just online dating, it's <br/>online dating with benefits
                             <Banner_4_elementWrapper>
                                 <Banner_4_elements><ArrowForwardIcon/> Verified users</Banner_4_elements>
@@ -88,6 +98,7 @@ export const Landingpage = () => {
                                 <Banner_4_elements><ArrowForwardIcon/> Thousands of members</Banner_4_elements>
                             </Banner_4_elementWrapper>
                         </Banner_2_ElementText>
+                        </div>
                         <Banner_4_Arrow>
                             <ArrowImg src={arrow}/>
                            
@@ -98,19 +109,19 @@ export const Landingpage = () => {
                 {/* Banner 5 */}
                 <Banner_3_Maincontainer style={{width:'100%',flexDirection:'column',gap:'50px',backgroundColor:'#f4b9a3',padding:'100px 0px'}}>
                         
-                        <Banner_2_heading className='font'>WE ARE THE FASTEST <br/> GROWING DATING APP!</Banner_2_heading>
+                        <Banner_2_heading className='font'> WHY WE ARE THE FASTEST <br/> GROWING MATCHMAKING APP?</Banner_2_heading>
                          <Banner_4_elementWrapper bannarNO={5}>
                             <Banner_2_ElementWrapper style={{border:'none'}}>
-                                <Banner_2_ElementImg src={dog}/>
-                                <h3>15 Million+ <br/> Meme Swipes</h3>
+                                <Banner_2_ElementImg src={img01}  style={{height:'80%' ,width:'80%'}}/>
+                                <h2 style={{textAlign:'center'}}>Verified <br/> from LinkedIn</h2>
                             </Banner_2_ElementWrapper>
                             <Banner_2_ElementWrapper style={{border:'none'}}>
-                                <Banner_2_ElementImg src={dog}/>
-                                <h3>500K+ <br/> Matches Made</h3>
+                                <Banner_2_ElementImg src={img02}  style={{height:'80%' ,width:'80%'}}/>
+                                <h2 style={{textAlign:'center'}}>Professional  <br/>Transparency</h2>
                             </Banner_2_ElementWrapper>
-                            <Banner_2_ElementWrapper style={{border:'none'}}>
-                                <Banner_2_ElementImg src={dog}/>
-                                <h3>150+ Universities <br/> Meme Swipes</h3>
+                            <Banner_2_ElementWrapper style={{border:'none'}} >
+                                <Banner_2_ElementImg src={img003}  style={{height:'80%' ,width:'80%'}}/>
+                                <h2 style={{textAlign:'center'}}>Globally  <br/>Accessible</h2>
                             </Banner_2_ElementWrapper>
                          </Banner_4_elementWrapper>
                 </Banner_3_Maincontainer>
@@ -120,7 +131,7 @@ export const Landingpage = () => {
                 <Banner_3_Maincontainer style={{width:'100%',flexDirection:'column',gap:'50px',backgroundColor:'#62d8b2',padding:'50px 0px',alignItems:'center',justifyContent:'center'}}>
 
                     <Banner_2_heading className='font'>CAREERS</Banner_2_heading>
-                    <div>Intrested in joining us ?<br/> Take a look at the open position</div>
+                    <Banner_2_ElementText>Intrested in joining us ?<br/> Take a look at the open position</Banner_2_ElementText>
 
                     <BtnContainer><TopBannarLeftPartBTN>View position</TopBannarLeftPartBTN></BtnContainer>
 

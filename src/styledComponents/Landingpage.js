@@ -29,18 +29,7 @@ align-items:center;
 justify-content:center;
 animation: changeBg 6s  infinite;
 padding-top:20px;
-@keyframes changeBg{
-    ${'' /* 3% {  background:rgb(255, 230, 116 , 0.6) }
-    10% {  background:rgb(255, 180, 85 , 0.6) }
-    20% { background: rgb(255, 233, 250 ,0.6) }
-    30% { background:rgb(255, 244, 203 , 0.6)  }
-    40% { background:rgb(255, 240, 182 , 0.6)  }
-    50% { background:rgb(255, 153, 193 , 0.6)  }
-    60% { background:rgb(255, 149, 213 , 0.6)  }
-    70% { background:rgb(255, 157, 235 , 0.6)  }
-    80% { background:rgb(255,201,0)  }
-    95% { background:rgb(255, 255, 255 , 0.5) } */}
-
+@keyframes changeBg{ 
     10%{background: rgb(255, 165, 0)}
     40%{background: rgb(255,201,0) }
     80%{background: rgb(255,144,232) }
@@ -162,6 +151,8 @@ export const TopBannarLeftPartElement = styled.span`
 width:100%;
 max-width:150px;
 font-size:30px;
+font-weight:600;
+
 @media only screen and (max-width:550px){
 font-size:20px;
 
@@ -204,6 +195,9 @@ justify-content:center;
 width:100%;
 max-width:100%;
 text-align:center;
+@media only screen and (max-width:550px){
+font-size:30px;
+}
 `
 export const BannerHeadingContainer = styled.div`
 ${'' /* border:1px solid red; */}
@@ -246,19 +240,17 @@ padding:20px;
 }
 `
 export const Banner_2_ElementImg = styled.img`
-height:50%;
-width:50%;
+height:70%;
+width:70%;
 `
 export const Banner_2_ElementText = styled.p`
 justify-content:flex-start;
 display:flex;
 flex-direction:column;
-${'' /* align-items:center; */}
 gap:30px;
 text-align: justify;
 text-justify: inter-word;
 font-size:20px;
-${'' /* border:1px solid red; */}
 `
 
 
@@ -297,7 +289,7 @@ min-height:inherit;
 `
 export const Banner_3_Text = styled.div`
 width:100%;
-max-width:70%;
+max-width:75%;
 font-size:30px;
 letter-spacing:2px;
 text-align:center;
@@ -432,6 +424,9 @@ display:${(props)=>props.bannarNO==5&& "flex"};
 gap:${(props)=>props.bannarNO==5&& "30px"};
 align-items:${(props)=>props.bannarNO==5&& "center"};
 justify-content:${(props)=>props.bannarNO==5&& "center"};
+@media only screen and (max-width:550px){
+    flex-direction: ${(props)=>props.bannarNO==5&& "column"};
+}
 `
 export const Banner_4_RightContainer = styled.div`
 width:100%;
@@ -445,6 +440,7 @@ justify-content:center;
 position:relative;
 padding:50px 0px;
 gap:40px;
+${'' /* border:1px solid red; */}
 `
 
 export const FunStar = styled.img`

@@ -2,11 +2,12 @@
 
 
 *{
-  margin: 0;
-  padding: 0;
+  /* margin: 0%;
+  padding: 0%; */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  ;
-}
 
+}
+ 
 .font{
   font-family: 'Fredoka One', cursive;
   font-size: xx-large;
@@ -20,17 +21,13 @@
 .footerHoverColorChange:hover{
   color: #fbb03f;
   cursor: pointer;
-color:  rgb(223, 80, 223);
-color: rgb(255, 180, 85);
-color: rgb(255, 233, 250);
-color: rgb(255, 244, 203);
-color: rgb(255, 240, 182);
-color: rgb(255, 153, 193);
-color: rgb(255, 149, 213);
-color: rgb(255, 157, 235);
-color: rgb(255, 204, 4);
-color: rgba(255, 214, 64, 0.932);
-color: rgb(255, 255, 255);
+ 
 }
+
+.Banner4-wd550{
+  margin-left: 20px;
+
+}
+ 
 
  
