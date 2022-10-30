@@ -108,7 +108,7 @@ export const Landingpage = () => {
                         <Banner_4_Arrow>
                             <ArrowImg src={arrow}/>
                            
-                        </Banner_4_Arrow>
+                        </Banner_4_Arrow> 
                     </Banner_4_RightContainer>
                 </Banner_3_Maincontainer>
 
@@ -133,7 +133,7 @@ export const Landingpage = () => {
                 </Banner_3_Maincontainer>
 
 
-                {/* bannar 6 */}
+                {/* bannar 6 */} 
                 <Banner_3_Maincontainer style={{width:'100%',flexDirection:'column',gap:'50px',backgroundColor:'#62d8b2',padding:'50px 0px',alignItems:'center',justifyContent:'center'}}>
 
                     <Banner_2_heading className='font'>CAREERS</Banner_2_heading>
