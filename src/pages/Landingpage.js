@@ -17,6 +17,9 @@ import funstar from '../images/star_fun.svg'
 import arrow from '../images/arrows.svg'
 
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { Link } from 'react-router-dom';
+
+
 
 export const Landingpage = () => {
   return (
@@ -27,7 +30,7 @@ export const Landingpage = () => {
                     <TopBannarContainer>
                         <TopBannarLeftPartContainer>
                             <TopBannarLeftPartHeading className='font'>MatchMaking portal for <br/>Linkedin users  </TopBannarLeftPartHeading>
-                            <BtnContainer><TopBannarLeftPartBTN>Let's Go <ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer>
+                            <Link className='Links' to={'/home'}><BtnContainer><TopBannarLeftPartBTN>Let's Go <ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer></Link>
                             <TopBannarLeftPartElementWrapper>
                                 <TopBannarLeftPartElement>10K+ Members</TopBannarLeftPartElement>
                                 <TopBannarLeftPartElement>Smart Ai</TopBannarLeftPartElement>

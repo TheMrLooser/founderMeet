@@ -17,6 +17,10 @@
   letter-spacing:2px;
   color:white;
 }
+.Links{
+  text-decoration: none;
+  color: inherit;
+}
 
 .footerHoverColorChange:hover{
   color: #fbb03f;
@@ -35,4 +39,5 @@
   align-items: center;
 }
 
+ 
  
