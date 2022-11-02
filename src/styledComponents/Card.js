@@ -7,7 +7,9 @@ border-radius:5px;
 min-width: 500px;
 max-width: fit-content;
 min-height: 100px;
-
+@media only screen and (max-width:580px){
+min-width: 290px;
+};
 `
 export const CardContainer = styled.div`
 width: 100%;
@@ -22,17 +24,24 @@ transition: transform 0.5s;
 &:hover{
 transform: translate(10px, 10px);
 }
+@media only screen and (max-width:580px){
+/* min-width: 400px; */
+};
 `
 export const CardWrapper = styled.div`
 display: flex;
 flex-direction: column;
 gap: 10px;
 position: relative;
+
 `
 export const CardUpperSection = styled.div`
+width: 100%;
+/* max-width: fit-content; */
 display: flex;
 /* border: 1px solid red; */
 gap: 10px;
+position: relative;
 `
 
 export const CardProfileImgSection = styled.div`
@@ -40,6 +49,12 @@ width: 100%;
 max-width: 80px;
 height: 80px;
 border-radius: 50%;
+position: relative;
+@media only screen and (max-width:580px){
+max-width:50px;
+height: 50px;
+};
+
 /* border: 1px solid black; */
 `
 export const CardProfileImg = styled.img`
@@ -60,7 +75,9 @@ justify-content: center;
 export const CardProfileName = styled.div`
 font-weight: 600;
 font-size: 25px;
-
+@media only screen and (max-width:580px){
+    font-size: 18px;
+};
 `
 export const CardRelationshipTypeContainer = styled.div`
 width: 100%;
@@ -76,6 +93,9 @@ padding: 2px 10px;
 border: 1px solid blue;
 color: blue;
 border-radius: 3px;
+@media only screen and (max-width:580px){
+    font-size: 10px;
+};
 `
 export const CardProfileType = styled.div`
 border: 1px solid black;
@@ -94,6 +114,14 @@ display: grid;
 grid-template-columns:1fr 1fr;
 min-height: 100px;
 max-height: fit-content;
+@media only screen and (max-width:580px){
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     
+
+};
 `
 
 export const CardLeftContainer = styled.div`
@@ -101,13 +129,26 @@ export const CardLeftContainer = styled.div`
 display: flex;
 flex-direction: column;
 gap: 10px;
+@media only screen and (max-width:580px){
+    width: 100%;
+    max-width: 80%;
+     align-items: center;
+     justify-content: center;
+};
 
 `
 export const CardRightContainer = styled.div`
+
 /* border: 1px solid red; */
 display: flex;
 flex-direction: column;
 gap: 10px;
+@media only screen and (max-width:580px){
+    width: 100%;
+    max-width: 80%;
+     align-items: center;
+     justify-content: center;
+};
 `
 
 export const CardElementContaienr = styled.div`

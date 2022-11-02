@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Cards } from "../componets/Card";
-import { CardContainer, Container, FilterContainer, FilterCustomInput, FilterElement, FilterH2, FilterH5, FilterInputRange, FilterInputRangeOutput, FilterOption, FilterSelect, FilterWrapper, Wrapper } from "../styledComponents/HomePage";
-
+import { CardContainer, CardMainContainer, Container, FilterContainer, FilterCustomInput, FilterElement, FilterH2, FilterH5, FilterInputRange, FilterInputRangeOutput, FilterOpener, FilterOpenerContainer, FilterOption, FilterSelect, FilterWrapper, Wrapper } from "../styledComponents/HomePage";
+import CloseIcon from '@mui/icons-material/Close';
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
  export const HomePage = ()=>{
 
     const IndustryList = [
@@ -79,14 +80,20 @@ import { CardContainer, Container, FilterContainer, FilterCustomInput, FilterEle
     const FieldOfStudyList = ["Medicine",'Engineering','Aarchitecture','Science','Business','Humanitiese & Arts' ,'Hotel Management','Management','Fashion','Law','Design','Psychology','Finance','Other']
 
     const [getAge,setAge] = useState(18) 
-    
+
+     const [showFilter,setShowFilter] = useState(null)
+    const ShowFilter = (hide)=>{
+        setShowFilter("show")
+        if(hide=="hide"){setShowFilter(hide)}
+    } 
 
     return(<>
         <Container>
             <Wrapper>
 
-                <FilterContainer>
+                <FilterContainer status = {showFilter}>
                     <FilterWrapper>
+                       {(showFilter !="hide" && showFilter !=null ) ? <div onClick={()=>ShowFilter("hide")}> <CloseIcon /></div> : null}
                         <FilterH2>Filter : </FilterH2>
                         <FilterH5>Members : </FilterH5>    
 
@@ -187,16 +194,20 @@ import { CardContainer, Container, FilterContainer, FilterCustomInput, FilterEle
 
                 {/* Cards Container */}
 
-                <CardContainer>
-                    <Cards/>
-                    <Cards/>
-                    <Cards/>
-                    <Cards/>
-                    <Cards/>
-                    <Cards/>
-                    <Cards/>
-                    <Cards/>
-                </CardContainer>
+
+               <CardMainContainer>
+                    <FilterOpenerContainer><FilterOpener onClick={ShowFilter}>Open Folter </FilterOpener></FilterOpenerContainer>
+                    <CardContainer>
+                        <Cards/>
+                        <Cards/>
+                        <Cards/>
+                        <Cards/>
+                        <Cards/>
+                        <Cards/>
+                        <Cards/>
+                        <Cards/>
+                    </CardContainer>
+               </CardMainContainer>
             </Wrapper>
         </Container>
     </>)
