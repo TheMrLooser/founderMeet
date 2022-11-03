@@ -94,7 +94,7 @@ import FilterAltIcon from '@mui/icons-material/FilterAlt';
                 <FilterContainer status = {showFilter}>
                     <FilterWrapper>
                        {(showFilter !="hide" && showFilter !=null ) ? <div onClick={()=>ShowFilter("hide")}> <CloseIcon /></div> : null}
-                        <FilterH2>Filter : </FilterH2>
+                        <FilterH2>Filter </FilterH2>
                         <FilterH5>Members : </FilterH5>    
 
                         <FilterElement>

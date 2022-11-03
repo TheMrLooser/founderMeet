@@ -6,6 +6,7 @@ width: 100%;
 min-height: 100vh;
 background-color: #FFF0E5;
 position: relative;
+margin-top: 5px;
 
 `
 export const Wrapper  = styled.div`
@@ -58,8 +59,9 @@ min-width: 200px;
 max-height: fit-content;
 min-height: 100px;
 background-color: #FFF0E5;
+border: 1px solid black;
+padding-left: 20px;
 @media only screen and (max-width:900px){
-    border: 1px solid black;
     width: 300px;
     max-height: 100%;
     overflow: auto;
@@ -88,6 +90,9 @@ export const FilterH2  = styled.h2`
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 font-weight: 600;
 letter-spacing: 1px;
+display: flex;
+align-items: center;
+justify-content: center;
 `
 export const FilterH5  = styled.h4`
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -100,11 +105,12 @@ width:100%;
 max-width: 80%;
 height:40px;
 font-size:18px;
-border: none;
 background: #FFF0E5;
 border-radius: 0px;
 cursor: pointer;
 display: inline-block;
+border: 1px solid black;
+border-radius: 3px;
  
 `
 export const FilterOption = styled.option`
