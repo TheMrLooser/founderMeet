@@ -15,8 +15,8 @@ max-width: 99%;
 min-height: 100vh;
 display: grid;
 grid-template-columns:1fr 5fr;
-
 padding-top:10px;
+padding-top: 50px;
 @media only screen and (max-width:900px){
      display: flex;
      align-items: center;
@@ -59,8 +59,8 @@ min-width: 200px;
 max-height: fit-content;
 min-height: 100px;
 background-color: #FFF0E5;
-border: 1px solid black;
-padding-left: 20px;
+/* border: 1px solid black; */
+margin-left: 5px;
 @media only screen and (max-width:900px){
     width: 300px;
     max-height: 100%;
@@ -68,7 +68,12 @@ padding-left: 20px;
     position:fixed ;
     z-index: 50;
     top: 0px;
-    left: 0px;
+    left: -10px;
+    &::-webkit-scrollbar {
+    display: none;
+    };
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
     display: ${(props) => props.status =="show" ? "block" :"none" };
 
 };
@@ -77,7 +82,7 @@ padding-left: 20px;
 `
 export const FilterWrapper  = styled.div`
 padding: 10px;
-
+border: 1px solid black;
 `
 export const FilterElement  = styled.div`
 display: flex;
@@ -99,6 +104,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 font-weight: 600;
 letter-spacing: 1px;
 color: black;
+font-size: 18px;
 `
 export const FilterSelect = styled.select`
 width:100%;
@@ -111,11 +117,14 @@ cursor: pointer;
 display: inline-block;
 border: 1px solid black;
 border-radius: 3px;
+font-size: 15px;
  
 `
 export const FilterOption = styled.option`
   background: #FFF0E5;
   color: gray;
+font-size: 15px;
+
 
 &:checked{
     background: white
@@ -150,7 +159,10 @@ border: 1px solid black;
 // Card 
 
 export const CardMainContainer = styled.div`
-
+display: flex;
+flex-direction: column;
+align-items: center;
+gap:30px;
 `
 
 export const CardContainer  = styled.div`
@@ -163,5 +175,30 @@ gap: 40px;
 justify-content: center;
 /* align-items: center; */
 padding-top: 20px;
-padding-bottom: 20px;
+padding-bottom: 100px;
+`
+
+export const TopBannerContainer = styled.div`
+width: 100%;
+height: 70px;
+background-color: #FFC900;
+max-width: 83%;
+border-radius: 3px ;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 20px;
+@media only screen and (max-width:900px) {
+    max-width: 70%;
+
+}
+`
+export const Title = styled.div`
+width: 83%;
+font-size: 25px;
+font-weight: 600;
+@media only screen and (max-width:900px) {
+    width: 70%;
+
+}
 `

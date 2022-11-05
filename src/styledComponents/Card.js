@@ -8,7 +8,7 @@ min-width: 500px;
 max-width: fit-content;
 min-height: 100px;
 @media only screen and (max-width:580px){
-min-width: 290px;
+min-width: 365px;
 };
 `
 export const CardContainer = styled.div`
@@ -22,7 +22,7 @@ border-radius: 3px;
 padding: 15px;
 transition: transform 0.5s;
 &:hover{
-transform: translate(10px, 10px);
+transform: translate(10px, -10px);
 }
 @media only screen and (max-width:580px){
 /* min-width: 400px; */
@@ -50,6 +50,10 @@ max-width: 80px;
 height: 80px;
 border-radius: 50%;
 position: relative;
+border: 1px solid black;
+display: flex;
+align-items: center;
+justify-content: center;
 @media only screen and (max-width:580px){
 max-width:50px;
 height: 50px;
@@ -73,18 +77,23 @@ justify-content: center;
 
 `
 export const CardProfileName = styled.div`
+
 font-weight: 600;
 font-size: 25px;
+display: flex;
+align-items: center;
+justify-content: space-between;
 @media only screen and (max-width:580px){
     font-size: 18px;
 };
 `
 export const CardRelationshipTypeContainer = styled.div`
 width: 100%;
-max-width: fit-content;
+/* max-width: fit-content; */
+/* border: 1px solid red; */
 display: flex;
 gap: 10px;
-
+/* flex-wrap: wrap; */
 `
 export const CardRelationshipTypes = styled.div`
 width: 100%;
@@ -93,18 +102,22 @@ padding: 2px 10px;
 border: 1px solid blue;
 color: blue;
 border-radius: 3px;
+font-size: 12px;
 @media only screen and (max-width:580px){
     font-size: 10px;
 };
 `
 export const CardProfileType = styled.div`
 border: 1px solid black;
-position: absolute;
-right: 10px;
+/* position: absolute; */
+/* right: 10px;
+top:10px; */
 padding: 0px 10px;
 background-color: black;
 color: #FFC900;
 border-radius: 3px;
+font-size: 16px;
+font-weight: 400;
 `
 
 

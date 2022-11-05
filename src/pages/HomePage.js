@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Cards } from "../componets/Card";
-import { CardContainer, CardMainContainer, Container, FilterContainer, FilterCustomInput, FilterElement, FilterH2, FilterH5, FilterInputRange, FilterInputRangeOutput, FilterOpener, FilterOpenerContainer, FilterOption, FilterSelect, FilterWrapper, Wrapper } from "../styledComponents/HomePage";
+import { CardContainer, CardMainContainer, Container, FilterContainer, FilterCustomInput, FilterElement, FilterH2, FilterH5, FilterInputRange, FilterInputRangeOutput, FilterOpener, FilterOpenerContainer, FilterOption, FilterSelect, FilterWrapper, Title, TopBannerContainer, Wrapper } from "../styledComponents/HomePage";
 import CloseIcon from '@mui/icons-material/Close';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
  export const HomePage = ()=>{
@@ -120,19 +120,19 @@ import FilterAltIcon from '@mui/icons-material/FilterAlt';
                         <FilterH5>Location : </FilterH5> 
                         <FilterElement>
                             <FilterSelect>
-                                <FilterOption selected disabled>City From</FilterOption>
-                                <FilterOption></FilterOption>
-                            </FilterSelect>
-                            <FilterSelect>
                                 <FilterOption selected disabled>Country From</FilterOption>
                                 <FilterOption></FilterOption>
                             </FilterSelect>
                             <FilterSelect>
-                                <FilterOption selected disabled>City Current</FilterOption>
+                                <FilterOption selected disabled>City From</FilterOption>
                                 <FilterOption></FilterOption>
                             </FilterSelect>
                             <FilterSelect>
                                 <FilterOption selected disabled>Country Current</FilterOption>
+                                <FilterOption></FilterOption>
+                            </FilterSelect>
+                            <FilterSelect>
+                                <FilterOption selected disabled>City Current</FilterOption>
                                 <FilterOption></FilterOption>
                             </FilterSelect>
                         </FilterElement>    
@@ -197,6 +197,8 @@ import FilterAltIcon from '@mui/icons-material/FilterAlt';
 
                <CardMainContainer>
                     <FilterOpenerContainer><FilterOpener onClick={ShowFilter}>Open Folter </FilterOpener></FilterOpenerContainer>
+                    <TopBannerContainer>Lorem Lorem Lorem Lorem Lorem</TopBannerContainer>
+                    <Title>Heading</Title>
                     <CardContainer>
                         <Cards/>
                         <Cards/>

@@ -18,14 +18,15 @@ export const Cards = ()=>{
                         <CardProfileImg src="https://tse4.mm.bing.net/th?id=OIP.Qz_6_xtigETpBhXMP76jlgHaH5&pid=Api&P=0"/>
                     </CardProfileImgSection>
                     <CardProfileNameContainer>
-                        <CardProfileName>Ankush Kumar</CardProfileName>
+                        <CardProfileName><div>Ankush Kumar </div> <CardProfileType>Basic</CardProfileType></CardProfileName>
                         <CardRelationshipTypeContainer>
+                            <div style={{fontSize:'16px'}}>Looking for : </div>
                             <CardRelationshipTypes>Friendship</CardRelationshipTypes>
                             <CardRelationshipTypes>Dating</CardRelationshipTypes>
                             <CardRelationshipTypes>Matrimony</CardRelationshipTypes>
                         </CardRelationshipTypeContainer>
                     </CardProfileNameContainer>
-                    <CardProfileType>Basic</CardProfileType>
+                    
                 </CardUpperSection>
 
 
