@@ -2,9 +2,9 @@ import React from 'react'
 import {TopBannarLeftPartElement,TopBannarLeftPartElementWrapper, Container, TopBannarContainer, TopBannarImg, TopBannarLeftPartBTN, TopBannarLeftPartContainer, TopBannarLeftPartHeading, Wrapper, BtnContainer, SmilyImg, TopBannerImgContainer, Banner_2_container, Banner_2_heading, Banner_2_headingElement, Banner_2_ElementContainer, Banner_2_ElementWrapper, Banner_2_ElementImg, Banner_2_ElementText, MovingTextContainer, Banner_3_container, Banner_3_Wrapper, Banner_3_Maincontainer, Banner_3_Text, Banner_3_HandImg, Banner_3_StarImg, Banner_4_LeftContainer, Banner_4_RightContainer, Banner_4_Img, Banner_4_elements, Banner_4_elementWrapper, Banner_4_Arrow, Banner_4_ArrowSpan, FunStar, SunStar, TopBannarWrapper, ArrowImg, BannerHeadingContainer } from '../styledComponents/Landingpage'
 import topImg from '../images/MEET.jpg';
 import smily from '../images/smile.svg';
-import frndImg5 from '../images/5.svg';
-import frndImg4 from '../images/4.svg';
-import frndImg3 from '../images/3.svg';
+import frndImg5 from '../images/5.png'; //
+import frndImg4 from '../images/4.png';//
+import frndImg3 from '../images/03.png';//
 
 import img01 from '../images/01.svg'
 import img02 from '../images/02.svg'

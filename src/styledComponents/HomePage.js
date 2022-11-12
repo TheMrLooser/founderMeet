@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Slider from '@mui/material/Slider';
 
 
 export const Container  = styled.div`
@@ -59,16 +60,16 @@ min-width: 200px;
 max-height: fit-content;
 min-height: 100px;
 background-color: #FFF0E5;
-/* border: 1px solid black; */
-margin-left: 5px;
+/* border: 1px solid red; */
+margin-left: 50px;
 @media only screen and (max-width:900px){
     width: 300px;
     max-height: 100%;
     overflow: auto;
     position:fixed ;
     z-index: 50;
-    top: 0px;
-    left: -10px;
+    top: 70px;
+    left: -50px;
     &::-webkit-scrollbar {
     display: none;
     };
@@ -83,6 +84,8 @@ margin-left: 5px;
 export const FilterWrapper  = styled.div`
 padding: 10px;
 border: 1px solid black;
+border-radius: 3px;
+padding-bottom: 40px;
 `
 export const FilterElement  = styled.div`
 display: flex;
@@ -91,6 +94,49 @@ align-items: center;
 justify-content: center;
 gap:10px;
 `
+
+export const PrettoSlider = styled(Slider)({
+  color: '#52af77',
+  height: 8,
+  '& .MuiSlider-track': {
+    border: 'none',
+  },
+  '& .MuiSlider-thumb': {
+    height: 24,
+    width: 24,
+    // backgroundColor: '#fff',
+    border: '2px solid currentColor',
+    '&:focus, &:hover, &.Mui-active, &.Mui-focusVisible': {
+      boxShadow: 'inherit',
+    },
+    '&:hover': {
+      boxShadow: '0 0 0 8px rgba(58, 133, 137, 0.16)',
+    },
+    '&:before': {
+      display: 'none',
+    },
+  },
+  '& .MuiSlider-valueLabel': {
+    lineHeight: 1.2,
+    fontSize: 12,
+    background: 'unset',
+    padding: 0,
+    width: 32,
+    height: 32,
+    borderRadius: '50% 50% 50% 0',
+    backgroundColor: '#FFC900',
+    transformOrigin: 'bottom left',
+    transform: 'translate(50%, -100%) rotate(-45deg) scale(0)',
+    '&:before': { display: 'none' },
+    '&.MuiSlider-valueLabelOpen': {
+      transform: 'translate(50%, -100%) rotate(-45deg) scale(1)',
+    },
+    '& > *': {
+      transform: 'rotate(45deg)',
+    },
+  },
+});
+
 export const FilterH2  = styled.h2`
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 font-weight: 600;
@@ -118,7 +164,43 @@ display: inline-block;
 border: 1px solid black;
 border-radius: 3px;
 font-size: 15px;
- 
+padding-left: 5px;
+-webkit-appearance: none;
+-moz-appearance: none;
+
+// select arrow designe
+background-image:
+linear-gradient(45deg, transparent 50%, gray 50%),
+linear-gradient(135deg, gray 50%, transparent 50%),
+radial-gradient(#ddd 70%, transparent 70%);
+background-position:
+calc(100% - 20px) calc(1em + 2px),
+calc(100% - 15px) calc(1em + 2px),
+calc(100% - .6em) .5em;
+background-size:
+5px 5px,
+5px 5px,
+1.5em 1.5em;
+background-repeat: no-repeat;
+
+&:focus{
+  background-image:
+linear-gradient(45deg, white 50%, transparent 50%),
+linear-gradient(135deg, transparent 50%, white 50%),
+radial-gradient(gray 70%, transparent 72%);
+background-position:
+calc(100% - 15px) 1em,
+calc(100% - 20px) 1em,
+calc(100% - .6em) .5em;
+background-size:
+5px 5px,
+5px 5px,
+1.5em 1.5em;
+background-repeat: no-repeat;
+border-color: green;
+outline: 0;
+}
+
 `
 export const FilterOption = styled.option`
   background: #FFF0E5;
@@ -153,6 +235,7 @@ max-width: 78%;
 height: 30px;
 border-radius: 5px;
 border: 1px solid black;
+padding-left: 5px;
 `
 
 
@@ -163,6 +246,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 gap:30px;
+padding-bottom: 50px;
 `
 
 export const CardContainer  = styled.div`
@@ -175,7 +259,7 @@ gap: 40px;
 justify-content: center;
 /* align-items: center; */
 padding-top: 20px;
-padding-bottom: 100px;
+padding-bottom: 50px;
 `
 
 export const TopBannerContainer = styled.div`
@@ -201,4 +285,10 @@ font-weight: 600;
     width: 70%;
 
 }
+`
+export const PaginationContainer = styled.div`
+  
+`
+export const PaginationWrapper = styled.div`
+
 `

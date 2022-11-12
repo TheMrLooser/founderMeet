@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { Cards } from "../componets/Card";
-import { CardContainer, CardMainContainer, Container, FilterContainer, FilterCustomInput, FilterElement, FilterH2, FilterH5, FilterInputRange, FilterInputRangeOutput, FilterOpener, FilterOpenerContainer, FilterOption, FilterSelect, FilterWrapper, Title, TopBannerContainer, Wrapper } from "../styledComponents/HomePage";
+import { CardContainer, CardMainContainer, Container, FilterContainer, FilterCustomInput, FilterElement, FilterH2, FilterH5, FilterInputRange, FilterInputRangeOutput, FilterOpener, FilterOpenerContainer, FilterOption, FilterSelect, FilterWrapper, PrettoSlider, Title, TopBannerContainer, Wrapper } from "../styledComponents/HomePage";
 import CloseIcon from '@mui/icons-material/Close';
-import FilterAltIcon from '@mui/icons-material/FilterAlt';
+import Box from '@mui/material/Box';
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
+
  export const HomePage = ()=>{
 
     const IndustryList = [
@@ -79,13 +84,45 @@ import FilterAltIcon from '@mui/icons-material/FilterAlt';
 
     const FieldOfStudyList = ["Medicine",'Engineering','Aarchitecture','Science','Business','Humanitiese & Arts' ,'Hotel Management','Management','Fashion','Law','Design','Psychology','Finance','Other']
 
-    const [getAge,setAge] = useState(18) 
-
-     const [showFilter,setShowFilter] = useState(null)
+    
+    const [showFilter,setShowFilter] = useState(null)
     const ShowFilter = (hide)=>{
         setShowFilter("show")
         if(hide=="hide"){setShowFilter(hide)}
     } 
+    
+    // range Slider
+    function valuetext(value) {
+        return `${value}°C`;
+      }
+    const [value, setValue] = React.useState([20, 37]);
+    
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+   
+   
+   // check box 
+
+   const [checked, setChecked] = React.useState([true, false]);
+
+ 
+   const handleChange2 = (event) => {
+     setChecked([event.target.checked, checked[1]]);
+   };
+ 
+   const handleChange3 = (event) => {
+     setChecked([checked[0], event.target.checked]);
+   };
+ 
+   
+    // Pagination
+    const [page, setPage] = React.useState(1);
+    const handlePageChange = (event, value) => {
+        setPage(value);
+        console.log(page)
+    };
+
 
     return(<>
         <Container>
@@ -141,24 +178,45 @@ import FilterAltIcon from '@mui/icons-material/FilterAlt';
 
                     <FilterH5>Age : </FilterH5> 
                     <FilterElement>
-                        <FilterInputRangeOutput>{getAge}</FilterInputRangeOutput>
-                        <FilterInputRange type={'range'} min="18" max="50"  onChange={(e)=>setAge(e.target.value)}/>
+                        <Box sx={{ width:'150px' }}> 
+                        <PrettoSlider 
+                            valueLabelDisplay="auto"
+                            aria-label="pretto slider"
+                            getAriaLabel={() => 'Temperature range'}
+                            value={value}
+                            onChange={handleChange}
+                            getAriaValueText={valuetext}
+                            max={50}
+                            min={18}
+                            sx={{color:'black'}}
+                        />
+                        </Box> 
                     </FilterElement>
 
                     <FilterH5>Language : </FilterH5> 
                     <FilterElement>
-                        <FilterSelect>
-                            <FilterOption selected disabled>Select Language</FilterOption>
+                        {/* <FilterSelect>
+                              <FilterOption selected disabled>  Language</FilterOption>
                             <FilterOption>Hindi</FilterOption>
-                            <FilterOption>English</FilterOption>
-                             
-                        </FilterSelect>
-                    </FilterElement>
+                            <FilterOption>English</FilterOption>  
+                            </FilterSelect> */}
+                        
+                            <Box sx={{ display: 'flex', flexDirection: 'column', ml: 3 }}>
+                                <FormControlLabel
+                                    label="Hindi"
+                                    control={<Checkbox checked={checked[0]} onChange={handleChange2} />}
+                                />
+                                <FormControlLabel
+                                    label="English"
+                                    control={<Checkbox checked={checked[1]} onChange={handleChange3} />}
+                                />
+                            </Box>
+                        </FilterElement>
 
                     <FilterH5>Qualification : </FilterH5> 
                     <FilterElement>
                         <FilterSelect>
-                            <FilterOption selected disabled>Select Highest Qualification</FilterOption>
+                            <FilterOption selected disabled>Highest Qualification</FilterOption>
                             <FilterOption>Bachelors</FilterOption>
                             <FilterOption>Masters</FilterOption>
                             <FilterOption>PHD</FilterOption>
@@ -166,7 +224,7 @@ import FilterAltIcon from '@mui/icons-material/FilterAlt';
                             <FilterOption>Other</FilterOption>
                         </FilterSelect>
                         <FilterSelect>
-                            <FilterOption selected disabled>Select Field of Study</FilterOption>
+                            <FilterOption selected disabled>Field of Study</FilterOption>
                             {FieldOfStudyList.map((field,index)=><FilterOption key={index}>{field}</FilterOption>)}
 
                         </FilterSelect>
@@ -209,6 +267,9 @@ import FilterAltIcon from '@mui/icons-material/FilterAlt';
                         <Cards/>
                         <Cards/>
                     </CardContainer>
+                    <Stack spacing={2}>
+                        <Pagination count={10} page={page} onChange={handlePageChange} />
+                    </Stack>
                </CardMainContainer>
             </Wrapper>
         </Container>

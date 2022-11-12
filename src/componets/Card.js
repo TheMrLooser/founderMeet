@@ -1,5 +1,5 @@
 import React from "react";
-import { CardBaggroundContainer, CardContainer, CardElementContaienr, CardElementKey, CardElementvalue, CardLeftContainer, CardLowerSection, CardProfileImg, CardProfileImgSection, CardProfileName, CardProfileNameContainer, CardProfileType, CardRelationshipTypeContainer, CardRelationshipTypes, CardRightContainer, CardSocialMediaIcon, CardSocialMediaIconContainer, CardUpperSection, CardWrapper } from "../styledComponents/Card";
+import { CardBaggroundContainer, CardContainer, CardElementContaienr, CardElementKey, CardElementvalue, CardLeftContainer, CardLowerSection, CardProfileImg, CardProfileImgSection, CardProfileName, CardProfileNameContainer, CardProfileType, CardRelationshipTypeContainer, CardRelationshipTypes, CardRightContainer, CardSocialMediaIcon, CardSocialMediaIconContainer, CardSocialMediaIconWrapper, CardUpperSection, CardWrapper } from "../styledComponents/Card";
 import instagramIcon from '../images/instagram black.png';
 import TelegramIcon from '../images/telegramblack.png';
 import maleIcon from '../images/mail.png';
@@ -20,7 +20,7 @@ export const Cards = ()=>{
                     <CardProfileNameContainer>
                         <CardProfileName><div>Ankush Kumar </div> <CardProfileType>Basic</CardProfileType></CardProfileName>
                         <CardRelationshipTypeContainer>
-                            <div style={{fontSize:'16px'}}>Looking for : </div>
+                            {/* <div style={{fontSize:'16px'}}>Looking for : </div> */}
                             <CardRelationshipTypes>Friendship</CardRelationshipTypes>
                             <CardRelationshipTypes>Dating</CardRelationshipTypes>
                             <CardRelationshipTypes>Matrimony</CardRelationshipTypes>
@@ -34,13 +34,14 @@ export const Cards = ()=>{
                 <CardLowerSection>
                     <CardLeftContainer>
                         <CardElementContaienr>
+                            <CardElementKey>Age : </CardElementKey>
+                            <CardElementvalue>50</CardElementvalue>
+                        </CardElementContaienr>
+                        <CardElementContaienr>
                             <CardElementKey>From : </CardElementKey>
                             <CardElementvalue>Noida, India</CardElementvalue>
                         </CardElementContaienr>
-                        <CardElementContaienr>
-                            <CardElementKey>Current : </CardElementKey>
-                            <CardElementvalue>Noida, India</CardElementvalue>
-                        </CardElementContaienr>
+                        
                         <CardElementContaienr>
                             <CardElementKey>Language : </CardElementKey>
                             <CardElementvalue>Hindi, English</CardElementvalue>
@@ -53,14 +54,16 @@ export const Cards = ()=>{
                             <CardElementKey>Company : </CardElementKey>
                             <CardElementvalue>Hendru Pvt. ltd.</CardElementvalue>
                         </CardElementContaienr>
+                        <CardElementContaienr>
+                            <CardElementKey>Current : </CardElementKey>
+                            <CardElementvalue>Noida, India</CardElementvalue>
+                        </CardElementContaienr>
+                        
                     </CardLeftContainer>
 
 
                     <CardRightContainer>
-                        <CardElementContaienr>
-                            <CardElementKey>Age : </CardElementKey>
-                            <CardElementvalue>50</CardElementvalue>
-                        </CardElementContaienr>
+                        
                         <CardElementContaienr>
                             <CardElementKey>Gender : </CardElementKey>
                             <CardElementvalue>Male</CardElementvalue>
@@ -71,24 +74,45 @@ export const Cards = ()=>{
                              
                         </CardElementContaienr>
                         <CardElementContaienr>
-                            <CardElementKey>School Name : R.K morder </CardElementKey>
+                            <CardElementKey>Field of Study : B.tech </CardElementKey>
                             {/* <CardElementvalue>R.K morder</CardElementvalue> */}
                         </CardElementContaienr>
                         <CardElementContaienr>
-                            <CardElementKey>College Name : Avviar Education hub </CardElementKey>
+                            <CardElementKey>School  : R.K morder </CardElementKey>
+                            {/* <CardElementvalue>R.K morder</CardElementvalue> */}
+                        </CardElementContaienr>
+                        <CardElementContaienr>
+                            <CardElementKey>College  : Avviar Education hub </CardElementKey>
                             {/* <CardElementvalue>Avviar Education hub</CardElementvalue> */}
+                        </CardElementContaienr>
+                        <CardElementContaienr>
+                            <CardSocialMediaIconWrapper>
+                                Connect on : 
+                                    <CardSocialMediaIcon src={TelegramIcon}/>
+                                    <CardSocialMediaIcon src={maleIcon}/>
+                                    <CardSocialMediaIcon src={TweetIcon}/>
+                                    <CardSocialMediaIcon src={instagramIcon}/>
+                            </CardSocialMediaIconWrapper>
                         </CardElementContaienr>
                         
                     </CardRightContainer>
                     
                 </CardLowerSection>
-                <CardSocialMediaIconContainer>
-                    Connect On : 
+                {/* <CardSocialMediaIconContainer>
+                    <div>
+                    <CardElementContaienr>
+                        <CardElementKey>Current : </CardElementKey>
+                        <CardElementvalue>Noida, India</CardElementvalue>
+                    </CardElementContaienr>
+                    </div>
+                   <CardSocialMediaIconWrapper>
+                   Connect on : 
                     <CardSocialMediaIcon src={TelegramIcon}/>
                     <CardSocialMediaIcon src={maleIcon}/>
                     <CardSocialMediaIcon src={TweetIcon}/>
                     <CardSocialMediaIcon src={instagramIcon}/>
-                </CardSocialMediaIconContainer>
+                   </CardSocialMediaIconWrapper>
+                </CardSocialMediaIconContainer> */}
             </CardWrapper>
         </CardContainer>
     </CardBaggroundContainer>
