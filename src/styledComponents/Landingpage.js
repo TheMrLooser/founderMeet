@@ -164,6 +164,9 @@ max-width:100%;
 display:flex;
 align-items:center;
 gap:35px;
+@media only screen and (max-width:500px){
+    gap: 10px;
+}
 `
 export const TopBannarLeftPartElement = styled.span`
 width:100%;
