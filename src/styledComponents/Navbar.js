@@ -73,6 +73,9 @@ border-right:none;
 display:flex;
 align-items:center;
 justify-content:center;
+&:hover{  
+    background-color: #FF90E8
+}
 @media only screen and (max-width:500px){
     display:${(props)=>props.display!='block'&&'none'};
     border:none;

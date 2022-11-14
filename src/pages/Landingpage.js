@@ -15,6 +15,9 @@ import hand from '../images/hand.svg'
 import cupal from '../images/cupal.png'
 import funstar from '../images/star_fun.svg'
 import arrow from '../images/arrows.svg'
+import gp from '../images/gp_2.webp'
+import gp_3 from '../images/gp_3.webp'
+import gp_4 from '../images/gp_4.webp'
 
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Link } from 'react-router-dom';
@@ -29,12 +32,12 @@ export const Landingpage = () => {
                 <TopBannarWrapper>
                     <TopBannarContainer>
                         <TopBannarLeftPartContainer>
-                            <TopBannarLeftPartHeading className='font'>MatchMaking portal for <br/>Linkedin users  </TopBannarLeftPartHeading>
-                            <Link className='Links' to={'/home'}><BtnContainer><TopBannarLeftPartBTN>Let's Go <ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer></Link>
+                            <TopBannarLeftPartHeading className='font'>MatchMaking Portal For <br/>Working Professionals <br/> Around The World  </TopBannarLeftPartHeading>
+                            <Link className='Links' to={'/home'}><BtnContainer><TopBannarLeftPartBTN>Find  Match <ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer></Link>
                             <TopBannarLeftPartElementWrapper>
-                                <TopBannarLeftPartElement>10K+ Members</TopBannarLeftPartElement>
-                                <TopBannarLeftPartElement>Smart Ai</TopBannarLeftPartElement>
-                                <TopBannarLeftPartElement>Perfect Match</TopBannarLeftPartElement>
+                                <TopBannarLeftPartElement>Globally Accessible</TopBannarLeftPartElement>
+                                <TopBannarLeftPartElement>Dynamic Filtering</TopBannarLeftPartElement>
+                                <TopBannarLeftPartElement>Verified Profiles</TopBannarLeftPartElement>
                             </TopBannarLeftPartElementWrapper>
                         </TopBannarLeftPartContainer>
                         <TopBannerImgContainer><TopBannarImg src={topImg}/>
@@ -44,6 +47,18 @@ export const Landingpage = () => {
                 </TopBannarWrapper>
                 
                 <MovingTextContainer> <marquee style={{marginLeft: '20px', marginRight: '20px'}} behavior="scroll" scrollamount="12"> Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match &nbsp;• &nbsp; Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match • &nbsp;Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match • &nbsp;Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match • &nbsp;Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match • &nbsp;Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match &nbsp;</marquee></MovingTextContainer>
+
+                <Banner_3_Maincontainer > 
+                    <Banner_3_container style={{backgroundColor:'#ffe3ad'}}>
+                        <Banner_3_Wrapper>
+                            
+                            <Banner_3_Text><Banner_2_heading className='font'>How We Are Different From Others</Banner_2_heading>MatchMaking24 isn’t like other dating websites. Here, you’ll find a community of similar thinkers and a community of singles who are tired of the singles and dating scene and want to find a love that will last with someone who wants the same thing, a loving & meaningful relationship.</Banner_3_Text>
+                        </Banner_3_Wrapper>
+                        {/* <Banner_3_HandImg src={hand}/> */}
+                        <Banner_3_StarImg src={star}/>
+                    </Banner_3_container>
+                </Banner_3_Maincontainer>
+
 
                 <Banner_2_container>
                     <Banner_2_heading className='font'> Find your perfect match </Banner_2_heading>
@@ -121,16 +136,19 @@ export const Landingpage = () => {
                         <Banner_2_heading className='font'> WHY WE ARE THE FASTEST <br/> GROWING MATCHMAKING APP?</Banner_2_heading>
                          <Banner_4_elementWrapper bannarNO={5}>
                             <Banner_2_ElementWrapper style={{border:'none'}}>
-                                <Banner_2_ElementImg src={img01}  style={{height:'80%' ,width:'80%'}}/>
-                                <h2 style={{textAlign:'center'}}>Verified <br/> from LinkedIn</h2>
-                            </Banner_2_ElementWrapper>
+                                <Banner_2_ElementImg /*src={img01}*/ src={gp}  style={{height:'80%' ,width:'80%'}}/>
+                                <h2>Thousands of Profiles</h2>  
+                                <Banner_2_ElementText style={{textAlign:'justify' ,marginTop:'-40px'}}>Meet thousands of singles who are ready to love and be loved</Banner_2_ElementText>
+                            </Banner_2_ElementWrapper> 
                             <Banner_2_ElementWrapper style={{border:'none'}}>
-                                <Banner_2_ElementImg src={img02}  style={{height:'80%' ,width:'80%'}}/>
-                                <h2 style={{textAlign:'center'}}>Professional  <br/>Transparency</h2>
+                                <Banner_2_ElementImg /*src={img02} */ src={gp_3} style={{height:'80%' ,width:'80%'}}/>
+                                <h2>Filter Out The Noise</h2>
+                                <Banner_2_ElementText style={{textAlign:'justify' ,marginTop:'-40px'}}>Connect with matches to form a deep, trusting relationship with</Banner_2_ElementText>
                             </Banner_2_ElementWrapper>
                             <Banner_2_ElementWrapper style={{border:'none'}} >
-                                <Banner_2_ElementImg src={img003}  style={{height:'80%' ,width:'80%'}}/>
-                                <h2 style={{textAlign:'center'}}>Globally  <br/>Accessible</h2>
+                                <Banner_2_ElementImg /* src={img003}*/ src={gp_4}  style={{height:'80%' ,width:'80%'}}/>
+                                <h2>Connect You Way</h2> 
+                                <Banner_2_ElementText style={{textAlign:'justify', marginTop:'-40px'}}>Use any chat, message, and flirt options to make connections</Banner_2_ElementText>
                             </Banner_2_ElementWrapper>
                          </Banner_4_elementWrapper>
                 </Banner_3_Maincontainer>
@@ -139,10 +157,10 @@ export const Landingpage = () => {
                 {/* bannar 6 */} 
                 <Banner_3_Maincontainer style={{width:'100%',flexDirection:'column',gap:'50px',backgroundColor:'#62d8b2',padding:'50px 0px',alignItems:'center',justifyContent:'center'}}>
 
-                    <Banner_2_heading className='font'>CAREERS</Banner_2_heading>
-                    <Banner_2_ElementText>Intrested in joining us ?<br/> Take a look at the open position</Banner_2_ElementText>
+                    <Banner_2_heading className='font'>Confession To Your Crush </Banner_2_heading>
+                    <Banner_2_ElementText style={{width:'60%',textAlign:'center'}}> From getting awkward on reaching out to your crush you having from your college or office colleague, <br/> but having fear of rejection to self-doubt? This is where most people ended up with.. <br/> But no more... Now confess without revealing your identity!</Banner_2_ElementText>
 
-                    <BtnContainer><TopBannarLeftPartBTN>View position</TopBannarLeftPartBTN></BtnContainer>
+                    <BtnContainer><TopBannarLeftPartBTN>Coming soon</TopBannarLeftPartBTN></BtnContainer>
 
                 </Banner_3_Maincontainer>
 

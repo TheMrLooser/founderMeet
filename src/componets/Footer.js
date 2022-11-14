@@ -24,7 +24,7 @@ export const Footer = () => {
         </FooterWrapper>
         <FooterCopyRightSection>
             <p> Made in India 🧡</p> 
-            <p>Copyright © 2022 MatchMaking24. All Rights Reserved.</p>
+            <p>Copyright © 2022 MatchMaking24.com | All Rights Reserved.</p>
             <p> <span className='footerHoverColorChange'>Terms of Use</span> | <span className='footerHoverColorChange'> Privacy Policy </span> | <span className='footerHoverColorChange'> Support </span></p> 
         </FooterCopyRightSection>
     </FooterContainer>

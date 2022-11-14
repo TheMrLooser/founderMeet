@@ -12,7 +12,7 @@ export const Navbar = () => {
                 <LogoContainer><LogoImg src={logoImg}/><LogoText></LogoText></LogoContainer>
                 <NavElementWrapper>
                     <NavElement>Home</NavElement>
-                    <NavElement>Login</NavElement>
+                    <NavElement>Confession</NavElement>
                     <NavElement>Signup</NavElement>
                     <NavElement display={'block'}><MenuIcon sx={{fontSize:'40px'}}/></NavElement>
                 </NavElementWrapper>

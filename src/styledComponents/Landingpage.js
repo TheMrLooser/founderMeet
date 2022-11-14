@@ -106,8 +106,13 @@ ${'' /* border:1px solid red; */}
 export const TopBannarLeftPartHeading = styled.h1`
 font-size:40px;
 color:white;
-${'' /* width:100%; */}
-${'' /* border:1px solid red; */}
+ width:540px; 
+ height: 30vh;
+//  border:1px solid red; 
+ line-height: 60px;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
 `
 export const BtnContainer  = styled.div`
 width:100%;
@@ -145,7 +150,7 @@ width:100%;
 max-width:100%;
 display:flex;
 align-items:center;
-gap:10px;
+gap:35px;
 `
 export const TopBannarLeftPartElement = styled.span`
 width:100%;
