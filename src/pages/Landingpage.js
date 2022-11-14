@@ -1,5 +1,5 @@
 import React from 'react'
-import {TopBannarLeftPartElement,TopBannarLeftPartElementWrapper, Container, TopBannarContainer, TopBannarImg, TopBannarLeftPartBTN, TopBannarLeftPartContainer, TopBannarLeftPartHeading, Wrapper, BtnContainer, SmilyImg, TopBannerImgContainer, Banner_2_container, Banner_2_heading, Banner_2_headingElement, Banner_2_ElementContainer, Banner_2_ElementWrapper, Banner_2_ElementImg, Banner_2_ElementText, MovingTextContainer, Banner_3_container, Banner_3_Wrapper, Banner_3_Maincontainer, Banner_3_Text, Banner_3_HandImg, Banner_3_StarImg, Banner_4_LeftContainer, Banner_4_RightContainer, Banner_4_Img, Banner_4_elements, Banner_4_elementWrapper, Banner_4_Arrow, Banner_4_ArrowSpan, FunStar, SunStar, TopBannarWrapper, ArrowImg, BannerHeadingContainer } from '../styledComponents/Landingpage'
+import {TopBannarLeftPartElement,TopBannarLeftPartElementWrapper, Container, TopBannarContainer, TopBannarImg, TopBannarLeftPartBTN, TopBannarLeftPartContainer, TopBannarLeftPartHeading, Wrapper, BtnContainer, SmilyImg, TopBannerImgContainer, Banner_2_container, Banner_2_heading, Banner_2_headingElement, Banner_2_ElementContainer, Banner_2_ElementWrapper, Banner_2_ElementImg, Banner_2_ElementText, MovingTextContainer, Banner_3_container, Banner_3_Wrapper, Banner_3_Maincontainer, Banner_3_Text, Banner_3_HandImg, Banner_3_StarImg, Banner_4_LeftContainer, Banner_4_RightContainer, Banner_4_Img, Banner_4_elements, Banner_4_elementWrapper, Banner_4_Arrow, Banner_4_ArrowSpan, FunStar, SunStar, TopBannarWrapper, ArrowImg, BannerHeadingContainer, Banner_6_ElementText, Banner_4_heading, Banner_1_ElementText } from '../styledComponents/Landingpage'
 import topImg from '../images/MEET.jpg';
 import smily from '../images/smile.svg';
 import frndImg5 from '../images/5.png'; //
@@ -52,7 +52,7 @@ export const Landingpage = () => {
                     <Banner_3_container style={{backgroundColor:'#ffe3ad'}}>
                         <Banner_3_Wrapper>
                             
-                            <Banner_3_Text><Banner_2_heading className='font'>How We Are Different From Others</Banner_2_heading>MatchMaking24 isn’t like other dating websites. Here, you’ll find a community of similar thinkers and a community of singles who are tired of the singles and dating scene and want to find a love that will last with someone who wants the same thing, a loving & meaningful relationship.</Banner_3_Text>
+                            <Banner_3_Text><Banner_2_heading className='font'>How We Are Different From Others</Banner_2_heading> <Banner_1_ElementText>MatchMaking24 isn’t like other dating websites. Here, you’ll find a community of similar thinkers and a community of singles who are tired of the singles and dating scene and want to find a love that will last with someone who wants the same thing, a loving & meaningful relationship.</Banner_1_ElementText></Banner_3_Text>
                         </Banner_3_Wrapper>
                         {/* <Banner_3_HandImg src={hand}/> */}
                         <Banner_3_StarImg src={star}/>
@@ -113,8 +113,8 @@ export const Landingpage = () => {
                     </Banner_4_LeftContainer>
                     <Banner_4_RightContainer>
                         <div className='Banner4-wd550'>
-                        <BannerHeadingContainer><Banner_2_heading className='font' style={{fontSize:'70px',textAlign:'left', justifyContent:'flex-start'}}> Why to  <br/> Choose Us?</Banner_2_heading></BannerHeadingContainer>
-                        <Banner_2_ElementText style={{fontSize:'30px',marginTop:'20px'}}> It's not just online dating, it's <br/>online dating with benefits
+                        <BannerHeadingContainer><Banner_4_heading className='font' > Why to  <br/> Choose Us?</Banner_4_heading></BannerHeadingContainer>
+                        <Banner_2_ElementText style={{fontSize:'25px',marginTop:'20px',marginRight:'10px'}}> It's not just online dating, it's <br/>online dating with benefits
                             <Banner_4_elementWrapper>
                                 <Banner_4_elements><ArrowForwardIcon/> Verified users</Banner_4_elements>
                                 <Banner_4_elements><ArrowForwardIcon/> Chat, Message and Flirt options</Banner_4_elements>
@@ -157,8 +157,8 @@ export const Landingpage = () => {
                 {/* bannar 6 */} 
                 <Banner_3_Maincontainer style={{width:'100%',flexDirection:'column',gap:'50px',backgroundColor:'#62d8b2',padding:'50px 0px',alignItems:'center',justifyContent:'center'}}>
 
-                    <Banner_2_heading className='font'>Confession To Your Crush </Banner_2_heading>
-                    <Banner_2_ElementText style={{width:'60%',textAlign:'center'}}> From getting awkward on reaching out to your crush you having from your college or office colleague, <br/> but having fear of rejection to self-doubt? This is where most people ended up with.. <br/> But no more... Now confess without revealing your identity!</Banner_2_ElementText>
+                    <Banner_2_heading className='font'>Confession To Your Crush ! </Banner_2_heading>
+                    <Banner_6_ElementText> From getting awkward on reaching out to your crush you having from your college or office colleague, <br/> but having fear of rejection to self-doubt? This is where most people ended up with.. <br/> But no more... Now confess without revealing your identity!</Banner_6_ElementText>
 
                     <BtnContainer><TopBannarLeftPartBTN>Coming soon</TopBannarLeftPartBTN></BtnContainer>
 

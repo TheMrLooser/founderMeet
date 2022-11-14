@@ -220,6 +220,21 @@ text-align:center;
 font-size:30px;
 }
 `
+export const Banner_4_heading = styled.div`
+font-size:70px;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
+max-width:100%;
+text-align:center;
+text-align:left;
+justify-content:flex-start;
+@media only screen and (max-width:550px){
+font-size:50px;
+}
+`
 export const BannerHeadingContainer = styled.div`
 ${'' /* border:1px solid red; */}
 
@@ -273,6 +288,29 @@ text-align: justify;
 text-justify: inter-word;
 font-size:20px;
 `
+export const Banner_1_ElementText = styled.p`
+justify-content:flex-start;
+display:flex;
+flex-direction:column;
+text-align: center;
+text-justify: inter-word;
+font-size:30px;
+@media only screen and (max-width:550px){
+    font-size: 25px;
+}
+@media only screen and (max-width:450px){
+    font-size: 20px;
+}
+`
+export const Banner_6_ElementText = styled.p`
+text-align: center;
+font-size:25px;
+width: 60%;
+@media  only screen and (max-width: 550px) {
+    font-size: 18px;
+    width: 90%;
+}
+`
 
 
 
@@ -318,6 +356,9 @@ display:flex;
 flex-direction :column;
 gap:30px;
 ${'' /* font-family: 'Fredoka One', cursive; */}
+@media only screen and (max-width:550px){
+    font-size: 25px;
+}
 
 `
 export const Banner_3_StarImg = styled.img`
@@ -436,7 +477,7 @@ margin-top:20px;
 text-align:left;
 ${'' /* border:1px solid red; */}
 @media only screen and (max-width:450px){
-    font-size:25px
+    font-size:22px
 }
 `
 export const Banner_4_elementWrapper = styled.div`
@@ -461,7 +502,7 @@ justify-content:center;
 position:relative;
 padding:50px 0px;
 gap:40px;
-${'' /* border:1px solid red; */}
+
 `
 
 export const FunStar = styled.img`
