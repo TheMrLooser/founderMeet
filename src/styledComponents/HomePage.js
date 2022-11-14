@@ -62,6 +62,10 @@ min-height: 100px;
 background-color: #FFF0E5;
 /* border: 1px solid red; */
 margin-left: 50px;
+@media only screen and (max-width:1300px){
+  margin-left: 10px;
+
+}
 @media only screen and (max-width:900px){
     width: 300px;
     max-height: 100%;

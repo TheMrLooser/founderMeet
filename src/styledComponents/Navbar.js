@@ -76,7 +76,7 @@ justify-content:center;
 &:hover{  
     background-color: #FF90E8
 }
-@media only screen and (max-width:500px){
+@media only screen and (max-width:600px){
     display:${(props)=>props.display!='block'&&'none'};
     border:none;
     margin-right:15px;

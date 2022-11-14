@@ -113,6 +113,19 @@ color:white;
  display: flex;
  flex-direction: column;
  justify-content: flex-end;
+ @media only screen and (max-width:600px){
+font-size:30px;
+ width:100%; 
+/* border:1px solid red;  */
+ line-height: 50px;
+ height: fit-content;
+     
+};
+ @media only screen and (max-width:500px){
+font-size:35px;
+ width:fit-content; 
+     
+};
 `
 export const BtnContainer  = styled.div`
 width:100%;
