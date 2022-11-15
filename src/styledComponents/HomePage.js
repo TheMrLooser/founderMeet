@@ -73,7 +73,7 @@ margin-left: 50px;
     position:fixed ;
     z-index: 50;
     top: 70px;
-    left: -50px;
+    left: 0px;
     &::-webkit-scrollbar {
     display: none;
     };
@@ -245,6 +245,49 @@ border: 1px solid black;
 padding-left: 5px;
 `
 
+export const FilterButtonContainer = styled.div`
+width: 100%;
+display: flex;
+gap:20px;
+align-items: center;
+justify-content: center;
+/* border: 1px solid red; */
+margin-top: 40px;
+padding: 10px;
+@media only screen and (max-width:900px){
+margin-top: 20px;
+margin-bottom: 20px;
+
+}
+`
+export const FilterButtonWrapper = styled.div`
+width:100%;
+max-width:fit-content;
+background-color:black;
+border-radius:5px;
+`
+
+export const FilterButton = styled.button`
+width:100%;
+max-width:fit-content;
+padding:5px 15px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:5px;
+background-color:#FFC900;
+color:black;
+font-size:22px;
+font-weight:600;
+gap:5px;
+border:none;
+transform: translate(-8px, -8px);
+cursor:pointer;
+transition: transform 0.5s;
+&:hover{
+transform: translate(-2px, -2px);
+}
+`
 
 // Card 
 

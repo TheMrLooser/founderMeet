@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CardBaggroundContainer = styled.div`
 width: 100%;
-max-width:400px;
+max-width:500px;
 height: min-content;
 background-color:#FFC900;
 border-radius:5px;
@@ -11,8 +11,8 @@ min-width: 300px;
 };
 `
 export const CardContainer = styled.div`
-max-width: 400px;
-max-height: 10vh;
+max-width: inherit;
+/* max-height: 10vh; */
 border: 1px solid gray;
 background-color: white;
 border-radius: 3px;
@@ -126,7 +126,7 @@ margin-right: 20px;
 
 export const CardLowerSection = styled.div`
 display: grid;
-border: 1px solid black;
+/* border: 1px solid black; */
 grid-template-columns:1fr 1fr;
 min-height: 100px;
 max-height: fit-content;
@@ -145,6 +145,7 @@ export const CardLeftContainer = styled.div`
 display: flex;
 flex-direction: column;
 gap: 10px;
+padding-right: 10px;
 @media only screen and (max-width:580px){
     width: 100%;
     max-width: 80%;
@@ -172,22 +173,19 @@ width: 100%;
 display: flex;
 gap: 10px;
 position: relative;
-/* border: 1px solid red; */
 `
 export const CardElementKey = styled.div`
-height: 20px;
-overflow: hidden;
-&:hover{
-    overflow: visible;
-}
-
+height: 25px;
+min-width: fit-content;
 `
 export const CardElementvalue = styled.div`
 /* border: 1px solid black; */
-height: 20px;
+height: 25px;
 overflow: hidden;
+/* color: #6b6b6b; */
 &:hover{
     overflow: visible;
+    height: fit-content;
 }
 `
 export const CardSocialMediaIconContainer = styled.div`

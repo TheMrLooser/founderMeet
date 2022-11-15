@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Cards } from "../componets/Card";
-import { CardContainer, CardMainContainer, Container, FilterContainer, FilterCustomInput, FilterElement, FilterH2, FilterH5, FilterInputRange, FilterInputRangeOutput, FilterOpener, FilterOpenerContainer, FilterOption, FilterSelect, FilterWrapper, PrettoSlider, Title, TopBannerContainer, Wrapper } from "../styledComponents/HomePage";
+import { CardContainer, CardMainContainer, Container, FilterButton, FilterButtonContainer, FilterButtonWrapper, FilterContainer, FilterCustomInput, FilterElement, FilterH2, FilterH5, FilterInputRange, FilterInputRangeOutput, FilterOpener, FilterOpenerContainer, FilterOption, FilterSelect, FilterWrapper, PrettoSlider, Title, TopBannerContainer, Wrapper } from "../styledComponents/HomePage";
 import CloseIcon from '@mui/icons-material/Close';
 import Box from '@mui/material/Box';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import { BtnContainer, TopBannarLeftPartBTN } from "../styledComponents/Landingpage";
 
  export const HomePage = ()=>{
 
@@ -244,7 +245,12 @@ import Stack from '@mui/material/Stack';
                         <FilterCustomInput placeholder="Enter Company Name"/>
                          
                     </FilterElement>
-
+                    
+                    <FilterButtonContainer>
+                        <FilterButtonWrapper><FilterButton>Reset</FilterButton></FilterButtonWrapper>
+                        <FilterButtonWrapper><FilterButton>Apply</FilterButton></FilterButtonWrapper>
+                       
+                    </FilterButtonContainer>
                     </FilterWrapper>
 
                 </FilterContainer>
@@ -258,6 +264,13 @@ import Stack from '@mui/material/Stack';
                     <TopBannerContainer>Lorem Lorem Lorem Lorem Lorem</TopBannerContainer>
                     <Title>Heading</Title>
                     <CardContainer>
+                        <Cards/>
+                        <Cards/>
+                        <Cards/>
+                        <Cards/>
+                        <Cards/>
+                        <Cards/>
+                        <Cards/>
                         <Cards/>
                         
                     </CardContainer>
