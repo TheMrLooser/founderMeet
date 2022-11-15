@@ -312,11 +312,11 @@ width: 60%;
 }
 `
 
-
+  
 
 // banner 3
 export const Banner_3_Maincontainer = styled.div`
-background-color:white;
+background-color:white; 
 width:100%;
 max-width:100%;
 min-height:400px;

@@ -86,7 +86,7 @@ margin-left: 50px;
 
 `
 export const FilterWrapper  = styled.div`
-padding: 10px;
+/* padding: 10px; */
 border: 1px solid black;
 border-radius: 3px;
 padding-bottom: 40px;
@@ -148,6 +148,8 @@ letter-spacing: 1px;
 display: flex;
 align-items: center;
 justify-content: center;
+background-color: #FFC900;
+margin-top: 0px;
 `
 export const FilterH5  = styled.h4`
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -155,6 +157,7 @@ font-weight: 600;
 letter-spacing: 1px;
 color: black;
 font-size: 18px;
+padding-left: 10px;
 `
 export const FilterSelect = styled.select`
 width:100%;

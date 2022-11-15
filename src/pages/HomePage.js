@@ -259,13 +259,7 @@ import Stack from '@mui/material/Stack';
                     <Title>Heading</Title>
                     <CardContainer>
                         <Cards/>
-                        <Cards/>
-                        <Cards/>
-                        <Cards/>
-                        <Cards/>
-                        <Cards/>
-                        <Cards/>
-                        <Cards/>
+                        
                     </CardContainer>
                     <Stack spacing={2}>
                         <Pagination count={10} page={page} onChange={handlePageChange} />

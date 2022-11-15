@@ -1,21 +1,18 @@
 import styled from "styled-components";
 
 export const CardBaggroundContainer = styled.div`
- width:100%;
+width: 100%;
+max-width:400px;
+height: min-content;
 background-color:#FFC900;
 border-radius:5px;
-min-width:450px;
-max-width: fit-content;
-min-height: 100px;
 @media only screen and (max-width:580px){
 min-width: 300px;
 };
 `
 export const CardContainer = styled.div`
-width: 100%;
-max-width: inherit;
-min-height: inherit;
-max-height: fit-content;
+max-width: 400px;
+max-height: 10vh;
 border: 1px solid gray;
 background-color: white;
 border-radius: 3px;
@@ -29,6 +26,7 @@ transform: translate(10px, -10px);
 };
 `
 export const CardWrapper = styled.div`
+width: 100%;
 display: flex;
 flex-direction: column;
 gap: 10px;
@@ -37,7 +35,7 @@ position: relative;
 `
 export const CardUpperSection = styled.div`
 width: 100%;
-/* max-width: fit-content; */
+max-width: 500px;
 display: flex;
 /* border: 1px solid red; */
 gap: 10px;
@@ -101,8 +99,8 @@ export const CardRelationshipTypes = styled.div`
 width: 100%;
 max-width: fit-content;
 padding: 2px 10px;
-border: 1px solid #f1c007;
-color: #FFC900;
+border: 1px solid black;
+color: black;
 border-radius: 3px;
 font-size: 12px;
 @media only screen and (max-width:580px){
@@ -111,9 +109,9 @@ font-size: 12px;
 `
 export const CardProfileType = styled.div`
 border: 1px solid #FFC900;
-/* position: absolute; */
-/* right: 10px;
-top:10px; */
+position: absolute;
+right: 0px;
+top:15px;
 padding: 0px 10px;
 background-color: #FFC900;
 color: black;
@@ -128,6 +126,7 @@ margin-right: 20px;
 
 export const CardLowerSection = styled.div`
 display: grid;
+border: 1px solid black;
 grid-template-columns:1fr 1fr;
 min-height: 100px;
 max-height: fit-content;
@@ -172,15 +171,24 @@ export const CardElementContaienr = styled.div`
 width: 100%;
 display: flex;
 gap: 10px;
+position: relative;
 /* border: 1px solid red; */
 `
 export const CardElementKey = styled.div`
-
+height: 20px;
+overflow: hidden;
+&:hover{
+    overflow: visible;
+}
 
 `
 export const CardElementvalue = styled.div`
-
-
+/* border: 1px solid black; */
+height: 20px;
+overflow: hidden;
+&:hover{
+    overflow: visible;
+}
 `
 export const CardSocialMediaIconContainer = styled.div`
 width: 100%;
