@@ -1,7 +1,7 @@
 import React from 'react'
-import { LogoContainer, LogoImg, LogoText, NavContainer, NavElement, NavElementWrapper, NavWrapper } from '../styledComponents/Navbar'
+import { AnkarTag, LogoContainer, LogoImg, LogoText, NavContainer, NavElement, NavElementWrapper, NavWrapper } from '../styledComponents/Navbar'
 import MenuIcon from '@mui/icons-material/Menu';
-import dil from '../images/dil.svg'
+import { Link } from 'react-router-dom';
 import logoImg from '../images/logo.svg'
 export const Navbar = () => {
   return (
@@ -9,10 +9,10 @@ export const Navbar = () => {
         <NavContainer>
             
             <NavWrapper>
-                <LogoContainer><LogoImg src={logoImg}/><LogoText></LogoText></LogoContainer>
+                <LogoContainer><Link to={'/'}><LogoImg src={logoImg}/></Link><LogoText></LogoText></LogoContainer>
                 <NavElementWrapper>
                     <NavElement>Home</NavElement>
-                    <NavElement>Confession</NavElement>
+                    <NavElement><AnkarTag href='#Confession'>Confession</AnkarTag> </NavElement>
                     <NavElement>Signup</NavElement>
                     <NavElement display={'block'}><MenuIcon sx={{fontSize:'40px'}}/></NavElement>
                 </NavElementWrapper>

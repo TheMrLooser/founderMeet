@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { Cards } from "../componets/Card";
-import { CardContainer, CardMainContainer, Container, FilterButton, FilterButtonContainer, FilterButtonWrapper, FilterContainer, FilterCustomInput, FilterElement, FilterH2, FilterH5, FilterInputRange, FilterInputRangeOutput, FilterOpener, FilterOpenerContainer, FilterOption, FilterSelect, FilterWrapper, PrettoSlider, Title, TopBannerContainer, Wrapper } from "../styledComponents/HomePage";
+import { CardContainer, CardMainContainer, Container, FilterButton, FilterButtonContainer, FilterButtonWrapper, FilterContainer, FilterCustomInput, FilterElement, FilterH2, FilterH5, FilterInputRange, FilterInputRangeOutput, FilterOpener, FilterOpenerContainer, FilterOption, FilterSelect, FilterSelect_antd, FilterWrapper, PrettoSlider, Title, TopBannerContainer, Wrapper } from "../styledComponents/HomePage";
 import CloseIcon from '@mui/icons-material/Close';
 import Box from '@mui/material/Box';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import { BtnContainer, TopBannarLeftPartBTN } from "../styledComponents/Landingpage";
-
  export const HomePage = ()=>{
 
     const IndustryList = [
@@ -136,6 +134,7 @@ import { BtnContainer, TopBannarLeftPartBTN } from "../styledComponents/Landingp
                         <FilterH5>Members : </FilterH5>    
 
                         <FilterElement>
+                             
                             <FilterSelect>
                                 <FilterOption selected disabled>Gender</FilterOption>
                                 <FilterOption className="Option">Male</FilterOption>
@@ -158,21 +157,14 @@ import { BtnContainer, TopBannarLeftPartBTN } from "../styledComponents/Landingp
                         <FilterH5>Location : </FilterH5> 
                         <FilterElement>
                             <FilterSelect>
-                                <FilterOption selected disabled>Country From</FilterOption>
+                                <FilterOption selected disabled>Country</FilterOption>
                                 <FilterOption></FilterOption>
                             </FilterSelect>
                             <FilterSelect>
-                                <FilterOption selected disabled>City From</FilterOption>
+                                <FilterOption selected disabled>City</FilterOption>
                                 <FilterOption></FilterOption>
                             </FilterSelect>
-                            <FilterSelect>
-                                <FilterOption selected disabled>Country Current</FilterOption>
-                                <FilterOption></FilterOption>
-                            </FilterSelect>
-                            <FilterSelect>
-                                <FilterOption selected disabled>City Current</FilterOption>
-                                <FilterOption></FilterOption>
-                            </FilterSelect>
+                             
                         </FilterElement>    
                                 
                     

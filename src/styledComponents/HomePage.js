@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Slider from '@mui/material/Slider';
+import { Select } from 'antd'; 
 
 
 export const Container  = styled.div`
@@ -150,6 +151,8 @@ align-items: center;
 justify-content: center;
 background-color: #FFC900;
 margin-top: 0px;
+height: 70px;
+border-radius: 3px;
 `
 export const FilterH5  = styled.h4`
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -159,6 +162,9 @@ color: black;
 font-size: 18px;
 padding-left: 10px;
 `
+
+ 
+
 export const FilterSelect = styled.select`
 width:100%;
 max-width: 80%;

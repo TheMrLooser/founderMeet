@@ -13,7 +13,7 @@ function App() {
        <Navbar/>
         <Routes>
           <Route path='/' element={<Landingpage/>}/>
-          <Route path='/home' element={<HomePage/>}/>
+          <Route path='/find-match' element={<HomePage/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>

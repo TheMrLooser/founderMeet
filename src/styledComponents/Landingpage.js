@@ -304,7 +304,7 @@ font-size:30px;
 `
 export const Banner_6_ElementText = styled.p`
 text-align: center;
-font-size:25px;
+font-size:24px;
 width: 60%;
 @media  only screen and (max-width: 550px) {
     font-size: 18px;
@@ -443,7 +443,7 @@ margin-bottom:60px;
 export const Banner_4_Arrow = styled.div`
 position:absolute;
 bottom:10px;
-right:10px;
+right:20px;
 ${'' /* transform:translate(50%, 50%); */}
 ${'' /* border:1px solid red; */}
 z-index:10;

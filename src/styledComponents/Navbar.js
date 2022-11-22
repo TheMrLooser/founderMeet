@@ -34,15 +34,12 @@ background-color:#FFC900;
 padding:0px 10px;
 
 @media only screen and (max-width:500px){
-    max-width:100px;
+    max-width:180px;
 }
 `
 export const LogoImg = styled.img`
 
-@media only screen and (max-width:500px){
-    width:100%;
-height:80%;
-}
+
 `
 export const LogoText = styled.span`
 
@@ -64,8 +61,8 @@ height:inherit;
 `
 export const NavElement = styled.span`
 width:100%;
-max-width:fit-content;
-padding:0px 5%;
+max-width:15%;
+/* padding:0px 5%; */
 cursor:pointer;
 height:inherit;
 border:2px solid black;
@@ -76,10 +73,24 @@ justify-content:center;
 &:hover{  
     background-color: #FF90E8
 }
+@media only screen and (max-width:800px){
+    max-width:25%;
+}
 @media only screen and (max-width:600px){
     display:${(props)=>props.display!='block'&&'none'};
     border:none;
     margin-right:15px;
 
 }
+`
+export const AnkarTag = styled.a`
+width: 100%;
+max-width: 100%;
+
+height: inherit;
+display:flex;
+align-items:center;
+justify-content:center;
+color: inherit;
+text-decoration: none;
 `

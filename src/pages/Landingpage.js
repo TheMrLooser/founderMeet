@@ -33,7 +33,7 @@ export const Landingpage = () => {
                     <TopBannarContainer>
                         <TopBannarLeftPartContainer>
                             <TopBannarLeftPartHeading className='font'>MatchMaking Portal For <br/>Working Professionals <br/> Around The World  </TopBannarLeftPartHeading>
-                            <Link className='Links' to={'/home'}><BtnContainer><TopBannarLeftPartBTN>Find  Match <ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer></Link>
+                            <Link className='Links' to={'/find-match'}><BtnContainer><TopBannarLeftPartBTN>Find  Match <ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer></Link>
                             <TopBannarLeftPartElementWrapper>
                                 <TopBannarLeftPartElement>Globally Accessible</TopBannarLeftPartElement>
                                 <TopBannarLeftPartElement>Dynamic Filtering</TopBannarLeftPartElement>
@@ -125,7 +125,6 @@ export const Landingpage = () => {
                         </div>
                         <Banner_4_Arrow>
                             <ArrowImg src={arrow}/>
-                           
                         </Banner_4_Arrow> 
                     </Banner_4_RightContainer>
                 </Banner_3_Maincontainer>
@@ -157,7 +156,7 @@ export const Landingpage = () => {
                 {/* bannar 6 */} 
                 <Banner_3_Maincontainer style={{width:'100%',flexDirection:'column',gap:'50px',backgroundColor:'#62d8b2',padding:'50px 0px',alignItems:'center',justifyContent:'center'}}>
 
-                    <Banner_2_heading className='font'>Confession To Your Crush ! </Banner_2_heading>
+                    <Banner_2_heading className='font' id='Confession'>Confession To Your Crush ! </Banner_2_heading>
                     <Banner_6_ElementText> From getting awkward on reaching out to your crush you having from your college or office colleague, <br/> but having fear of rejection to self-doubt? This is where most people ended up with.. <br/> But no more... Now confess without revealing your identity!</Banner_6_ElementText>
 
                     <BtnContainer><TopBannarLeftPartBTN>Coming soon</TopBannarLeftPartBTN></BtnContainer>
