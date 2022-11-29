@@ -20,7 +20,7 @@ export const Cards = ()=>{
                     <CardRelationshipTypeContainer>
                         <CardRelationshipTypes>Dating</CardRelationshipTypes>
                         <CardRelationshipTypes>Matrimonial</CardRelationshipTypes>
-                        <CardRelationshipTypes>FriendShip</CardRelationshipTypes>
+                        <CardRelationshipTypes>Friendship</CardRelationshipTypes>
                     </CardRelationshipTypeContainer>
                    </CardProfileNameContainer>
                     <CardProfileType>Basic</CardProfileType>

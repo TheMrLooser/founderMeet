@@ -7,8 +7,11 @@ height: min-content;
 background-color:#FFC900;
 border-radius:5px;
 @media only screen and (max-width:580px){
-min-width: 300px;
+max-width: 400px;
 };
+@media only screen and (max-width:400px){
+max-width: 300px;
+}
 `
 export const CardContainer = styled.div`
 max-width: inherit;
@@ -119,7 +122,10 @@ border-radius: 3px;
 font-size: 16px;
 font-weight: 600;
 margin-right: 20px;
- 
+@media only screen and (max-width:580px){
+    margin-top: -15px;
+     
+};
 `
 
 

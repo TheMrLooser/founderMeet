@@ -316,6 +316,7 @@ justify-content: center;
 /* align-items: center; */
 padding-top: 20px;
 padding-bottom: 50px;
+
 `
 
 export const TopBannerContainer = styled.div`

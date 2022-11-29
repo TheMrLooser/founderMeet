@@ -142,7 +142,7 @@ import Stack from '@mui/material/Stack';
                             </FilterSelect>
                             <FilterSelect>
                                 <FilterOption selected disabled>Loking For</FilterOption>
-                                <FilterOption>FriendShip</FilterOption>
+                                <FilterOption>Friendship</FilterOption>
                                 <FilterOption>Dating</FilterOption>
                                 <FilterOption>Matrimonial</FilterOption>
                             </FilterSelect>
@@ -179,7 +179,7 @@ import Stack from '@mui/material/Stack';
                             value={value}
                             onChange={handleChange}
                             getAriaValueText={valuetext}
-                            max={50}
+                            max={40}
                             min={18}
                             sx={{color:'black'}}
                         />

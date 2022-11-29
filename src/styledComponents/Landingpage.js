@@ -304,8 +304,8 @@ font-size:30px;
 `
 export const Banner_6_ElementText = styled.p`
 text-align: center;
-font-size:24px;
-width: 60%;
+font-size:24px; 
+width: 80%;
 @media  only screen and (max-width: 550px) {
     font-size: 18px;
     width: 90%;

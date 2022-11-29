@@ -6,14 +6,14 @@ import logoImg from '../images/logo.svg'
 export const Navbar = () => {
   return (
     <>
-        <NavContainer>
+        <NavContainer> 
             
             <NavWrapper>
                 <LogoContainer><Link to={'/'}><LogoImg src={logoImg}/></Link><LogoText></LogoText></LogoContainer>
                 <NavElementWrapper>
                     <NavElement>Home</NavElement>
                     <NavElement><AnkarTag href='#Confession'>Confession</AnkarTag> </NavElement>
-                    <NavElement>Signup</NavElement>
+                    <NavElement><Link to={'/signup'} className='Links' style={{width:'100%',height:'100%',display:'flex',alignItems:'center',justifyContent:'center'}}>Signup</Link></NavElement>
                     <NavElement display={'block'}><MenuIcon sx={{fontSize:'40px'}}/></NavElement>
                 </NavElementWrapper>
                  
