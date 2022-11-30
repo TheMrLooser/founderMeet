@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { ComponentWrapper, Container, FormContainer, FormTitle, HeadingTitleContainer, HeadingTitleImg, Img, ImgContainer, LeftPart, LeftPartTaglineContainer, LeftPartTagLineHeading, LeftPartTagLinePara, LowerPart, LowerPartFormWrapper, OrContainer, OrLeft, OrRigth, OrWrapper, RightPart, UpperPart, Wrapper } from "../styledComponents/Signup";
-import logo from '../images/nowYouDate.svg'
+import logo from '../images/logo.svg'
+
 import snale from '../images/snaleImg.svg'
-import { BtnContainer, TopBannarLeftPartBTN } from "../styledComponents/Landingpage";
+import { BtnContainer, MovingTextContainer, TopBannarLeftPartBTN } from "../styledComponents/Landingpage";
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -117,7 +118,7 @@ const SignUp = ()=>{
                             <FormTitle style={{paddingLeft:'10px',color:'black'}}>Have an account?</FormTitle>
                             <BtnContainer style={{maxWidth:'300px'}}><TopBannarLeftPartBTN style={{maxWidth:'300px'}}>Signin with LinkedIn</TopBannarLeftPartBTN></BtnContainer>
                             
-                            <OrContainer><OrLeft/><OrWrapper>Or</OrWrapper><OrRigth/></OrContainer>
+                            <OrContainer><OrLeft/><OrWrapper>or</OrWrapper><OrRigth/></OrContainer>
                             
                             <FormTitle style={{paddingLeft:'10px',color:'black'}}>Not have an account?</FormTitle>
                             <LowerPartFormWrapper>
@@ -362,6 +363,8 @@ const SignUp = ()=>{
                     </ImgContainer>
                 </RightPart>
             </Wrapper>
+            <MovingTextContainer> <marquee style={{marginLeft: '20px', marginRight: '20px'}} behavior="scroll" scrollamount="12"> Join Now  •  Make it Happen    &nbsp;• &nbsp;Join Now  •  Make it Happen  &nbsp;• &nbsp;Join Now  •  Make it Happen &nbsp;• &nbsp;Join Now  •  Make it Happen  &nbsp;• &nbsp;Join Now  •  Make it Happen  &nbsp;• &nbsp;Join Now  •  Make it Happen  &nbsp;• &nbsp;Join Now  •  Make it Happen  &nbsp;• &nbsp;Join Now  •  Make it Happen   </marquee></MovingTextContainer>
+
         </Container>
     </>)
 }

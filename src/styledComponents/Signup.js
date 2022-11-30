@@ -23,7 +23,7 @@ padding-top: 5px;
 export const RightPart = styled.div`
 border-left: 2px solid black;
 display: flex;
-align-items:center;
+align-items:flex-end;
 justify-content: center;
 min-height: inherit;
 background-color: #FFC900;
@@ -37,7 +37,7 @@ max-width: 90%;
 height: fit-content;
 margin-left: -60%;
 position: relative;
-
+margin-bottom: 25%;
 `
 export const Img = styled.img`
 height: 100%;
@@ -122,13 +122,11 @@ width: 100%;
 max-width: 100%;
 align-items: center;
 justify-content: center;
+margin: 70px 0px;
 `
 export const OrWrapper = styled.div`
-font-size: 15px;
-border: 1px solid black;
-width: fit-content;
-border-radius: 50%;
-padding: 1px;
+font-size: 20px;
+padding: 0px 10px;
 
 `
 export const OrRigth = styled.div`
