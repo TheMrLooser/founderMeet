@@ -151,14 +151,14 @@ justify-content: center;
 `
 export const MenuElement = styled.div`
 width: 100%;
-max-width: 30%;
+max-width: 35%;
 height: 50px;
-border: 1px solid gray;
+/* border: 1px solid gray; */
 font-size: 25px;
 font-weight: 600;
 display: flex;
 align-items: center;
-justify-content: space-between;
+/* justify-content: space-between; */
 cursor: pointer;
 gap: 10px;
  

@@ -51,7 +51,7 @@ export const Navbar = () => {
                 <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/profile"}><MenuElement>Profile <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
                 </>
                 :
-                <MenuElementContainer><MenuElement onClick={() => loginWithRedirect()}> Signup with <img height={'20px'} width={'20px'} style={{marginLeft:'10px'}} src={LinkedinLogo}/> </MenuElement></MenuElementContainer>
+                <MenuElementContainer><MenuElement style={{maxWidth:'fit-content'}} onClick={() => loginWithRedirect()}> Signup with <img height={'20px'} width={'20px'} style={{marginLeft:'10px'}} src={LinkedinLogo}/> </MenuElement></MenuElementContainer>
               }
              
               <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/about"}><MenuElement>About <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
