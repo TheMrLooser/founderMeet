@@ -49,22 +49,22 @@ export const CardProfileImgSection = styled.div`
 width: 100%;
 max-width: 80px;
 height: 80px;
-border-radius: 50%;
-position: relative;
-border: 1px solid black;
 display: flex;
 align-items: center;
 justify-content: center;
+overflow: hidden;
+border: 1px solid black;
+border-radius: 50%;
+background-color: gray;
 @media only screen and (max-width:580px){
 max-width:50px;
 height: 50px;
 };
 
-/* border: 1px solid black; */
 `
 export const CardProfileImg = styled.img`
-width: 100%;
-height: 100%;
+width: 98%;
+height: 99%;
 border-radius: 50%;
 `
 export const CardProfileNameContainer = styled.div`
@@ -188,6 +188,10 @@ export const CardElementvalue = styled.div`
 /* border: 1px solid black; */
 height: 25px;
 overflow: hidden;
+/* display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center; */
 /* color: #6b6b6b; */
 &:hover{
     overflow: visible;

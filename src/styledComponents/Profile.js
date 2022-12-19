@@ -96,6 +96,7 @@ color: gray;
 margin-top: -20px;
 font-size: 17px;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 `
 export const FormContainer = styled.div`
 /* border: 1px solid black; */
@@ -115,32 +116,50 @@ color: #23A094;
 width: 100%;
 font-weight: 600;
 `
-export const OrContainer = styled.div`
-/* border: 1px solid black; */
+export const ProfileBasicDetailContainer = styled.div`
+/* border: 1px solid black ; */
 display: flex;
-width: 100%;
-max-width: 100%;
 align-items: center;
-justify-content: center;
-margin: 70px 0px;
+width: 100%;
+height: max-content;
+gap:20px;
+@media only screen and (max-width:450px){
+    flex-direction: column;
+}
 `
-export const OrWrapper = styled.div`
-font-size: 20px;
-padding: 0px 10px;
+export const DetailWrapper = styled.div`
+/* border: 1px solid black; */
+height: inherit;
+`
+export const DetailElement = styled.div`
 
 `
-export const OrRigth = styled.div`
-/* border: 1px solid black; */
-width: 100%;
-height: 1px;
-background-color: black;
-`
-export const OrLeft = styled.div`
-/* border: 1px solid black; */
-width: 100%;
-height: 1px;
-background-color: black;
-`
+// export const OrContainer = styled.div`
+// border: 1px solid black;
+// display: flex;
+// width: 100%;
+// max-width: 100%;
+// align-items: center;
+// justify-content: center;
+// margin: 70px 0px;
+// `
+// export const OrWrapper = styled.div`
+// font-size: 20px;
+// padding: 0px 10px;
+
+// `
+// export const OrRigth = styled.div`
+// border: 1px solid black;
+// width: 100%;
+// height: 1px;
+// background-color: black;
+// `
+// export const OrLeft = styled.div`
+// border: 1px solid black;
+// width: 100%;
+// height: 1px;
+// background-color: black;
+// `
 export const LowerPartFormWrapper = styled.div`
 /* border: 1px solid black; */
 width: 100%;
@@ -152,6 +171,9 @@ gap:20px;
 export const ComponentWrapper = styled.div`
 /* border: 1px solid black; */
 width: 100%;
+/* display: flex;
+flex-direction: column;
+align-items:flex-start ; */
 `
 
 

@@ -16,9 +16,10 @@ width: 100%;
 max-width: 99%;
 min-height: 100vh;
 display: grid;
-grid-template-columns:1fr 5fr;
+grid-template-columns:2fr 7fr;
 padding-top:10px;
 padding-top: 50px;
+/* border: 2px solid red; */
 @media only screen and (max-width:900px){
      display: flex;
      align-items: center;
@@ -62,7 +63,7 @@ max-height: fit-content;
 min-height: 100px;
 background-color: #FFF0E5;
 /* border: 1px solid red; */
-margin-left: 50px;
+margin-left: 30px;
 @media only screen and (max-width:1300px){
   margin-left: 10px;
 
@@ -97,7 +98,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-gap:10px;
+gap:15px;
 `
 
 export const PrettoSlider = styled(Slider)({
@@ -161,6 +162,8 @@ letter-spacing: 1px;
 color: black;
 font-size: 18px;
 padding-left: 10px;
+margin-top: 20px;
+margin-bottom: 10px;
 `
 
  
@@ -245,7 +248,7 @@ justify-content: center;
 export const FilterCustomInput = styled.input`
 width: 100%;
 max-width: 78%;
-height: 30px;
+height: 40px;
 border-radius: 5px;
 border: 1px solid black;
 padding-left: 5px;
@@ -303,8 +306,18 @@ flex-direction: column;
 align-items: center;
 gap:30px;
 padding-bottom: 50px;
+/* border: 2px solid black; */
+width:100%;
 `
-
+export const CardWrapper = styled.div`
+width: 90%;
+height: max-content;
+/* border: 2px solid red; */
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+`
 export const CardContainer  = styled.div`
 width: 100%;
 /* border: 2px solid black; */
@@ -323,7 +336,6 @@ export const TopBannerContainer = styled.div`
 width: 100%;
 height: 70px;
 background-color: #FFC900;
-max-width: 83%;
 border-radius: 3px ;
 display: flex;
 align-items: center;
@@ -335,7 +347,7 @@ font-size: 20px;
 }
 `
 export const Title = styled.div`
-width: 83%;
+width: 100%;
 font-size: 25px;
 font-weight: 600;
 @media only screen and (max-width:900px) {

@@ -4,6 +4,7 @@ import nobadWibesImg from '../images/nobadvibes.svg'
 import footerSnapImg from '../images/footershapes.svg'
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
@@ -25,7 +26,7 @@ export const Footer = () => {
         <FooterCopyRightSection>
             <p> Made in India 🧡</p> 
             <p>Copyright © 2022 MatchMaking24.com | All Rights Reserved.</p>
-            <p> <span className='footerHoverColorChange'>Terms of Use</span> | <span className='footerHoverColorChange'> Privacy Policy </span> | <span className='footerHoverColorChange'> Support </span></p> 
+            <p> <Link to={'/term-and-condition'} className="Links inherit"> <span className='footerHoverColorChange'>Terms of Use</span></Link>  | <Link to={'/privacy-and-policy'} className='Links inherit'><span className='footerHoverColorChange'> Privacy Policy </span> </Link> | <span className='footerHoverColorChange'> Support </span></p> 
         </FooterCopyRightSection>
     </FooterContainer>
    </>

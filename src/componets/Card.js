@@ -4,78 +4,88 @@ import instagramIcon from '../images/instagram black.png';
 import TelegramIcon from '../images/telegramblack.png';
 import maleIcon from '../images/mail.png';
 import TweetIcon from '../images/tweet.png';
+import clandlyImg from '../images/clandelyLogo.png'
+import {Link} from 'react-router-dom'
 
+ 
 
-
-
-export const Cards = ()=>{
+export const Cards = ({user})=>{
     return(<>
     <CardBaggroundContainer>
         <CardContainer>
            <CardWrapper>
                 <CardUpperSection>
-                    <CardProfileImgSection><CardProfileImg src="https://tse4.mm.bing.net/th?id=OIP.Qz_6_xtigETpBhXMP76jlgHaH5&pid=Api&P=0"/></CardProfileImgSection>
+                    <CardProfileImgSection><CardProfileImg src={user.img}/></CardProfileImgSection>
                    <CardProfileNameContainer>
-                    <CardProfileName>Rahul Kumar</CardProfileName>
+                    <CardProfileName>{user.name}</CardProfileName>
                     <CardRelationshipTypeContainer>
-                        <CardRelationshipTypes>Dating</CardRelationshipTypes>
-                        <CardRelationshipTypes>Matrimonial</CardRelationshipTypes>
-                        <CardRelationshipTypes>Friendship</CardRelationshipTypes>
+                        {
+                            user.lokingFor.map((item,index)=>{
+                            return <CardRelationshipTypes>{item}</CardRelationshipTypes>
+                            })
+                        } 
                     </CardRelationshipTypeContainer>
                    </CardProfileNameContainer>
-                    <CardProfileType>Basic</CardProfileType>
+                    <CardProfileType>{user.profileType}</CardProfileType>
                 </CardUpperSection>
                 <CardLowerSection>
                     <CardLeftContainer>
                         <CardElementContaienr>
                             <CardElementKey>Age :</CardElementKey>
-                            <CardElementvalue>50</CardElementvalue>
+                            <CardElementvalue>{user.age}</CardElementvalue>
                         </CardElementContaienr>
                         <CardElementContaienr>
                             <CardElementKey>Location :</CardElementKey>
-                            <CardElementvalue>City,Country</CardElementvalue>
+                            <CardElementvalue>{user.city},{user.country}</CardElementvalue>
                         </CardElementContaienr>
                         <CardElementContaienr>
                             <CardElementKey>Language :</CardElementKey>
-                            <CardElementvalue>Hindi, English</CardElementvalue>
+                            <CardElementvalue>
+                                {
+                                   user.language.map((item,index)=>{
+                                    return <p key={index} style={{fontSize:'14px',marginTop:'2px'}} >{item}</p>
+                                   })
+                                }
+                            </CardElementvalue>
                         </CardElementContaienr>
                         <CardElementContaienr>
                             <CardElementKey>Industry :</CardElementKey>
-                            <CardElementvalue>It Sector</CardElementvalue>
+                            <CardElementvalue>{user.industry}</CardElementvalue>
                         </CardElementContaienr>
                         <CardElementContaienr>
                             <CardElementKey>Company :</CardElementKey>
-                            <CardElementvalue>Matchmaking24.com</CardElementvalue>
+                            <CardElementvalue>{user.companyName}</CardElementvalue>
                         </CardElementContaienr>
                     </CardLeftContainer>
                     <CardRightContainer>
                     <CardElementContaienr>
                             <CardElementKey>Gender :</CardElementKey>
-                            <CardElementvalue>50</CardElementvalue>
+                            <CardElementvalue>{user.gender}</CardElementvalue>
                         </CardElementContaienr>
                         <CardElementContaienr>
                             <CardElementKey>Field of Study :</CardElementKey>
-                            <CardElementvalue>Medical</CardElementvalue>
+                            <CardElementvalue>{user.fieldOfStudy}</CardElementvalue>
                         </CardElementContaienr>
                         <CardElementContaienr>
                             <CardElementKey>Higher Education :</CardElementKey>
-                            <CardElementvalue>Graduation</CardElementvalue>
+                            <CardElementvalue>{user.higherQualification}</CardElementvalue>
                         </CardElementContaienr>
                         <CardElementContaienr>
                             <CardElementKey>Inst 1 :</CardElementKey>
-                            <CardElementvalue> Rk modern public school sector noida</CardElementvalue>
+                            <CardElementvalue>{user.schoolName}</CardElementvalue>
                         </CardElementContaienr>
                         <CardElementContaienr>
                             <CardElementKey>Inst 2 :</CardElementKey>
-                            <CardElementvalue> Avviar education hub sec 64</CardElementvalue>
+                            <CardElementvalue>{user.collageName}</CardElementvalue>
                         </CardElementContaienr>
                         <CardElementContaienr>
                             <CardSocialMediaIconWrapper>
                                 Connect on : 
-                                    <CardSocialMediaIcon src={TelegramIcon}/>
-                                    <CardSocialMediaIcon src={maleIcon}/>
-                                    <CardSocialMediaIcon src={TweetIcon}/>
-                                    <CardSocialMediaIcon src={instagramIcon}/>
+                                    <a href={user.telegram} target={"_blank"}><CardSocialMediaIcon src={TelegramIcon}/></a>
+                                    <a href={`mailto:${user.email}?`}><CardSocialMediaIcon src={maleIcon}/></a>
+                                    <a href={user.twiter} target={"_blank"}><CardSocialMediaIcon src={TweetIcon}/></a>
+                                    <a href={user.instagram} target={"_blank"}><CardSocialMediaIcon src={instagramIcon}/></a>
+                                    <a href={"https://calendly.com/"} target={"_blank"}><CardSocialMediaIcon  src={clandlyImg}/></a>
                             </CardSocialMediaIconWrapper>
                         </CardElementContaienr>
                     </CardRightContainer>

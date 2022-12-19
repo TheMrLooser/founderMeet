@@ -93,4 +93,93 @@ align-items:center;
 justify-content:center;
 color: inherit;
 text-decoration: none;
+
+`
+
+// Menu baar style
+
+export const MainMenuContainer = styled.div`
+position: fixed;
+/* backdrop-filter: blur(50px); */
+width: 100%;
+height: 100vh;
+z-index: 100;
+top: 0px;
+display: flex;
+justify-content: flex-end;
+/* background-color: black; */
+
+`
+export const MenuContainer = styled.div`
+width: 30%;
+height: inherit;
+border: 2px solid black;
+background-color: #ffc900;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 20px;
+@media only screen and (max-width:900px){
+    width: 50%;
+}
+@media only screen and (max-width:500px){
+    width: 100%;
+}
+
+`
+export const MenuWrapper = styled.div`
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+
+`
+export const MenuElementContainer = styled.div`
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+/* border: 1px solid gray; */
+&:hover{
+    background-color:#FF90E8 ;
+    /* box-shadow: 5px 5px 7px; */
+}
+
+
+`
+export const MenuElement = styled.div`
+width: 100%;
+min-width: max-content;
+max-width: 25%;
+height: 50px;
+/* border: 1px solid gray; */
+font-size: 25px;
+font-weight: 600;
+display: flex;
+align-items: center;
+justify-content: space-between;
+cursor: pointer;
+gap: 10px;
+/* border-radius: 3px; */
+transition: background-color 1s,box-shadow .5s;
+&:hover{
+    /* background-color:#FF90E8 ; */
+    /* box-shadow: 5px 5px 7px; */
+}
+`
+export const ProfileLogoContainer = styled.div`
+border: 1px solid gray;
+width: 30%;
+border-radius: 50%;
+
+
+`
+export const ProfileLogo = styled.img`
+width: 100%;
+object-fit:fill;
+border-radius: 50%;
+height: 100%;
+
 `
