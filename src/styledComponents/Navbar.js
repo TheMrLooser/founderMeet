@@ -151,10 +151,9 @@ justify-content: center;
 `
 export const MenuElement = styled.div`
 width: 100%;
-min-width: max-content;
-max-width: 25%;
+max-width: 30%;
 height: 50px;
-/* border: 1px solid gray; */
+border: 1px solid gray;
 font-size: 25px;
 font-weight: 600;
 display: flex;
@@ -162,12 +161,7 @@ align-items: center;
 justify-content: space-between;
 cursor: pointer;
 gap: 10px;
-/* border-radius: 3px; */
-transition: background-color 1s,box-shadow .5s;
-&:hover{
-    /* background-color:#FF90E8 ; */
-    /* box-shadow: 5px 5px 7px; */
-}
+ 
 `
 export const ProfileLogoContainer = styled.div`
 border: 1px solid gray;
