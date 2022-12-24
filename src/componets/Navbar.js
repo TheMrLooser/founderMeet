@@ -33,7 +33,7 @@ export const Navbar = () => {
                 <LogoContainer><Link to={'/'}><LogoImg src={logoImg}/></Link><LogoText></LogoText></LogoContainer>
                 <NavElementWrapper>
                     <NavElement> <Link className='Links inheritProperty' to={"/"}>Home</Link></NavElement>
-                    <NavElement><AnkarTag href='#Confession'>Confession</AnkarTag> </NavElement>
+                    <NavElement><AnkarTag href='#Confession'>Blog</AnkarTag> </NavElement>
                     { (!isAuthenticated && !isLoading ) && <NavElement onClick={() => loginWithRedirect()}> Signup with <img height={'20px'} width={'20px'} style={{marginLeft:'10px'}} src={LinkedinLogo}/> </NavElement>}
                     <NavElement display={'block'} ><MenuIcon sx={{fontSize:'40px'}} onClick={()=>setOpenMenuBar(true)} /></NavElement>
                 </NavElementWrapper>
@@ -56,6 +56,8 @@ export const Navbar = () => {
              
               <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/about"}><MenuElement>About <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
               <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/contact"}><MenuElement>Contact <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
+              <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/blog"}><MenuElement>Blog <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
+              <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty'  to={"/"}><MenuElement> Confetion  <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
               {
                 (isAuthenticated && !isLoading) ?
                 <MenuElementContainer><MenuElement onClick={() => logout()}>Logout</MenuElement></MenuElementContainer>

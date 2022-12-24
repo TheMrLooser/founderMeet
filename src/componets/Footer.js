@@ -14,7 +14,7 @@ export const Footer = () => {
             <FooterElementContainer >
                  <div style={{width:'80%'}}><h2 className='font'>Have  Question?</h2></div>
                 <FooterElement> <FooterElementIcon><LocalPhoneIcon/></FooterElementIcon> 888888888888 </FooterElement>
-                <FooterElement style={{backgroundColor:'#FF90E8'}}> <FooterElementIcon><EmailIcon/></FooterElementIcon> info@gmail.com </FooterElement>
+                <FooterElement style={{backgroundColor:'#FF90E8'}}> <FooterElementIcon><EmailIcon/></FooterElementIcon> hellomatchmaking24@gmail.com </FooterElement>
             </FooterElementContainer>
             <FooterElementContainer hide={'hide'} style={{alignItems:'flex-end'}}>
             <ImagesCOntainer><FooterImg src={footerSnapImg}/></ImagesCOntainer>

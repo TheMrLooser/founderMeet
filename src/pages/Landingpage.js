@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import {TopBannarLeftPartElement,TopBannarLeftPartElementWrapper, Container, TopBannarContainer, TopBannarImg, TopBannarLeftPartBTN, TopBannarLeftPartContainer, TopBannarLeftPartHeading, Wrapper, BtnContainer, SmilyImg, TopBannerImgContainer, Banner_2_container, Banner_2_heading, Banner_2_headingElement, Banner_2_ElementContainer, Banner_2_ElementWrapper, Banner_2_ElementImg, Banner_2_ElementText, MovingTextContainer, Banner_3_container, Banner_3_Wrapper, Banner_3_Maincontainer, Banner_3_Text, Banner_3_HandImg, Banner_3_StarImg, Banner_4_LeftContainer, Banner_4_RightContainer, Banner_4_Img, Banner_4_elements, Banner_4_elementWrapper, Banner_4_Arrow, Banner_4_ArrowSpan, FunStar, SunStar, TopBannarWrapper, ArrowImg, BannerHeadingContainer, Banner_6_ElementText, Banner_4_heading, Banner_1_ElementText } from '../styledComponents/Landingpage'
 import topImg from '../images/MEET.jpg';
 import smily from '../images/smile.svg';
@@ -21,19 +21,41 @@ import gp_4 from '../images/gp_4.webp'
 
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Link } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
+import axios from 'axios';
+import {HOST_NAME} from '../hostName'
+import { UserProfileData } from '../App';
 
 
 
 export const Landingpage = () => {
+
+    const { loginWithRedirect,user,isAuthenticated ,isLoading ,logout } = useAuth0();
+  const {setUserData} = useContext(UserProfileData)
+  useEffect(()=>{
+    const login = async()=>{
+      const res = await axios.post(`${HOST_NAME}/user/register`,{email:user.email,name:user.name,img:user.picture})
+      if(res.data.message!="Profile Registerd"){
+        setUserData(res.data.message)
+      }
+    }
+    login()
+  },[user])
+
+  const handalClickRender =()=>{
+     if(!isAuthenticated){
+        loginWithRedirect()
+     }
+  }
   return (
      <>
         <Container>
             <Wrapper>
                 <TopBannarWrapper>
-                    <TopBannarContainer>
+                    <TopBannarContainer> 
                         <TopBannarLeftPartContainer>
-                            <TopBannarLeftPartHeading className='font'>MatchMaking Portal For <br/>Working Professionals <br/> Around The World  </TopBannarLeftPartHeading>
-                            <Link className='Links' to={'/find-match'}><BtnContainer><TopBannarLeftPartBTN>Find  Match <ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer></Link>
+                            <TopBannarLeftPartHeading className='font'>MatchMaking Portal <br/>For LinkedIn Users <br/> Around The World  </TopBannarLeftPartHeading>
+                            <Link className='Links' to={isAuthenticated?'/find-match':null}><BtnContainer><TopBannarLeftPartBTN onClick={ handalClickRender}>{(isAuthenticated || isLoading )?"Find Match":"Sign Up Free "}<ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer></Link>
                             <TopBannarLeftPartElementWrapper>
                                 <TopBannarLeftPartElement>Globally Accessible</TopBannarLeftPartElement>
                                 <TopBannarLeftPartElement>Dynamic Filtering</TopBannarLeftPartElement>
@@ -78,7 +100,7 @@ export const Landingpage = () => {
                             <div className='align-Center'>
                                 <h2>Dating</h2>
                                 <Banner_2_ElementText>
-                                    Various online dating apps focus on quick dates with lesser digital satisfaction, and incidents of harassment and sexual misconduct. Although we known to be for transparency. Because there is more to life than just swiping. If dates goes wrong, at worst be a good friend.
+                                    Various online dating apps focus on quick dates with lesser digital satisfaction, and incidents of harassment and sexual misconduct. Although we known to be for transparency. Because there is more to life than just swiping. If dates goes wrong, at worst be a good friend and exchange vibes.
                                 </Banner_2_ElementText>
                             </div>
                         </Banner_2_ElementWrapper>
@@ -137,17 +159,17 @@ export const Landingpage = () => {
                             <Banner_2_ElementWrapper style={{border:'none'}}>
                                 <Banner_2_ElementImg /*src={img01}*/ src={gp}  style={{height:'80%' ,width:'80%'}}/>
                                 <h2>Thousands of Profiles</h2>  
-                                <Banner_2_ElementText style={{textAlign:'justify' ,marginTop:'-40px'}}>Meet thousands of singles who are ready to love and be loved</Banner_2_ElementText>
+                                <Banner_2_ElementText style={{textAlign:'justify' ,marginTop:'-20px'}}>Meet thousands of singles who are ready to love and be loved</Banner_2_ElementText>
                             </Banner_2_ElementWrapper> 
                             <Banner_2_ElementWrapper style={{border:'none'}}>
                                 <Banner_2_ElementImg /*src={img02} */ src={gp_3} style={{height:'80%' ,width:'80%'}}/>
-                                <h2>Filter Out The Noise</h2>
-                                <Banner_2_ElementText style={{textAlign:'justify' ,marginTop:'-40px'}}>Connect with matches to form a deep, trusting relationship with</Banner_2_ElementText>
+                                <h2>Verified Profiles</h2>
+                                <Banner_2_ElementText style={{textAlign:'justify' ,marginTop:'-20px'}}>Connect with matches to form a deep, trusting relationship with</Banner_2_ElementText>
                             </Banner_2_ElementWrapper>
                             <Banner_2_ElementWrapper style={{border:'none'}} >
                                 <Banner_2_ElementImg /* src={img003}*/ src={gp_4}  style={{height:'80%' ,width:'80%'}}/>
-                                <h2>Connect You Way</h2> 
-                                <Banner_2_ElementText style={{textAlign:'justify', marginTop:'-40px'}}>Use any chat, message, and flirt options to make connections</Banner_2_ElementText>
+                                <h2>Connect Your Way</h2> 
+                                <Banner_2_ElementText style={{textAlign:'justify', marginTop:'-20px'}}>Use any chat, message, and flirt options to make connections</Banner_2_ElementText>
                             </Banner_2_ElementWrapper>
                          </Banner_4_elementWrapper>
                 </Banner_3_Maincontainer>
@@ -156,7 +178,7 @@ export const Landingpage = () => {
                 {/* bannar 6 */} 
                 <Banner_3_Maincontainer style={{width:'100%',flexDirection:'column',gap:'50px',backgroundColor:'#62d8b2',padding:'50px 0px',alignItems:'center',justifyContent:'center'}}>
 
-                    <Banner_2_heading className='font' id='Confession'>Confession To Your Crush ! </Banner_2_heading>
+                    <Banner_2_heading className='font' id='Confession'>Confession To Your Crush! </Banner_2_heading>
                     <Banner_6_ElementText> From getting awkward on reaching out to your crush you having from your college or office colleague, <br/> but having fear of rejection to self-doubt? This is where most people ended up with.. <br/> But no more... Now confess without revealing your identity!</Banner_6_ElementText>
 
                     <BtnContainer><TopBannarLeftPartBTN>Coming soon</TopBannarLeftPartBTN></BtnContainer>
@@ -167,7 +189,7 @@ export const Landingpage = () => {
                 <Banner_3_Maincontainer style={{width:'100%',flexDirection:'column',gap:'50px',backgroundColor:'#ff7051',padding:'50px 0px',alignItems:'center',justifyContent:'center',}}>
 
                     <Banner_2_heading className='font'>Join the chase, join the fun! <br/>Get out there!</Banner_2_heading>
-                    <BtnContainer style={{maxWidth:'300px'}}><TopBannarLeftPartBTN style={{maxWidth:'350px'}}>FIND YOUR MATCH NOW</TopBannarLeftPartBTN></BtnContainer>
+                    <Link className='Links' to={'/find-match'}><BtnContainer style={{maxWidth:'300px'}}><TopBannarLeftPartBTN style={{maxWidth:'350px'}}>FIND YOUR MATCH NOW</TopBannarLeftPartBTN></BtnContainer></Link>
                     <FunStar src={funstar}/>
                     <SunStar src={star}/>
                 </Banner_3_Maincontainer>

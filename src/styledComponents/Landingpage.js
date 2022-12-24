@@ -7,18 +7,16 @@ min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-${'' /* padding-bottom:100px; */}
+ 
 `
 export const Wrapper = styled.div`
 width:100%;
 max-width:100%;
 min-height:inherit;
-${'' /* border:1px solid red; */}
-padding-top:5px;
+padding-top:2px;
 display:flex;
 align-items:center;
 flex-direction:column;
-${'' /* gap:50px; */}
 `
 
 export const TopBannarWrapper = styled.div`
@@ -287,6 +285,7 @@ gap:30px;
 text-align: justify;
 text-justify: inter-word;
 font-size:20px;
+margin-top: 10px;
 `
 export const Banner_1_ElementText = styled.p`
 justify-content:flex-start;

@@ -200,19 +200,47 @@ PaperProps: {
  
    
    const [users,setUsers] = useState()
+   const [pageNo,setPageNo] = useState(0)
     useEffect(()=>{
         const getAllUsers = async()=>{
             const res = await axios.get(`${HOST_NAME}/user/get-all-user/?page=${page}`)
             setUsers(res.data.message)
-        }
+        } 
         getAllUsers()
     },[page])
+    useEffect(()=>{ 
+        if(users&&users.length>10){
+            setPageNo(parseInt(users&&users.length/10)+1)
+        }
+        else{
+            setPageNo(0) 
 
+        }
+    },[users])
+    
+     
     const ApplyFilter = async()=>{
         const res = await axios.get(`${HOST_NAME}/user/get-all-user/?page=${page}`)
         setUsers(filterdata(res.data.message,gender,country,city,qualification,fieldOfStudy,industry,companyName,schoolName,collageName,age,language,lookingFor ))
 
     }
+
+
+    // getting Countries
+    const [Data,setData] = useState([]);
+    useEffect(()=>{
+        const getContryState_city = async ()=>{
+            var res = await axios.get(`https://maxisholidayserver.onrender.com/api/countries`);
+                setData(res.data) 
+        }
+        getContryState_city()
+    },[])
+    
+    const countryList = [...new Set(Data.map(items=>items.country))]
+    countryList.sort()
+     
+     
+     
 
     return(<>
         <Container>
@@ -249,11 +277,15 @@ PaperProps: {
                         <FilterElement>
                             <FilterSelect onChange={(e)=>{setCountry(e.target.value.toLocaleLowerCase())}}>
                                 <FilterOption selected disabled>Country</FilterOption>
-                                <FilterOption></FilterOption>
+                                {
+                                  countryList&&countryList.map((data,index)=>
+                                        <FilterOption key={index} value={data}>{data}</FilterOption>
+                                    )
+                                }
                             </FilterSelect>
                             <FilterSelect onChange={(e)=>{setCity(e.target.value.toLocaleLowerCase())}} >
                                 <FilterOption selected disabled>City</FilterOption>
-                                <FilterOption></FilterOption>
+                                 
                             </FilterSelect>
                              
                         </FilterElement>    
@@ -369,10 +401,13 @@ PaperProps: {
                                 })
                                 :"Londing...."
                             }
-                        </CardContainer>
-                        <Stack spacing={2}>
-                            <Pagination count={10} page={page} onChange={handlePageChange} />
-                        </Stack>
+                        </CardContainer> 
+                        {
+                            pageNo>0?
+                            <Stack spacing={2}>
+                            <Pagination count={pageNo} page={page} onChange={handlePageChange} />
+                            </Stack>:null
+                        }
                     </CardWrapper>
                </CardMainContainer>
             </Wrapper>
