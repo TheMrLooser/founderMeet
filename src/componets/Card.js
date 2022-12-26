@@ -6,7 +6,7 @@ import maleIcon from '../images/mail.png';
 import TweetIcon from '../images/tweet.png';
 import clandlyImg from '../images/clandelyLogo.png'
 import {Link} from 'react-router-dom'
-
+import { format} from "timeago.js";
  
 
 export const Cards = ({user})=>{
@@ -55,6 +55,10 @@ export const Cards = ({user})=>{
                         <CardElementContaienr>
                             <CardElementKey>Company :</CardElementKey>
                             <CardElementvalue>{user.companyName}</CardElementvalue>
+                        </CardElementContaienr>
+                        <CardElementContaienr>
+                            <CardElementKey>lastActive :</CardElementKey>
+                            <CardElementvalue>{format(user.lastActive)}</CardElementvalue>
                         </CardElementContaienr>
                     </CardLeftContainer>
                     <CardRightContainer>

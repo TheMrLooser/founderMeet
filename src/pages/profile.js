@@ -26,6 +26,8 @@ import { UserProfileData } from "../App";
 import axios from "axios";
 import { HOST_NAME } from "../hostName";
 import Box from '@mui/material/Box';
+import counrtyList from '../JsonData/countryName.json' 
+import IndustryList from '../JsonData/IndustryData.json' 
 //year picker
 import {DesktopDatePicker,LocalizationProvider, } from '@mui/x-date-pickers';
 import Stack from '@mui/material/Stack';
@@ -50,7 +52,7 @@ PaperProps: {
 
 
     const names = [
-        'Hindi',
+        'Hindi', 
         'English',
         'Urdu',
         'Tamil',
@@ -141,7 +143,15 @@ const SignUp = ()=>{
            }
         setAlert("success",res.data.message,true)
     }
- 
+
+
+
+    const countryList = [...new Set(counrtyList.map(items=>items.countryName))]
+    countryList.sort()
+    const cityList = [...new Set(counrtyList.map(items=>(items.countryName ===country  )?items.cityNameList:""))]
+    const FieldOfStudyList = ["Medicine",'Engineering','Aarchitecture','Science','Business','Humanitiese & Arts' ,'Hotel Management','Management','Fashion','Law','Design','Psychology','Finance','Other']
+    
+
     return (<>
          
         <Container>
@@ -205,9 +215,11 @@ const SignUp = ()=>{
                                             <MenuItem value="">
                                                 <em>None</em>
                                             </MenuItem>
-                                            <MenuItem value={"India"}>India</MenuItem>
-                                            <MenuItem value={"UnitedState"}>UnitedState</MenuItem>
-                                            <MenuItem value={"Russia"}>Russia</MenuItem>
+                                             {
+                                                countryList && countryList.map((item,index)=>
+                                                    <MenuItem value={item} key={index}>{item}</MenuItem>
+                                                )
+                                             }
                                             </Select>
                                         </FormControl>
 
@@ -224,9 +236,12 @@ const SignUp = ()=>{
                                             <MenuItem value="">
                                                 <em>None</em>
                                             </MenuItem>
-                                            <MenuItem value={"Noida"}>Noida</MenuItem>
-                                            <MenuItem value={"Delhi"}>Delhi</MenuItem>
-                                            <MenuItem value={"Gazipur"}>Gazipur</MenuItem>
+                                            {
+                                                cityList[1]&&cityList[1].map((data,index)=>
+                                                    <MenuItem key={index} value={data.name}>{data.name}</MenuItem>
+                                                ) 
+                                            }
+                                             
                                             </Select>
                                         </FormControl>
                                     </div>
@@ -368,9 +383,11 @@ const SignUp = ()=>{
                                             <MenuItem value="">
                                                 <em>None</em>
                                             </MenuItem>
-                                            <MenuItem value={10}>Ten</MenuItem>
-                                            <MenuItem value={20}>Twenty</MenuItem>
-                                            <MenuItem value={30}>Thirty</MenuItem>
+                                            <MenuItem value={"Bachelors"}>Bachelors</MenuItem>
+                                            <MenuItem value={"Masters"}>Masters</MenuItem>
+                                            <MenuItem value={"PHD"}>PHD</MenuItem>
+                                            <MenuItem value={"Post Doc"}>Post Doc</MenuItem>
+                                            <MenuItem value={"Other"}>Other</MenuItem>
                                             </Select>
                                         </FormControl>
 
@@ -385,9 +402,7 @@ const SignUp = ()=>{
                                             <MenuItem value="">
                                                 <em>None</em>
                                             </MenuItem>
-                                            <MenuItem value={10}>Ten</MenuItem>
-                                            <MenuItem value={20}>Twenty</MenuItem>
-                                            <MenuItem value={30}>Thirty</MenuItem>
+                                            {FieldOfStudyList.map((item,index)=><MenuItem key={index} value={item}>{item}</MenuItem>)}
                                             </Select>
                                         </FormControl>
                                         
@@ -418,9 +433,13 @@ const SignUp = ()=>{
                                             <MenuItem value="">
                                                 <em>None</em>
                                             </MenuItem>
-                                            <MenuItem value={10}>Ten</MenuItem>
-                                            <MenuItem value={20}>Twenty</MenuItem>
-                                            <MenuItem value={30}>Thirty</MenuItem>
+                                            {
+                                                IndustryList&&IndustryList.map((item,index)=>
+                                                <MenuItem value={item.name} key={index}>{item.name}</MenuItem>
+                                                )
+                                            }
+                                            
+                                             
                                             </Select>
                                         </FormControl>
                                         <TextField id="outlined-basic" label={companyName?companyName:"Company Name"} variant="outlined" onChange={(e)=>{setCompanyName(e.target.value)}} />

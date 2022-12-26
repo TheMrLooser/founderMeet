@@ -12,7 +12,8 @@ import { MovingTextContainer } from "../styledComponents/Landingpage";
 import axios from 'axios';
 import {HOST_NAME} from '../hostName'
 import { FormControl, InputLabel, ListItemText, MenuItem, OutlinedInput, Select } from "@mui/material";
-
+import counrtyList from '../JsonData/countryName.json' 
+import IndustryList from '../JsonData/IndustryData.json' 
 
 
 
@@ -37,7 +38,7 @@ const filterdata = (user,gender,country,city,higherQualification,fieldOfStudy,in
         const userAge = user.age&&user.age ;
         const userLanguage = user.language&&user.language ;
         const userLookingFor= user.lokingFor&&user.lokingFor ;
-         
+        
         return userLookingFor.includes(lookingFor)||userLanguage.includes(language)||( userAge<= age[1] && userAge>= age[0] ) || userSchoolName.includes(schoolName?schoolName:null) || userCollageName.includes(collageName?collageName:null)|| usergender === gender || userCountry===country || userCity===city  || userQualification===higherQualification || userFieldOfStudy===fieldOfStudy || userIndustry===industry || userCompanyName===companyName
     })
   
@@ -94,76 +95,7 @@ PaperProps: {
     };
 
 
-    const IndustryList = [
-        "Aerospace industry",
-        "Agricultural industry ",
-        "Automotive industry",
-        "Basic metal industry ",
-        "Chemical industry ",
-        "Computer industry",
-        "Construction industry ",
-        "Creative industry ",
-        "Cultural industry",
-        "Defense industry",
-        "Education industry",
-        "Electric power industry",
-        "Electronics industry",
-        "Energy industry",
-        "Engineering industry ",
-        "Entertainment industry",
-        "Farming industry",
-        "Fashion industry",
-        "Film industry",
-        "Financial services industry",
-        "Fishing industry",
-        "Food industry",
-        "Forestry industry",
-        "Gambling industry",
-        "Gas industry",
-        "Green industry",
-        "Health services industry ",
-        "Hospitality industry",
-        "Hotels industry",
-        "Industrial robot industry",
-        "Information industry",
-        "Information technology industry",
-        "Infrastructure industry",
-        "Insurance industry ",
-        "Leisure industry",
-        "Low technology industry",
-        "Manufacturing industry",
-        "Meat industry",
-        "Media industry",
-        "Merchandising industry",
-        "Mining industry ",
-        "Music industry",
-        "News media industry ",
-        "Oil and gas industry",
-        "Pharmaceutical industry",
-        "Professional industry",
-        "Publishing industry",
-        "Pulp and paper industry",
-        "Railway industry ",
-        "Real estate industry ",
-        "Retail industry ",
-        "Scientific industry",
-        "Services industry",
-        "Sex industry",
-        "Software industry",
-        "Space industry",
-        "Sport industry",
-        "Steel industry",
-        "Technology industry",
-        "Telecommunications industry",
-        "Textile industry",
-        "Tobacco industry",
-        "Transport industry",
-        "Utility industry ",
-        "Video game industry",
-        "Water industry",
-        "Wholesale industry",
-        "Wood industry",
-    ]
+     
 
 
     const FieldOfStudyList = ["Medicine",'Engineering','Aarchitecture','Science','Business','Humanitiese & Arts' ,'Hotel Management','Management','Fashion','Law','Design','Psychology','Finance','Other']
@@ -227,20 +159,10 @@ PaperProps: {
 
 
     // getting Countries
-    const [Data,setData] = useState([]);
-    useEffect(()=>{
-        const getContryState_city = async ()=>{
-            var res = await axios.get(`https://maxisholidayserver.onrender.com/api/countries`);
-                setData(res.data) 
-        }
-        getContryState_city()
-    },[])
-    
-    const countryList = [...new Set(Data.map(items=>items.country))]
+    const countryList = [...new Set(counrtyList.map(items=>items.countryName))]
     countryList.sort()
-     
-     
-     
+    const cityList = [...new Set(counrtyList.map(items=>(items.countryName.toLocaleLowerCase()===country)?items.cityNameList:""))]
+ 
 
     return(<>
         <Container>
@@ -285,6 +207,11 @@ PaperProps: {
                             </FilterSelect>
                             <FilterSelect onChange={(e)=>{setCity(e.target.value.toLocaleLowerCase())}} >
                                 <FilterOption selected disabled>City</FilterOption>
+                                {
+                                    cityList[1]&&cityList[1].map((data,index)=>
+                                        <FilterOption key={index} value={data.name}>{data.name}</FilterOption>
+                                    ) 
+                                }
                                  
                             </FilterSelect>
                              
@@ -367,7 +294,7 @@ PaperProps: {
                     <FilterElement>
                         <FilterSelect onChange={(e)=>{setIndustry(e.target.value.toLocaleLowerCase())}}>
                             <FilterOption selected disabled>Industry</FilterOption>
-                            {IndustryList.map((field,index)=><FilterOption key={index}>{field}</FilterOption>)}
+                            {IndustryList.map((industry,index)=><FilterOption key={index}>{industry.name}</FilterOption>)}
 
                         </FilterSelect>
 

@@ -60,7 +60,7 @@ export const Navbar = () => {
               <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty'  to={"/"}><MenuElement> Confetion  <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
               {
                 (isAuthenticated && !isLoading) ?
-                <MenuElementContainer><MenuElement onClick={() => logout()}>Logout</MenuElement></MenuElementContainer>
+                <MenuElementContainer><MenuElement onClick={() => logout()}>Sign Out</MenuElement></MenuElementContainer>
                 :null
               }
             </MenuWrapper>

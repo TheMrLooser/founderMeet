@@ -13,7 +13,7 @@ export const Footer = () => {
         <FooterWrapper> 
             <FooterElementContainer >
                  <div style={{width:'80%'}}><h2 className='font'>Have  Question?</h2></div>
-                <FooterElement> <FooterElementIcon><LocalPhoneIcon/></FooterElementIcon> 888888888888 </FooterElement>
+                <FooterElement> <FooterElementIcon><LocalPhoneIcon/></FooterElementIcon> Contact Us </FooterElement>
                 <FooterElement style={{backgroundColor:'#FF90E8'}}> <FooterElementIcon><EmailIcon/></FooterElementIcon> hellomatchmaking24@gmail.com </FooterElement>
             </FooterElementContainer>
             <FooterElementContainer hide={'hide'} style={{alignItems:'flex-end'}}>

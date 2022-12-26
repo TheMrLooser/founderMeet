@@ -50,22 +50,30 @@ justify-content:center;
 export const FooterElement = styled.div`
 width:100%;
 max-width:80%;
-min-width:fit-content;
+min-width: fit-content;
 display:flex;
-${'' /* flex-direction:column; */}
 align-items:center;
-${'' /* justify-content:center; */}
 border:3px solid black;
 min-height:40px;
 margin-top:20px;
+padding-right: 10px;
 background-color:#fbb02f;
 gap:20px;
 font-size:20px;
+overflow: hidden;
+&:hover{
+    overflow: visible;
+    min-width: fit-content;
 
+}
+@media only screen and (max-width:550px){
+    min-width:0px;
+     
+}
 `
 export const FooterElementIcon = styled.div`
 width:100%;
-max-width:50px;
+width:50px;
 display:flex;
 ${'' /* flex-direction:column; */}
 align-items:center;
