@@ -1,23 +1,23 @@
 import React, { useContext, useEffect, useState } from 'react'
 import {TopBannarLeftPartElement,TopBannarLeftPartElementWrapper, Container, TopBannarContainer, TopBannarImg, TopBannarLeftPartBTN, TopBannarLeftPartContainer, TopBannarLeftPartHeading, Wrapper, BtnContainer, SmilyImg, TopBannerImgContainer, Banner_2_container, Banner_2_heading, Banner_2_headingElement, Banner_2_ElementContainer, Banner_2_ElementWrapper, Banner_2_ElementImg, Banner_2_ElementText, MovingTextContainer, Banner_3_container, Banner_3_Wrapper, Banner_3_Maincontainer, Banner_3_Text, Banner_3_HandImg, Banner_3_StarImg, Banner_4_LeftContainer, Banner_4_RightContainer, Banner_4_Img, Banner_4_elements, Banner_4_elementWrapper, Banner_4_Arrow, Banner_4_ArrowSpan, FunStar, SunStar, TopBannarWrapper, ArrowImg, BannerHeadingContainer, Banner_6_ElementText, Banner_4_heading, Banner_1_ElementText } from '../styledComponents/Landingpage'
-import topImg from '../images/MEET.jpg';
-import smily from '../images/smile.svg';
-import frndImg5 from '../images/5.png'; //
-import frndImg4 from '../images/4.png';//
-import frndImg3 from '../images/03.png';//
+import topImg from '../images/MatchMaking24-friendship-dating-matrimony-match-logo.jpg';
+import smily from '../images/MatchMaking24-best-dating-for-working-profetionals-smile.svg';
+import frndImg5 from '../images/MatchMaking24-best-dating-for-working-profetionals-5.png'; //MatchMaking24-best-dating-for-working-profetionals
+import frndImg4 from '../images/MatchMaking-portal-for-linkedin-users-4.png';// MatchMaking24-best-matrimonial-for-working-profetionals
+import frndImg3 from '../images/MatchMaking24-best-matrimonial-for-working-profetionals-03.png';// MatchMaking-portal-for-linkedin-users
 
-import img01 from '../images/01.svg'
-import img02 from '../images/02.svg'
-import img003 from '../images/003.svg'
+// import img01 from '../images/01.svg'
+// import img02 from '../images/02.svg'
+// import img003 from '../images/003.svg'MatchMaking24-friendship-dating-matrimony-match
 
-import star from '../images/star.svg'
-import hand from '../images/hand.svg'
-import cupal from '../images/cupal.png'
-import funstar from '../images/star_fun.svg'
-import arrow from '../images/arrows.svg'
-import gp from '../images/gp_2.webp'
-import gp_3 from '../images/gp_3.webp'
-import gp_4 from '../images/gp_4.webp'
+import star from '../images/MatchMaking24-best-matrimonial-for-working-profetionals-star.svg'
+import hand from '../images/MatchMaking24-best-dating-for-working-profetionals-hand.svg'
+import cupal from '../images/MatchMaking24-best-dating-for-working-profetionals-cupal.png'
+import funstar from '../images/MatchMaking24-friendship-dating-matrimony-match-star_fun.svg'
+import arrow from '../images/MatchMaking24-friendship-dating-matrimony-match-arrows.svg'
+import gp from '../images/MatchMaking24-friendship-dating-matrimony-match-gp_2.webp'
+import gp_3 from '../images/MatchMaking24-friendship-dating-matrimony-match-gp_3.webp'
+import gp_4 from '../images/MatchMaking24-friendship-dating-matrimony-match-gp_4.webp'
 
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Link } from 'react-router-dom';
@@ -55,7 +55,7 @@ export const Landingpage = () => {
                     <TopBannarContainer> 
                         <TopBannarLeftPartContainer>
                             <TopBannarLeftPartHeading className='font'>MatchMaking Portal <br/>For LinkedIn Users <br/> Around The World  </TopBannarLeftPartHeading>
-                            <Link className='Links' to={isAuthenticated?'/find-match':null}><BtnContainer><TopBannarLeftPartBTN onClick={ handalClickRender}>{(isAuthenticated || isLoading )?"Find Match":"Sign Up Free "}<ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer></Link>
+                            <Link className='Links' to={isAuthenticated?'/right-match-for-friendship-dating-matrimony':null}><BtnContainer><TopBannarLeftPartBTN onClick={ handalClickRender}>{(isAuthenticated || isLoading )?"Find Match":"Sign Up Free "}<ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer></Link>
                             <TopBannarLeftPartElementWrapper>
                                 <TopBannarLeftPartElement>Globally Accessible</TopBannarLeftPartElement>
                                 <TopBannarLeftPartElement>Dynamic Filtering</TopBannarLeftPartElement>

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ComponentWrapper, Container, DetailElement, DetailWrapper, Div, FormContainer, FormTitle, HeadingTitleContainer, HeadingTitleImg, Img, ImgContainer, LeftPart, LeftPartTaglineContainer, LeftPartTagLineHeading, LeftPartTagLinePara, LowerPart, LowerPartFormWrapper, OrContainer, OrLeft, OrRigth, OrWrapper, ProfileBasicDetailContainer, RightPart, UpperPart, Wrapper } from "../styledComponents/ShowProfile";
-import logo from '../images/logo.svg'
-import snale from '../images/snaleImg.svg'
+import logo from '../images/MatchMaking24-friendship-dating-matrimony-match-logo.svg'
+import snale from '../images/MatchMaking24-best-matrimonial-for-working-profetionals-snaleImg.svg'
 import { BtnContainer, MovingTextContainer, TopBannarLeftPartBTN } from "../styledComponents/Landingpage";
 import { ProfileLogo, ProfileLogoContainer } from "../styledComponents/Navbar";
 import { useAuth0 } from "@auth0/auth0-react";

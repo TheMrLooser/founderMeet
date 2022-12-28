@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useState } from 'react'
 import { AnkarTag, LogoContainer, LogoImg, LogoText, MainMenuContainer, MenuContainer, MenuElement, MenuElementContainer, MenuWrapper, NavContainer, NavElement, NavElementWrapper, NavWrapper, ProfileLogo, ProfileLogoContainer } from '../styledComponents/Navbar'
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
-import logoImg from '../images/logo.svg'
-import LinkedinLogo from '../images/linkedin.png'
+import logoImg from '../images/MatchMaking24-friendship-dating-matrimony-match-logo.svg'
+import LinkedinLogo from '../images/MatchMaking24-friendship-dating-matrimony-match-linkedin.png'
 import { useAuth0 } from "@auth0/auth0-react";
 import CloseIcon from '@mui/icons-material/Close'; 
 import {HOST_NAME} from '../hostName'
@@ -54,7 +54,7 @@ export const Navbar = () => {
                 <MenuElementContainer><MenuElement style={{maxWidth:'fit-content'}} onClick={() => loginWithRedirect()}> Signup with <img height={'20px'} width={'20px'} style={{marginLeft:'10px'}} src={LinkedinLogo}/> </MenuElement></MenuElementContainer>
               }
              
-              <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/find-match"}><MenuElement>FindMatch <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
+              <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/right-match-for-friendship-dating-matrimony"}><MenuElement>FindMatch <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
               <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/about"}><MenuElement>About <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
               <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/contact"}><MenuElement>Contact <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
               <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/blog"}><MenuElement>Blog <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>

@@ -28,10 +28,10 @@ function App() {
         <Navbar/>
           <Routes>
             <Route path='/' element={<Landingpage/>}/>
-            <Route path='/find-match' element={<HomePage/>}/>
+            <Route path='/right-match-for-friendship-dating-matrimony' element={<HomePage/>}/>
             <Route path='/about' element={<AboutPage/>}/>
             <Route path='/term-and-condition' element={<TermAndCondition/>}/>
-            <Route path='/privacy-and-policy' element={<PrivacyAndPolicy/>}/>
+            <Route path='/privacy-policy' element={<PrivacyAndPolicy/>}/>
             <Route element={<PrivateRoute authenticated={isAuthenticated} redirectOn={'/'} isLoading={isLoading}/>}>
               <Route path='/profile' element={<ShowProfile/>}/>
               <Route path='/profile/edit' element={<ProfileUpdate/>}/>

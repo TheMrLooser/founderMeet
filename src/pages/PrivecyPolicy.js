@@ -1,8 +1,8 @@
 import React from "react";
 import { ComponentWrapper, Container, DetailElement, DetailWrapper, FormContainer, FormTitle, HeadingTitleContainer, HeadingTitleImg, Img, ImgContainer, LeftPart, LeftPartTaglineContainer, LeftPartTagLineHeading, LeftPartTagLinePara, LowerPart, LowerPartFormWrapper, OrContainer, OrLeft, OrRigth, OrWrapper, ProfileBasicDetailContainer, RightPart, UpperPart, Wrapper } from "../styledComponents/Profile";
-import logo from '../images/logo.svg'
+import logo from '../images/MatchMaking24-friendship-dating-matrimony-match-logo.svg'
 
-import snale from '../images/snaleImg.svg'
+import snale from '../images/MatchMaking24-best-matrimonial-for-working-profetionals-snaleImg.svg'
 import {  MovingTextContainer } from "../styledComponents/Landingpage";
  
 

@@ -1,10 +1,10 @@
 import React from "react";
 import { CardBaggroundContainer, CardContainer, CardElementContaienr, CardElementKey, CardElementvalue, CardLeftContainer, CardLowerSection, CardProfileImg, CardProfileImgSection, CardProfileName, CardProfileNameContainer, CardProfileType, CardRelationshipTypeContainer, CardRelationshipTypes, CardRightContainer, CardSocialMediaIcon, CardSocialMediaIconContainer, CardSocialMediaIconWrapper, CardUpperSection, CardWrapper } from "../styledComponents/Card";
-import instagramIcon from '../images/instagram black.png';
-import TelegramIcon from '../images/telegramblack.png';
-import maleIcon from '../images/mail.png';
-import TweetIcon from '../images/tweet.png';
-import clandlyImg from '../images/clandelyLogo.png'
+import instagramIcon from '../images/MatchMaking24-best-dating-for-working-profetionals-instagram black.png';
+import TelegramIcon from '../images/MatchMaking24-best-dating-for-working-profetionals-telegramblack.png';
+import maleIcon from '../images/MatchMaking24-best-dating-for-working-profetionals-mail.png';
+import TweetIcon from '../images/MatchMaking24-best-dating-for-working-profetionals-tweet.png';
+import clandlyImg from '../images/MatchMaking24-best-dating-for-working-profetionals-clandelyLogo.png'
 import {Link} from 'react-router-dom'
 import { format} from "timeago.js";
  
