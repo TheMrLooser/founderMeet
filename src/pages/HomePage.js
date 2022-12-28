@@ -38,7 +38,9 @@ const filterdata = (user,gender,country,city,higherQualification,fieldOfStudy,in
         const userAge = user.age&&user.age ;
         const userLanguage = user.language&&user.language ;
         const userLookingFor= user.lokingFor&&user.lokingFor ;
-        
+        if((usergender||userCountry||userCity||userQualification ||userFieldOfStudy)==undefined){
+            return user
+        }
         return userLookingFor.includes(lookingFor)||userLanguage.includes(language)||( userAge<= age[1] && userAge>= age[0] ) || userSchoolName.includes(schoolName?schoolName:null) || userCollageName.includes(collageName?collageName:null)|| usergender === gender || userCountry===country || userCity===city  || userQualification===higherQualification || userFieldOfStudy===fieldOfStudy || userIndustry===industry || userCompanyName===companyName
     })
   
@@ -117,19 +119,7 @@ PaperProps: {
     };
    
    
-   // check box 
-
-   const [checked, setChecked] = React.useState([true, false]);
-   const handleCheckBOXChange = (event) => {
-    const {
-        target: { value },
-    } = event;
-    setLanguage(
-        // On autofill we get a stringified value.
-        typeof value === 'string' ? value.split(',') : value,
-        );
-    };
- 
+   
    
    const [users,setUsers] = useState()
    const [pageNo,setPageNo] = useState(0)
@@ -187,12 +177,7 @@ PaperProps: {
                                 <FilterOption>Dating</FilterOption>
                                 <FilterOption>Matrimonial</FilterOption>
                             </FilterSelect>
-                            {/* <FilterSelect>
-                                <FilterOption selected disabled>Membership Type</FilterOption>
-                                <FilterOption>Basic</FilterOption>
-                                <FilterOption>Standard</FilterOption>
-                                <FilterOption>Premium</FilterOption>
-                            </FilterSelect> */}
+                             
                         </FilterElement> 
 
                         <FilterH5>Location : </FilterH5> 
@@ -237,29 +222,7 @@ PaperProps: {
                     </FilterElement>
 
                     <FilterH5>Language : </FilterH5> 
-                    <FilterElement>
-                        {/* <FormControl sx={{ m: 1, width: '80%' }}>
-                            <InputLabel id="demo-multiple-checkbox-label" style={{backgroundColor:'#FFF0E5'}} >Language</InputLabel>
-                            <Select
-                            labelId="demo-multiple-checkbox-label"
-                            id="demo-multiple-checkbox"
-                            multiple
-                            value={language}
-                            onChange={handleCheckBOXChange}
-                            input={<OutlinedInput label="Tag" />}
-                            renderValue={(selected) => selected.join(', ')}
-                            MenuProps={MenuProps}
-                            
-                            >
-                            {languagesList.map((name) => (
-                                <MenuItem key={name} value={name}>
-                                <Checkbox checked={language.indexOf(name) > -1} />
-                                <ListItemText primary={name} />
-                                </MenuItem>
-                            ))}
-                            </Select>
-                            </FormControl> */}
-
+                    <FilterElement> 
                             <FilterSelect onChange={(e)=>{setLanguage(e.target.value)}}>
                                 <FilterOption selected disabled>Hindi</FilterOption>
                                 {languagesList.map((name) => (
@@ -318,15 +281,15 @@ PaperProps: {
                <CardMainContainer>
                     <CardWrapper>
                         <FilterOpenerContainer><FilterOpener onClick={ShowFilter}>Open Folter </FilterOpener></FilterOpenerContainer>
-                        <TopBannerContainer>Lorem Lorem Lorem Lorem Lorem</TopBannerContainer>
-                        <Title>Heading</Title>
+                        <TopBannerContainer>Friendship Match &nbsp;• &nbsp;Dating Match &nbsp;• &nbsp;Matrimony Match</TopBannerContainer>
+                        <Title>Profiles:</Title>
                         <CardContainer>
                             {
                                 users ? 
                                 users.map((user,index)=>{
                                     return <Cards user={user} key={index}/>
                                 })
-                                :"Londing...."
+                                :`Londing....`
                             }
                         </CardContainer> 
                         {

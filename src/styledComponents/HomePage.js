@@ -247,11 +247,12 @@ justify-content: center;
 `
 export const FilterCustomInput = styled.input`
 width: 100%;
-max-width: 78%;
+max-width: 80%;
 height: 40px;
-border-radius: 5px;
+border-radius: 3px;
 border: 1px solid black;
 padding-left: 5px;
+background-color: #FFF0E5;
 `
 
 export const FilterButtonContainer = styled.div`

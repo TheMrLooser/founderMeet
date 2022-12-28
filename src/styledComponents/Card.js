@@ -188,10 +188,7 @@ export const CardElementvalue = styled.div`
 /* border: 1px solid black; */
 height: 25px;
 overflow: hidden;
-/* display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center; */
+/* display: flex; */
 /* color: #6b6b6b; */
 &:hover{
     overflow: visible;

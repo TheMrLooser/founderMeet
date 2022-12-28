@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ComponentWrapper, Container, DetailElement, DetailWrapper, FormContainer, FormTitle, HeadingTitleContainer, HeadingTitleImg, Img, ImgContainer, LeftPart, LeftPartTaglineContainer, LeftPartTagLineHeading, LeftPartTagLinePara, LowerPart, LowerPartFormWrapper, OrContainer, OrLeft, OrRigth, OrWrapper, ProfileBasicDetailContainer, RightPart, UpperPart, Wrapper } from "../styledComponents/Profile";
 import logo from '../images/logo.svg'
 
@@ -38,6 +38,7 @@ import { Alert, Collapse, FormHelperText, IconButton } from "@mui/material";
 
 // import { createStyles, makeStyles } from '@mui/styles';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useNavigate } from "react-router-dom";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -74,7 +75,7 @@ PaperProps: {
 
 
 
-const SignUp = ()=>{
+const ProfileUpdate = ()=>{
         // alert section
         const [alertOpen, setAlertOpen] = useState(false);
         const [alertText, setAlertText] = useState("Somthing");
@@ -152,21 +153,31 @@ const SignUp = ()=>{
     const FieldOfStudyList = ["Medicine",'Engineering','Aarchitecture','Science','Business','Humanitiese & Arts' ,'Hotel Management','Management','Fashion','Law','Design','Psychology','Finance','Other']
     
 
-    return (<>
-         
+    const [dataLoading,setDataLoading] = useState(false)
+    const nevigate = useNavigate()
+    useEffect(()=>{ 
+        if(userData&&userData.name){
+            setDataLoading(true)
+        }
+    },[ userData])
+        
+
+     
+
+     return (<>
         <Container>
          
             <Wrapper>
                 <LeftPart>
                     <UpperPart>
-                        <HeadingTitleContainer><HeadingTitleImg src={logo}/></HeadingTitleContainer>
+                        <HeadingTitleContainer><HeadingTitleImg src={logo} /></HeadingTitleContainer>
                     </UpperPart>
                     <LowerPart>
                         <LeftPartTaglineContainer>
                             <LeftPartTagLineHeading>Profile!</LeftPartTagLineHeading>
                             <LeftPartTagLinePara><br/>Welcome to profile<br/> View And Update!</LeftPartTagLinePara>
                         </LeftPartTaglineContainer>
-                        
+                    {dataLoading&&
                         <FormContainer>
                             <ProfileBasicDetailContainer>
                                 <ProfileLogoContainer style={{width:"100px",height:'100px'}}><ProfileLogo  src={isLoading?"Loading...":userData && userData.img} alt=""/></ProfileLogoContainer>
@@ -199,7 +210,7 @@ const SignUp = ()=>{
                                 </Collapse>
 
                                 <ComponentWrapper> 
-                                    <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>WHERE ARE YOU?</FormTitle>
+                                    <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>WHERE ARE YOU? *</FormTitle>
  
                                     <div style={{width:'100%',display:'flex',alignItems:'center',gap:'10px'}}>
                                         <FormControl sx={{ m: 1,width:'40%' }}>
@@ -208,7 +219,7 @@ const SignUp = ()=>{
                                             labelId="demo-simple-select-helper-label"
                                             id="demo-simple-select-helper"
                                             value={country}
-                                            label="City"
+                                            label="Country"
                                             onChange={(e)=>{setCountry(e.target.value)}}
                                             
                                             > 
@@ -248,7 +259,7 @@ const SignUp = ()=>{
                                 </ComponentWrapper>
 
                                 <ComponentWrapper>
-                                    <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>WHAT IS YOUR GENDER?</FormTitle>
+                                    <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>WHAT IS YOUR GENDER? *</FormTitle>
                                     <FormControl  sx={{paddingLeft:1}}>
                                     <RadioGroup
                                         aria-labelledby="demo-controlled-radio-buttons-group"
@@ -265,7 +276,7 @@ const SignUp = ()=>{
                                 </ComponentWrapper>
 
                                 <ComponentWrapper>
-                                <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>WHAT'S YOUR AGE?</FormTitle>
+                                <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>WHAT'S YOUR AGE? *</FormTitle>
                                     <Box
                                     component="form"
                                     sx={{
@@ -449,7 +460,7 @@ const SignUp = ()=>{
 
 
                                 <ComponentWrapper>
-                                    <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>YOUR SOCIAL MEDIA LINKS</FormTitle>
+                                    <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>YOUR SOCIAL MEDIA HANDALS</FormTitle>
                                          
                                     <Box
                                     component="form"
@@ -459,18 +470,7 @@ const SignUp = ()=>{
                                     noValidate
                                     autoComplete="off"
                                     >
-                                        <TextField id="outlined-basic" label={telegram?telegram:"Telegram Account Link"} variant="outlined" onChange={(e)=>{setTelegram(e.target.value)}} />
-                                         
-                                    </Box>
-                                    <Box
-                                    component="form"
-                                    sx={{
-                                        '& > :not(style)': { m: 1, width: '100%' },
-                                    }}
-                                    noValidate
-                                    autoComplete="off"
-                                    >
-                                        <TextField id="outlined-basic" label={instagram?instagram:"Instagram Account Link"} variant="outlined"  onChange={(e)=>{setInstagram(e.target.value)}}/>
+                                        <TextField id="outlined-basic" label={telegram?telegram:"Telegram Account Name"} variant="outlined" onChange={(e)=>{setTelegram(e.target.value)}} />
                                          
                                     </Box>
                                     <Box
@@ -481,7 +481,18 @@ const SignUp = ()=>{
                                     noValidate
                                     autoComplete="off"
                                     >
-                                        <TextField id="outlined-basic" label={twiter?twiter:"Twiter Account Link"} variant="outlined" onChange={(e)=>{setTwiter(e.target.value)}} />
+                                        <TextField id="outlined-basic" label={instagram?instagram:"Instagram Account Name"} variant="outlined"  onChange={(e)=>{setInstagram(e.target.value)}}/>
+                                         
+                                    </Box>
+                                    <Box
+                                    component="form"
+                                    sx={{
+                                        '& > :not(style)': { m: 1, width: '100%' },
+                                    }}
+                                    noValidate
+                                    autoComplete="off"
+                                    >
+                                        <TextField id="outlined-basic" label={twiter?twiter:"Twiter Account Name"} variant="outlined" onChange={(e)=>{setTwiter(e.target.value)}} />
                                          
                                     </Box>
                                 </ComponentWrapper>
@@ -491,7 +502,7 @@ const SignUp = ()=>{
                             </LowerPartFormWrapper> 
 
                         </FormContainer>
-
+                    }
                     </LowerPart>
                 </LeftPart>
                 <RightPart>
@@ -503,7 +514,8 @@ const SignUp = ()=>{
             <MovingTextContainer> <marquee style={{marginLeft: '20px', marginRight: '20px'}} behavior="scroll" scrollamount="12"> Join Now  •  Make it Happen    &nbsp;• &nbsp;Join Now  •  Make it Happen  &nbsp;• &nbsp;Join Now  •  Make it Happen &nbsp;• &nbsp;Join Now  •  Make it Happen  &nbsp;• &nbsp;Join Now  •  Make it Happen  &nbsp;• &nbsp;Join Now  •  Make it Happen  &nbsp;• &nbsp;Join Now  •  Make it Happen  &nbsp;• &nbsp;Join Now  •  Make it Happen   </marquee></MovingTextContainer>
          
         </Container>
+       
     </>)
 }
 
-export default SignUp
+export default ProfileUpdate

@@ -83,14 +83,14 @@ export const Cards = ({user})=>{
                             <CardElementvalue>{user.collageName}</CardElementvalue>
                         </CardElementContaienr>
                         <CardElementContaienr>
-                            <CardSocialMediaIconWrapper>
-                                Connect on : 
+                            <CardElementKey>Connect on : </CardElementKey>
+                            <CardElementvalue style={{display:'flex',gap:'10px'}}>
                                     <a href={user.telegram} target={"_blank"}><CardSocialMediaIcon src={TelegramIcon}/></a>
                                     <a href={`mailto:${user.email}?`}><CardSocialMediaIcon src={maleIcon}/></a>
                                     <a href={user.twiter} target={"_blank"}><CardSocialMediaIcon src={TweetIcon}/></a>
                                     <a href={user.instagram} target={"_blank"}><CardSocialMediaIcon src={instagramIcon}/></a>
                                     <a href={"https://calendly.com/"} target={"_blank"}><CardSocialMediaIcon  src={clandlyImg}/></a>
-                            </CardSocialMediaIconWrapper>
+                            </CardElementvalue>
                         </CardElementContaienr>
                     </CardRightContainer>
                 </CardLowerSection>

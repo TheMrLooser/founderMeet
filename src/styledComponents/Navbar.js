@@ -142,6 +142,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 /* border: 1px solid gray; */
+padding-left: 30px;
 &:hover{
     background-color:#FF90E8 ;
     /* box-shadow: 5px 5px 7px; */

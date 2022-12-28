@@ -56,20 +56,11 @@ align-items:center;
 border:3px solid black;
 min-height:40px;
 margin-top:20px;
-padding-right: 10px;
 background-color:#fbb02f;
 gap:20px;
 font-size:20px;
 overflow: hidden;
-&:hover{
-    overflow: visible;
-    min-width: fit-content;
-
-}
-@media only screen and (max-width:550px){
-    min-width:0px;
-     
-}
+ 
 `
 export const FooterElementIcon = styled.div`
 width:100%;

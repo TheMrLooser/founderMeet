@@ -134,6 +134,25 @@ height: inherit;
 export const DetailElement = styled.div`
 
 `
+export const Div = styled.div`
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+    width: 100%;
+    min-height:55px;
+    max-width: ${props=>props.maxWidth}%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 370;
+    margin: 1%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    @media only screen and (max-width:470px){
+
+    }
+`
  
 export const LowerPartFormWrapper = styled.div`
 /* border: 1px solid black; */
