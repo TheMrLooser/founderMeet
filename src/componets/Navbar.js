@@ -34,7 +34,7 @@ export const Navbar = () => {
                 <NavElementWrapper>
                     <NavElement> <Link className='Links inheritProperty' to={"/"}>Home</Link></NavElement>
                     <NavElement><AnkarTag href='https://www.blog.matchmaking24.com' target={'_blank'}>Blog</AnkarTag> </NavElement>
-                    { (!isAuthenticated && !isLoading ) && <NavElement onClick={() => loginWithRedirect()}> Signup with <img height={'20px'} width={'20px'} style={{marginLeft:'10px'}} src={LinkedinLogo}/> </NavElement>}
+                    { (!isAuthenticated && !isLoading ) && <NavElement onClick={() => loginWithRedirect()}> Signup with <img height={'20px'} width={'20px'} style={{marginLeft:'5px'}} src={LinkedinLogo}/> </NavElement>}
                     <NavElement display={'block'} ><MenuIcon sx={{fontSize:'40px'}} onClick={()=>setOpenMenuBar(true)} /></NavElement>
                 </NavElementWrapper>
                  
@@ -50,15 +50,15 @@ export const Navbar = () => {
                 <ProfileLogoContainer><ProfileLogo src={user.picture}/></ProfileLogoContainer>
                 <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/profile"}><MenuElement>Profile <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
                 </>
-                :
-                <MenuElementContainer><MenuElement style={{maxWidth:'fit-content'}} onClick={() => loginWithRedirect()}> Signup with <img height={'20px'} width={'20px'} style={{marginLeft:'10px'}} src={LinkedinLogo}/> </MenuElement></MenuElementContainer>
+                : 
+                <MenuElementContainer><MenuElement  onClick={() => loginWithRedirect()}> SignUpWith <img height={'20px'} width={'20px'} style={{marginLeft:'-5px'}} src={LinkedinLogo}/> <ArrowForwardIcon/></MenuElement></MenuElementContainer>
               }
              
-              <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/right-match-for-friendship-dating-matrimony"}><MenuElement>FindMatch <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
+              {(isAuthenticated && !isLoading) ?<MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/right-match-for-friendship-dating-matrimony"}><MenuElement>FindMatch <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>:null}
+              <MenuElementContainer><AnkarTag onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty'  href={"/#Confession"}><MenuElement> Confession  <ArrowForwardIcon/></MenuElement></AnkarTag></MenuElementContainer>
               <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/about"}><MenuElement>About <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
               <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/contact"}><MenuElement>Contact <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
               <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/blog"}><MenuElement>Blog <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
-              <MenuElementContainer><AnkarTag onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty'  href={"/#Confession"}><MenuElement> Confession  <ArrowForwardIcon/></MenuElement></AnkarTag></MenuElementContainer>
               {
                 (isAuthenticated && !isLoading) ?
                 <MenuElementContainer><MenuElement onClick={() => logout()}>Sign Out</MenuElement></MenuElementContainer>

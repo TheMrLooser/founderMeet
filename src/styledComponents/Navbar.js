@@ -142,7 +142,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 /* border: 1px solid gray; */
-padding-left: 30px;
+padding-left: 20%;
 &:hover{
     background-color:#FF90E8 ;
     /* box-shadow: 5px 5px 7px; */
@@ -152,7 +152,7 @@ padding-left: 30px;
 `
 export const MenuElement = styled.div`
 width: 100%;
-max-width: 35%;
+max-width: 55%;
 height: 50px;
 /* border: 1px solid gray; */
 font-size: 25px;
