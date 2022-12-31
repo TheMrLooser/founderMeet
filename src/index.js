@@ -11,7 +11,7 @@ root.render(
     <Auth0Provider
     domain="dev-2wrhnz83wxyo8z5x.us.auth0.com"
     clientId="AojwkiyZA7L6oUMtb6V9QA5c8ot39ZNO"
-    redirectUri={`https://matchmaking24.netlify.app/profile`}
+    redirectUri={`https://matchmaking24.netlify.app/profile/`}
   >
     <App />
   </Auth0Provider>
