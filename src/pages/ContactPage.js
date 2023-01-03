@@ -19,8 +19,8 @@ const ContactPage = ()=>{
                     </UpperPart>
                     <LowerPart>
                         <LeftPartTaglineContainer>
-                            <LeftPartTagLineHeading style={{fontSize:'25px'}}>Privacy Policy!</LeftPartTagLineHeading>
-                            <LeftPartTagLinePara style={{marginTop:'10px'}}>Know more about <br/> Matchmaking24.com <br/> Privacy Policy</LeftPartTagLinePara>
+                            <LeftPartTagLineHeading style={{fontSize:'25px'}}>Contact Us!</LeftPartTagLineHeading>
+                            <LeftPartTagLinePara style={{marginTop:'10px'}}>If you have any<br/> query fill the form  <br/> get support from us</LeftPartTagLinePara>
                         </LeftPartTaglineContainer>
                         <FormContainer>
                             <iframe style={{width:'100%'}} src="https://docs.google.com/forms/d/e/1FAIpQLScT-Q4ex37RDwKCzuwyZLt0UgLokpxjcC77FeCay8ottFHJOg/viewform?embedded=true" width="640" height="1092" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
