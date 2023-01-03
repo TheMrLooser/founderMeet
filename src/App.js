@@ -13,6 +13,7 @@ import PrivacyAndPolicy from './pages/PrivecyPolicy';
 import { NotFoundPage } from './pages/NotFoundPage';
 import ProfileUpdate from './componets/profileUpdate';
 import ShowProfile from './componets/ShowProfile';
+import ContactPage from './pages/ContactPage';
 
 export const UserProfileData = createContext(null)
 
@@ -30,6 +31,7 @@ function App() {
             <Route path='/' element={<Landingpage/>}/>
             <Route path='/right-match-for-friendship-dating-matrimony' element={<HomePage/>}/>
             <Route path='/about' element={<AboutPage/>}/>
+            <Route path='/contact' element={<ContactPage/>}/>
             <Route path='/term-and-condition' element={<TermAndCondition/>}/>
             <Route path='/privacy-policy' element={<PrivacyAndPolicy/>}/>
             <Route element={<PrivateRoute authenticated={isAuthenticated} redirectOn={'/'} isLoading={isLoading}/>}>
