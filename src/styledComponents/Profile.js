@@ -150,6 +150,10 @@ width: 100%;
 flex-direction: column;
 align-items:flex-start ; */
 `
+export const BtnsWrapper = styled.div`
+width: 100%;
+padding-left: 15px;
+`
 
 
 

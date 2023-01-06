@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Cards } from "../componets/Card";
 import { CardContainer, CardMainContainer, CardWrapper, Container, FilterButton, FilterButtonContainer, FilterButtonWrapper, FilterContainer, FilterCustomInput, FilterElement, FilterH2, FilterH5, FilterInputRange, FilterInputRangeOutput, FilterOpener, FilterOpenerContainer, FilterOption, FilterSelect, FilterSelect_antd, FilterWrapper, PrettoSlider, Title, TopBannerContainer, Wrapper } from "../styledComponents/HomePage";
 import CloseIcon from '@mui/icons-material/Close';
@@ -14,6 +14,7 @@ import {HOST_NAME} from '../hostName'
 import { FormControl, InputLabel, ListItemText, MenuItem, OutlinedInput, Select } from "@mui/material";
 import counrtyList from '../JsonData/countryName.json' 
 import IndustryList from '../JsonData/IndustryData.json' 
+import { UserProfileData } from "../App";
 
 
 
@@ -88,9 +89,7 @@ PaperProps: {
     const [age, setAge] = useState([16,37]);
     const [language, setLanguage] = useState("");
     
-   
-
- 
+    const {userData} = useContext(UserProfileData)
 
     const handlePageChange = (event, value) => {
         setPage(value);
@@ -117,7 +116,7 @@ PaperProps: {
     const handleChange = (event, newValue) => {
         setAge(newValue);
     };
-   
+           
    
    
    
@@ -153,7 +152,7 @@ PaperProps: {
     countryList.sort()
     const cityList = [...new Set(counrtyList.map(items=>(items.countryName.toLocaleLowerCase()===country)?items.cityNameList:""))]
  
-
+    
     return(<>
         <Container>
             <Wrapper>

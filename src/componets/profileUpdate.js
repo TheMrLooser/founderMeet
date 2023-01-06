@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { ComponentWrapper, Container, DetailElement, DetailWrapper, FormContainer, FormTitle, HeadingTitleContainer, HeadingTitleImg, Img, ImgContainer, LeftPart, LeftPartTaglineContainer, LeftPartTagLineHeading, LeftPartTagLinePara, LowerPart, LowerPartFormWrapper, OrContainer, OrLeft, OrRigth, OrWrapper, ProfileBasicDetailContainer, RightPart, UpperPart, Wrapper } from "../styledComponents/Profile";
+import { BtnsWrapper, ComponentWrapper, Container, DetailElement, DetailWrapper, FormContainer, FormTitle, HeadingTitleContainer, HeadingTitleImg, Img, ImgContainer, LeftPart, LeftPartTaglineContainer, LeftPartTagLineHeading, LeftPartTagLinePara, LowerPart, LowerPartFormWrapper, OrContainer, OrLeft, OrRigth, OrWrapper, ProfileBasicDetailContainer, RightPart, UpperPart, Wrapper } from "../styledComponents/Profile";
 import logo from '../images/MatchMaking24-friendship-dating-matrimony-match-logo.svg'
 
 import snale from '../images/MatchMaking24-best-matrimonial-for-working-profetionals-snaleImg.svg'
@@ -38,7 +38,10 @@ import { Alert, Collapse, FormHelperText, IconButton } from "@mui/material";
 
 // import { createStyles, makeStyles } from '@mui/styles';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
+import Loader from "../loder/loder";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -114,7 +117,7 @@ const ProfileUpdate = ()=>{
         const [telegram, setTelegram] = useState(userData&&userData.telegram&&userData.telegram);
         const [instagram, setInstagram] = useState(userData&&userData.instagram&&userData.instagram);
         const [twiter, setTwiter] = useState(userData&&userData.twiter&&userData.twiter);
-        const [age, setAge] = useState(userData&&userData.age&&userData.age);
+        // const [age, setAge] = useState(userData&&userData.age&&userData.age);
          
         
         const handleCheckBOXChange = (event) => {
@@ -136,13 +139,23 @@ const ProfileUpdate = ()=>{
                 );
             };
 
+    const [openLoader,setOpenLoader] = useState(false)
     const updateProfile = async()=>{
-        const res = await axios.put(`${HOST_NAME}/user/update-user`, 
-        {age,city,country,gender,email:userData.email,year,month,day,language,higherQualification:qualification,fieldOfStudy,schoolName,collageName,industry,companyName,lokingFor,telegram,instagram,twiter})
-        if(res.data.error){
-            return setAlert("error",res.data.message,true);
-           }
-        setAlert("success",res.data.message,true)
+        if(!city||!country||!gender||!year||!month||!day||!language||!fieldOfStudy||!schoolName||!collageName||!industry||!companyName||!lokingFor){
+            setAlert("error",'Fill all the required field first',true)
+
+        }
+        else{
+            setOpenLoader(true)
+            const res = await axios.put(`${HOST_NAME}/user/update-user`, 
+            {city,country,gender,email:userData.email,year,month,day,language,higherQualification:qualification,fieldOfStudy,schoolName,collageName,industry,companyName,lokingFor,telegram,instagram,twiter})
+            if(res.data.error){
+                return setAlert("error",res.data.message,true);
+               }
+            setAlert("success",res.data.message,true)
+            setOpenLoader(false)
+        }
+
     }
 
 
@@ -189,25 +202,7 @@ const ProfileUpdate = ()=>{
 
                             <LowerPartFormWrapper>
 
-                            <Collapse in={alertOpen}> 
-                                <Alert
-                                    action={
-                                    <IconButton
-                                        aria-label="close"
-                                        color="inherit"
-                                        size="small"
-                                        onClick={() => {
-                                        setAlertOpen(true);
-                                        }}
-                                    >
-                                    </IconButton>
-                                    }
-                                    sx={{ mb: 2 }}
-                                    severity={alertType}
-                                >
-                                {alertText}
-                                </Alert>
-                                </Collapse>
+                             
 
                                 <ComponentWrapper> 
                                     <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>WHERE ARE YOU? *</FormTitle>
@@ -268,31 +263,18 @@ const ProfileUpdate = ()=>{
                                         value={gender}
                                         onChange={(e)=>{setGender(e.target.value)}}
                                     >
-                                        <FormControlLabel value="female" control={<Radio />} label="Female" />
-                                        <FormControlLabel value="male" control={<Radio />} label="Male" />
-                                        <FormControlLabel value="other" control={<Radio />} label="Other" />
+                                        <FormControlLabel value="Female" control={<Radio />} label="Female" />
+                                        <FormControlLabel value="Male" control={<Radio />} label="Male" />
+                                        <FormControlLabel value="Other" control={<Radio />} label="Other" />
                                     </RadioGroup>
                                     </FormControl>
                                 </ComponentWrapper>
 
-                                <ComponentWrapper>
-                                <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>WHAT'S YOUR AGE? *</FormTitle>
-                                    <Box
-                                    component="form"
-                                    sx={{
-                                        '& > :not(style)': { m: 1, width: '100%' },
-                                    }}
-                                    noValidate
-                                    autoComplete="off"
-                                    >
-                                        <TextField id="outlined-basic" label={age?`${age} Year`:"Age"} variant="outlined" onChange={(e)=>{setAge(e.target.value)}} />
-                                         
-                                    </Box>
-                                </ComponentWrapper>
+                                 
 
 
                                 <ComponentWrapper>
-                                    <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>LOOKING FOR</FormTitle>
+                                    <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>LOOKING FOR *</FormTitle>
                                     <FormControl sx={{ m: 1, width: '98%' }}>
                                     <InputLabel id="demo-multiple-checkbox-label" style={{backgroundColor:'white'}} >Looking For</InputLabel>
                                     <Select
@@ -316,7 +298,7 @@ const ProfileUpdate = ()=>{
                                 </ComponentWrapper>
 
                                 <ComponentWrapper>
-                                    <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>WHEN'S YOUR BIRTHDAY</FormTitle>
+                                    <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>WHEN'S YOUR BIRTHDAY *</FormTitle>
                                     <FormControl  sx={{paddingLeft:1}}>
                                     
                                         <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -355,7 +337,7 @@ const ProfileUpdate = ()=>{
 
 
                                 <ComponentWrapper>
-                                    <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>WHAT'S YOUR LANGUAGE</FormTitle>
+                                    <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>WHAT'S YOUR LANGUAGE *</FormTitle>
                                     <FormControl sx={{ m: 1, width: '98%' }}>
                                     <InputLabel id="demo-multiple-checkbox-label" style={{backgroundColor:'white'}} >Language</InputLabel>
                                     <Select
@@ -367,6 +349,7 @@ const ProfileUpdate = ()=>{
                                     input={<OutlinedInput label="Tag" />}
                                     renderValue={(selected) => selected.join(', ')}
                                     MenuProps={MenuProps}
+                                    
                                     >
                                     {names.map((name) => (
                                         <MenuItem key={name} value={name}>
@@ -380,7 +363,7 @@ const ProfileUpdate = ()=>{
 
 
                                 <ComponentWrapper>
-                                    <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>WHAT'S YOUR QUALIFICATION'S</FormTitle>
+                                    <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>WHAT'S YOUR QUALIFICATION'S *</FormTitle>
                                     <div style={{width:'100%',display:'flex',alignItems:'baseline',gap:'10px'}}>
                                         <FormControl sx={{ m: 1,width:'40%' }}>
                                         <InputLabel id="demo-simple-select-helper-label"  style={{backgroundColor:'white'}}>Qualification</InputLabel>
@@ -403,7 +386,7 @@ const ProfileUpdate = ()=>{
                                         </FormControl>
 
                                         <FormControl sx={{ m: 1, width:'40%' }}>
-                                        <InputLabel id="demo-simple-select-helper-label" style={{backgroundColor:'white'}}>Field Of Study</InputLabel>
+                                        <InputLabel id="demo-simple-select-helper-label" style={{backgroundColor:'white'}}>Field Of Study *</InputLabel>
                                             <Select
                                             labelId="demo-simple-select-helper-label"
                                             id="demo-simple-select-helper"
@@ -431,7 +414,7 @@ const ProfileUpdate = ()=>{
 
 
                                 <ComponentWrapper>
-                                <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>IN WHICH INDUSTRY YOU WORK</FormTitle>
+                                <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>IN WHICH INDUSTRY YOU WORK *</FormTitle>
                                     <div style={{width:'100%',display:'flex',alignItems:'baseline',gap:'10px'}}>
                                         <FormControl sx={{ m: 1, width:'40%' }}>
                                             <InputLabel id="demo-simple-select-helper-label" sx={{backgroundColor:"white"}}>Industry</InputLabel>
@@ -497,8 +480,30 @@ const ProfileUpdate = ()=>{
                                     </Box>
                                 </ComponentWrapper>
 
+                                <BtnsWrapper>
+                                    <Collapse in={alertOpen} id="alert"> 
+                                    <Alert
+                                        action={
+                                        <IconButton
+                                            aria-label="close"
+                                            color="inherit"
+                                            size="small"
+                                            onClick={() => {
+                                            setAlertOpen(true);
+                                            }}
+                                        >
+                                        </IconButton>
+                                        }
+                                        sx={{ mb: 2 }}
+                                        severity={alertType}
+                                    >
+                                    {alertText}
+                                    </Alert>
+                                    </Collapse>
+                                    <BtnContainer style={{maxWidth:'200px'}}><TopBannarLeftPartBTN style={{maxWidth:'300px'}} onClick={updateProfile}>{openLoader?<Loader/>:"Save Prfofile"}</TopBannarLeftPartBTN></BtnContainer>
+                                    {/* <Link className='Links' to={'/right-match-for-friendship-dating-matrimony'}><BtnContainer><TopBannarLeftPartBTN>Find Match<ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer></Link> */}
+                                </BtnsWrapper>
 
-                                <BtnContainer style={{maxWidth:'200px'}}><TopBannarLeftPartBTN style={{maxWidth:'300px'}} onClick={updateProfile}>Update Profile</TopBannarLeftPartBTN></BtnContainer>
                             </LowerPartFormWrapper> 
 
                         </FormContainer>

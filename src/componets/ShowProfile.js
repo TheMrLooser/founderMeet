@@ -8,6 +8,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { CardProfileName, CardProfileType } from "../styledComponents/Card";
 import { UserProfileData } from "../App";
 import { Link, useNavigate } from "react-router-dom";
+import { BtnsWrapper } from "../styledComponents/Profile";
  
     
 
@@ -141,8 +142,10 @@ const ShowProfile = ()=>{
 
                                 </>:null
                                 }
-                               <Link className="Links" to={'/profile/edit'}> <BtnContainer style={{maxWidth:'200px'}}><TopBannarLeftPartBTN style={{maxWidth:'300px'}} >Update Profile</TopBannarLeftPartBTN></BtnContainer></Link>
 
+                                <BtnsWrapper style={{marginTop:'30px'}}>
+                                    <BtnContainer style={{maxWidth:'200px'}}><Link className="Links" to={'/profile/edit'}> <TopBannarLeftPartBTN style={{maxWidth:'300px'}} >Edit Profile</TopBannarLeftPartBTN></Link></BtnContainer>
+                                </BtnsWrapper>
                             
                             </LowerPartFormWrapper> 
 

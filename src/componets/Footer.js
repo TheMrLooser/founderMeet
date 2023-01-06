@@ -26,7 +26,7 @@ export const Footer = () => {
         <FooterCopyRightSection>
             <p> Made in India 🧡</p> 
             <p>Copyright © 2022 MatchMaking24.com | All Rights Reserved.</p>
-            <p> <Link to={'/term-and-condition'} className="Links inherit"> <span className='footerHoverColorChange'>Terms of Use</span></Link>  | <Link to={'/privacy-policy'} className='Links inherit'><span className='footerHoverColorChange'> Privacy Policy </span> </Link> | <span className='footerHoverColorChange'> Support </span></p> 
+            <p> <Link to={'/term-and-condition'} className="Links inherit"> <span className='footerHoverColorChange'>Terms of Use</span></Link>  | <Link to={'/privacy-policy'} className='Links inherit'><span className='footerHoverColorChange'> Privacy Policy </span> </Link> | <Link className='Links inherit' to={'/contact'}><span className='footerHoverColorChange'> Support </span></Link></p> 
         </FooterCopyRightSection>
     </FooterContainer>
    </>

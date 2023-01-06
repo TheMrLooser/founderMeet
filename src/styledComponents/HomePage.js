@@ -341,7 +341,10 @@ border-radius: 3px ;
 display: flex;
 align-items: center;
 justify-content: center;
-font-size: 20px;
+font-size: 22px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 600;
+letter-spacing: 1px;
 @media only screen and (max-width:900px) {
     max-width: 70%;
 

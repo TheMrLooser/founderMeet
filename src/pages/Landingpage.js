@@ -55,7 +55,7 @@ export const Landingpage = () => {
                     <TopBannarContainer> 
                         <TopBannarLeftPartContainer>
                             <TopBannarLeftPartHeading className='font'>MatchMaking Portal <br/>For LinkedIn Users <br/> Around The World  </TopBannarLeftPartHeading>
-                            <Link className='Links' to={isAuthenticated?'/right-match-for-friendship-dating-matrimony':null}><BtnContainer><TopBannarLeftPartBTN onClick={ handalClickRender}>{(isAuthenticated || isLoading )?"Find Match":"Sign Up Free "}<ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer></Link>
+                            <BtnContainer><Link className='Links' to={isAuthenticated?'/right-match-for-friendship-dating-matrimony':null}><TopBannarLeftPartBTN onClick={ handalClickRender}>{(isAuthenticated || isLoading )?"Find Match":"Sign Up Free "}<ArrowForwardIcon/></TopBannarLeftPartBTN></Link></BtnContainer>
                             <TopBannarLeftPartElementWrapper>
                                 <TopBannarLeftPartElement>Globally Accessible</TopBannarLeftPartElement>
                                 <TopBannarLeftPartElement>Dynamic Filtering</TopBannarLeftPartElement>
@@ -189,7 +189,7 @@ export const Landingpage = () => {
                 <Banner_3_Maincontainer style={{width:'100%',flexDirection:'column',gap:'50px',backgroundColor:'#ff7051',padding:'50px 0px',alignItems:'center',justifyContent:'center',}}>
 
                     <Banner_2_heading className='font'>Join the chase, join the fun! <br/>Get out there!</Banner_2_heading>
-                    <Link className='Links' to={'/find-match'}><BtnContainer style={{maxWidth:'300px'}}><TopBannarLeftPartBTN style={{maxWidth:'350px'}}>FIND YOUR MATCH NOW</TopBannarLeftPartBTN></BtnContainer></Link>
+                    <Link className='Links'  to={isAuthenticated?'/right-match-for-friendship-dating-matrimony':null} ><BtnContainer style={{maxWidth:'350px'}} ><TopBannarLeftPartBTN style={{maxWidth:'350px'}} onClick={ handalClickRender}>{(isAuthenticated || isLoading )?"FIND YOUR MATCH NOW":"Sign Up Free "}<ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer></Link>
                     <FunStar src={funstar}/>
                     <SunStar src={star}/>
                 </Banner_3_Maincontainer>
