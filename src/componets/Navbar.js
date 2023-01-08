@@ -54,7 +54,7 @@ export const Navbar = () => {
                 <MenuElementContainer><MenuElement  onClick={() => loginWithPopup()}> SignUpWith <img height={'20px'} width={'20px'} style={{marginLeft:'-7px',marginBottom:'-3px'}} src={LinkedinLogo}/> <ArrowForwardIcon/></MenuElement></MenuElementContainer>
               }
              
-              {(isAuthenticated && !isLoading) ?<MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={userData.gender?"/right-match-for-friendship-dating-matrimony":null}><MenuElement>FindMatch <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>:null}
+              {(isAuthenticated && !isLoading) ?<MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={userData?.gender?"/right-match-for-friendship-dating-matrimony":null}><MenuElement>FindMatch <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>:null}
               <MenuElementContainer><AnkarTag onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty'  href={"/#Confession"}><MenuElement> Confession  <ArrowForwardIcon/></MenuElement></AnkarTag></MenuElementContainer>
               <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/about"}><MenuElement>About <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
               <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/contact"}><MenuElement>Contact <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
