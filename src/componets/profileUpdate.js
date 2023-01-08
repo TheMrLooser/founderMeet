@@ -500,8 +500,10 @@ const ProfileUpdate = ()=>{
                                     {alertText}
                                     </Alert>
                                     </Collapse>
-                                    <BtnContainer style={{maxWidth:'200px'}}><TopBannarLeftPartBTN style={{maxWidth:'300px'}} onClick={updateProfile}>{openLoader?<Loader/>:"Save Prfofile"}</TopBannarLeftPartBTN></BtnContainer>
-                                    {/* <Link className='Links' to={'/right-match-for-friendship-dating-matrimony'}><BtnContainer><TopBannarLeftPartBTN>Find Match<ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer></Link> */}
+                                    <div className="btnWrapper">
+                                        <BtnContainer style={{maxWidth:'200px'}}><TopBannarLeftPartBTN style={{maxWidth:'300px'}} onClick={updateProfile}>{openLoader?<Loader/>:"Save Prfofile"}</TopBannarLeftPartBTN></BtnContainer>
+                                        <Link className='Links' to={(!city||!country||!gender||!year||!month||!day||!language||!fieldOfStudy||!schoolName||!collageName||!industry||!companyName||!lokingFor)?null:'/right-match-for-friendship-dating-matrimony'}><BtnContainer><TopBannarLeftPartBTN>Find Match<ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer></Link>
+                                    </div>
                                 </BtnsWrapper>
 
                             </LowerPartFormWrapper> 

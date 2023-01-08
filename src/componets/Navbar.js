@@ -14,7 +14,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 export const Navbar = () => {
   const { loginWithRedirect,user,isAuthenticated ,isLoading ,logout ,loginWithPopup} = useAuth0();
   const [openMenuBar,setOpenMenuBar] = useState(false)
-  const {setUserData} = useContext(UserProfileData)
+  const {setUserData,userData} = useContext(UserProfileData)
   useEffect(()=>{
     const login = async()=>{
       const res = await axios.post(`${HOST_NAME}/user/register`,{email:user.email,name:user.name,img:user.picture})
@@ -51,10 +51,10 @@ export const Navbar = () => {
                 <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/profile"}><MenuElement>Profile <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
                 </>
                 : 
-                <MenuElementContainer><MenuElement  onClick={() => loginWithPopup()}> SignUpWith <img height={'20px'} width={'20px'} style={{marginLeft:'-5px'}} src={LinkedinLogo}/> <ArrowForwardIcon/></MenuElement></MenuElementContainer>
+                <MenuElementContainer><MenuElement  onClick={() => loginWithPopup()}> SignUpWith <img height={'20px'} width={'20px'} style={{marginLeft:'-7px',marginBottom:'-3px'}} src={LinkedinLogo}/> <ArrowForwardIcon/></MenuElement></MenuElementContainer>
               }
              
-              {(isAuthenticated && !isLoading) ?<MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/right-match-for-friendship-dating-matrimony"}><MenuElement>FindMatch <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>:null}
+              {(isAuthenticated && !isLoading) ?<MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={userData.gender?"/right-match-for-friendship-dating-matrimony":null}><MenuElement>FindMatch <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>:null}
               <MenuElementContainer><AnkarTag onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty'  href={"/#Confession"}><MenuElement> Confession  <ArrowForwardIcon/></MenuElement></AnkarTag></MenuElementContainer>
               <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/about"}><MenuElement>About <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
               <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/contact"}><MenuElement>Contact <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>

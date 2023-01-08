@@ -31,7 +31,7 @@ import { UserProfileData } from '../App';
 export const Landingpage = () => {
 
     const { loginWithRedirect,user,isAuthenticated ,isLoading ,logout ,loginWithPopup } = useAuth0();
-  const {setUserData} = useContext(UserProfileData)
+  const {setUserData,userData} = useContext(UserProfileData)
   useEffect(()=>{
     const login = async()=>{
       const res = await axios.post(`${HOST_NAME}/user/register`,{email:user.email,name:user.name,img:user.picture})
@@ -55,7 +55,7 @@ export const Landingpage = () => {
                     <TopBannarContainer> 
                         <TopBannarLeftPartContainer>
                             <TopBannarLeftPartHeading className='font'>MatchMaking Portal <br/>For LinkedIn Users <br/> Around The World  </TopBannarLeftPartHeading>
-                            <BtnContainer><Link className='Links' to={isAuthenticated?'/right-match-for-friendship-dating-matrimony':null}><TopBannarLeftPartBTN onClick={ handalClickRender}>{(isAuthenticated || isLoading )?"Find Match":"Sign Up Free "}<ArrowForwardIcon/></TopBannarLeftPartBTN></Link></BtnContainer>
+                            <BtnContainer><Link className='Links' to={(isAuthenticated&&userData.gender)?'/right-match-for-friendship-dating-matrimony':null}><TopBannarLeftPartBTN onClick={ handalClickRender}>{(isAuthenticated || isLoading )?"Find Match":"Sign Up Free "}<ArrowForwardIcon/></TopBannarLeftPartBTN></Link></BtnContainer>
                             <TopBannarLeftPartElementWrapper>
                                 <TopBannarLeftPartElement>Globally Accessible</TopBannarLeftPartElement>
                                 <TopBannarLeftPartElement>Dynamic Filtering</TopBannarLeftPartElement>
@@ -189,7 +189,7 @@ export const Landingpage = () => {
                 <Banner_3_Maincontainer style={{width:'100%',flexDirection:'column',gap:'50px',backgroundColor:'#ff7051',padding:'50px 0px',alignItems:'center',justifyContent:'center',}}>
 
                     <Banner_2_heading className='font'>Join the chase, join the fun! <br/>Get out there!</Banner_2_heading>
-                    <Link className='Links'  to={isAuthenticated?'/right-match-for-friendship-dating-matrimony':null} ><BtnContainer style={{maxWidth:'350px'}} ><TopBannarLeftPartBTN style={{maxWidth:'350px'}} onClick={ handalClickRender}>{(isAuthenticated || isLoading )?"FIND YOUR MATCH NOW":"Sign Up Free "}<ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer></Link>
+                    <Link className='Links'  to={(isAuthenticated&&userData.gender)?'/right-match-for-friendship-dating-matrimony':null} ><BtnContainer style={{maxWidth:'350px'}} ><TopBannarLeftPartBTN style={{maxWidth:'350px'}} onClick={ handalClickRender}>{(isAuthenticated || isLoading )?"FIND YOUR MATCH NOW":"Sign Up Free "}<ArrowForwardIcon/></TopBannarLeftPartBTN></BtnContainer></Link>
                     <FunStar src={funstar}/>
                     <SunStar src={star}/>
                 </Banner_3_Maincontainer>

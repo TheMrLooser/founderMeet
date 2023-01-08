@@ -48,4 +48,14 @@ justify-content: center;
 
 
  
- 
+ .btnWrapper{
+  display: flex;
+  gap: 10px;
+ }
+ @media screen and (max-width:500px){
+  .btnWrapper{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+   }
+ }
