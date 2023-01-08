@@ -453,7 +453,7 @@ const ProfileUpdate = ()=>{
                                     noValidate
                                     autoComplete="off"
                                     >
-                                        <TextField id="outlined-basic" label={telegram?telegram:"Telegram Account Name"} variant="outlined" onChange={(e)=>{setTelegram(e.target.value)}} />
+                                        <TextField id="outlined-basic" label={telegram?telegram:"telegram.com/______"} variant="outlined" onChange={(e)=>{setTelegram(e.target.value)}} />
                                          
                                     </Box>
                                     <Box
@@ -464,7 +464,7 @@ const ProfileUpdate = ()=>{
                                     noValidate
                                     autoComplete="off"
                                     >
-                                        <TextField id="outlined-basic" label={instagram?instagram:"Instagram Account Name"} variant="outlined"  onChange={(e)=>{setInstagram(e.target.value)}}/>
+                                        <TextField id="outlined-basic" label={instagram?instagram:"instagram.com/________"} variant="outlined"  onChange={(e)=>{setInstagram(e.target.value)}}/>
                                          
                                     </Box>
                                     <Box
@@ -475,7 +475,7 @@ const ProfileUpdate = ()=>{
                                     noValidate
                                     autoComplete="off"
                                     >
-                                        <TextField id="outlined-basic" label={twiter?twiter:"Twiter Account Name"} variant="outlined" onChange={(e)=>{setTwiter(e.target.value)}} />
+                                        <TextField id="outlined-basic" label={twiter?twiter:"twiter.com/_______"} variant="outlined" onChange={(e)=>{setTwiter(e.target.value)}} />
                                          
                                     </Box>
                                 </ComponentWrapper>

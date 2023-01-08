@@ -40,9 +40,8 @@ const filterdata = (user,gender,country,city,higherQualification,fieldOfStudy,in
         const userLanguage = user.language&&user.language ;
         const userLookingFor= user.lokingFor&&user.lokingFor ;
         if((usergender||userCountry||userCity||userQualification ||userFieldOfStudy)==undefined){
-            return user
+            return user 
         }
-         
         if(usergender === gender.toLowerCase() && userAge<= age[1] && userAge>= age[0]){
             return user
         }
@@ -152,9 +151,9 @@ PaperProps: {
     }
 
     useEffect(()=>{
-        setGender(userData?.gender=="Male"?"Female":"Male")
+        setGender(userData?.gender==="Male"?"Female":"Male")
         ApplyFilter()
-    },[userData,users])
+    },[userData,gender])
 
     // getting Countries
     const countryList = [...new Set(counrtyList.map(items=>items.countryName))]
@@ -174,7 +173,7 @@ PaperProps: {
 
                         <FilterElement>
                              
-                            <FilterSelect value={userData?.gender==="Male"?"Female":"Gender"} onChange={(e)=>{setGender(e.target.value.toLocaleLowerCase())}}>
+                            <FilterSelect value={userData?.gender==="Male"?"Female":"Male"} onChange={(e)=>{setGender(e.target.value.toLocaleLowerCase())}}>
                                 <FilterOption selected disabled>Gender</FilterOption>
                                 <FilterOption className="Option">Male</FilterOption>
                                 <FilterOption className="Option">Female</FilterOption>
