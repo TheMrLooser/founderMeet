@@ -30,7 +30,7 @@ import { UserProfileData } from '../App';
 
 export const Landingpage = () => {
 
-    const { loginWithRedirect,user,isAuthenticated ,isLoading ,logout } = useAuth0();
+    const { loginWithRedirect,user,isAuthenticated ,isLoading ,logout ,loginWithPopup } = useAuth0();
   const {setUserData} = useContext(UserProfileData)
   useEffect(()=>{
     const login = async()=>{
@@ -44,7 +44,7 @@ export const Landingpage = () => {
 
   const handalClickRender =()=>{
      if(!isAuthenticated){
-        loginWithRedirect()
+        loginWithPopup()
      }
   }
   return (

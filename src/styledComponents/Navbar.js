@@ -34,7 +34,7 @@ background-color:#FFC900;
 padding:0px 10px;
 
 @media only screen and (max-width:500px){
-    max-width:180px;
+    max-width:190px;
 }
 `
 export const LogoImg = styled.img`

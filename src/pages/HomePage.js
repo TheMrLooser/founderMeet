@@ -42,7 +42,11 @@ const filterdata = (user,gender,country,city,higherQualification,fieldOfStudy,in
         if((usergender||userCountry||userCity||userQualification ||userFieldOfStudy)==undefined){
             return user
         }
-        return userLookingFor.includes(lookingFor)||userLanguage.includes(language)||( userAge<= age[1] && userAge>= age[0] ) || userSchoolName.includes(schoolName?schoolName:null) || userCollageName.includes(collageName?collageName:null)|| usergender === gender || userCountry===country || userCity===city  || userQualification===higherQualification || userFieldOfStudy===fieldOfStudy || userIndustry===industry || userCompanyName===companyName
+         
+        if(usergender === gender.toLowerCase() && userAge<= age[1] && userAge>= age[0]){
+            return user
+        }
+        return userLookingFor.includes(lookingFor)||userLanguage.includes(language) || userSchoolName.includes(schoolName?schoolName:null) || userCollageName.includes(collageName?collageName:null)|| userCountry===country || userCity===city  || userQualification===higherQualification || userFieldOfStudy===fieldOfStudy || userIndustry===industry || userCompanyName===companyName
     })
   
   }
@@ -75,6 +79,8 @@ PaperProps: {
 
 
  export const HomePage = ()=>{
+     const {userData} = useContext(UserProfileData)
+
     const [page, setPage] = React.useState(1);
     const [gender, setGender] = useState(null);
     const [lookingFor, setLookingFor] = useState("");
@@ -89,7 +95,6 @@ PaperProps: {
     const [age, setAge] = useState([16,37]);
     const [language, setLanguage] = useState("");
     
-    const {userData} = useContext(UserProfileData)
 
     const handlePageChange = (event, value) => {
         setPage(value);
@@ -146,6 +151,10 @@ PaperProps: {
 
     }
 
+    useEffect(()=>{
+        setGender(userData?.gender=="Male"?"Female":"Male")
+        ApplyFilter()
+    },[userData,users])
 
     // getting Countries
     const countryList = [...new Set(counrtyList.map(items=>items.countryName))]
@@ -165,7 +174,7 @@ PaperProps: {
 
                         <FilterElement>
                              
-                            <FilterSelect onChange={(e)=>{setGender(e.target.value.toLocaleLowerCase())}}>
+                            <FilterSelect value={userData?.gender==="Male"?"Female":"Gender"} onChange={(e)=>{setGender(e.target.value.toLocaleLowerCase())}}>
                                 <FilterOption selected disabled>Gender</FilterOption>
                                 <FilterOption className="Option">Male</FilterOption>
                                 <FilterOption className="Option">Female</FilterOption>

@@ -12,7 +12,7 @@ import { UserProfileData } from '../App';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export const Navbar = () => {
-  const { loginWithRedirect,user,isAuthenticated ,isLoading ,logout } = useAuth0();
+  const { loginWithRedirect,user,isAuthenticated ,isLoading ,logout ,loginWithPopup} = useAuth0();
   const [openMenuBar,setOpenMenuBar] = useState(false)
   const {setUserData} = useContext(UserProfileData)
   useEffect(()=>{
@@ -34,7 +34,7 @@ export const Navbar = () => {
                 <NavElementWrapper>
                     <NavElement> <Link className='Links inheritProperty' to={"/"}>Home</Link></NavElement>
                     <NavElement><AnkarTag href='https://blog.matchmaking24.com/' target={'_blank'}>Blog</AnkarTag> </NavElement>
-                    { (!isAuthenticated && !isLoading ) && <NavElement onClick={() => loginWithRedirect()}> Signup with <img height={'20px'} width={'20px'} style={{marginLeft:'5px'}} src={LinkedinLogo}/> </NavElement>}
+                    { (!isAuthenticated && !isLoading ) && <NavElement onClick={() => loginWithPopup()}> Signup with <img height={'20px'} width={'20px'} style={{marginLeft:'5px'}} src={LinkedinLogo}/> </NavElement>}
                     <NavElement display={'block'} ><MenuIcon sx={{fontSize:'40px'}} onClick={()=>setOpenMenuBar(true)} /></NavElement>
                 </NavElementWrapper>
                  
@@ -51,7 +51,7 @@ export const Navbar = () => {
                 <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/profile"}><MenuElement>Profile <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
                 </>
                 : 
-                <MenuElementContainer><MenuElement  onClick={() => loginWithRedirect()}> SignUpWith <img height={'20px'} width={'20px'} style={{marginLeft:'-5px'}} src={LinkedinLogo}/> <ArrowForwardIcon/></MenuElement></MenuElementContainer>
+                <MenuElementContainer><MenuElement  onClick={() => loginWithPopup()}> SignUpWith <img height={'20px'} width={'20px'} style={{marginLeft:'-5px'}} src={LinkedinLogo}/> <ArrowForwardIcon/></MenuElement></MenuElementContainer>
               }
              
               {(isAuthenticated && !isLoading) ?<MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/right-match-for-friendship-dating-matrimony"}><MenuElement>FindMatch <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>:null}

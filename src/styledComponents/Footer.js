@@ -60,7 +60,7 @@ background-color:#fbb02f;
 gap:20px;
 font-size:20px;
 overflow: hidden;
- 
+padding-right: 10px;
 `
 export const FooterElementIcon = styled.div`
 width:100%;
