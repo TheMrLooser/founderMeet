@@ -153,6 +153,7 @@ padding-left: 20%;
 export const MenuElement = styled.div`
 width: 100%;
 max-width: 55%;
+/* max-width: max-content; */
 height: 50px;
 /* border: 1px solid gray; */
 font-size: 25px;
@@ -162,6 +163,7 @@ align-items: center;
 /* justify-content: space-between; */
 cursor: pointer;
 gap: 10px;
+ 
  
 `
 export const ProfileLogoContainer = styled.div`

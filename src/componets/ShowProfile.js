@@ -133,9 +133,10 @@ const ShowProfile = ()=>{
 
                                 <ComponentWrapper>
                                     <FormTitle style={{fontSize:'14px',fontWeight:'600',paddingLeft:'10px'}}>YOUR SOCIAL MEDIA HANDALS</FormTitle>
-                                    <Div maxWidth={100}>{isLoading?"Loading...":userData&&userData.telegram} </Div>
-                                    <Div maxWidth={100}>{isLoading?"Loading...":userData&&userData.twiter} </Div>
-                                    <Div maxWidth={100}>{isLoading?"Loading...":userData&&userData.instagram} </Div>
+                                    {userData&&userData.telegram&&<Div maxWidth={100}>{isLoading?"Loading...":userData&&userData.telegram} </Div>}
+                                    {userData&&userData.twiter&&<Div maxWidth={100}>{isLoading?"Loading...":userData&&userData.twiter} </Div>}
+                                    {userData&&userData.instagram&&<Div maxWidth={100}>{isLoading?"Loading...":userData&&userData.instagram} </Div>}
+                                    {userData&&userData.calendly&&<Div maxWidth={100}>{isLoading?"Loading...":userData&&userData.calendly} </Div>}
                                          
                                    
                                 </ComponentWrapper>

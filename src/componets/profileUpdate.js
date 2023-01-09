@@ -117,6 +117,7 @@ const ProfileUpdate = ()=>{
         const [telegram, setTelegram] = useState(userData&&userData.telegram&&userData.telegram);
         const [instagram, setInstagram] = useState(userData&&userData.instagram&&userData.instagram);
         const [twiter, setTwiter] = useState(userData&&userData.twiter&&userData.twiter);
+        const [calendly, setCalendly] = useState(userData&&userData.calendly&&userData.calendly);
         // const [age, setAge] = useState(userData&&userData.age&&userData.age);
          
         
@@ -148,7 +149,7 @@ const ProfileUpdate = ()=>{
         else{
             setOpenLoader(true)
             const res = await axios.put(`${HOST_NAME}/user/update-user`, 
-            {city,country,gender,email:userData.email,year,month,day,language,higherQualification:qualification,fieldOfStudy,schoolName,collageName,industry,companyName,lokingFor,telegram,instagram,twiter})
+            {calendly,city,country,gender,email:userData.email,year,month,day,language,higherQualification:qualification,fieldOfStudy,schoolName,collageName,industry,companyName,lokingFor,telegram,instagram,twiter})
             if(res.data.error){
                 return setAlert("error",res.data.message,true);
                }
@@ -476,6 +477,17 @@ const ProfileUpdate = ()=>{
                                     autoComplete="off"
                                     >
                                         <TextField id="outlined-basic" label={twiter?twiter:"twiter.com/_______"} variant="outlined" onChange={(e)=>{setTwiter(e.target.value)}} />
+                                         
+                                    </Box>
+                                    <Box
+                                    component="form"
+                                    sx={{
+                                        '& > :not(style)': { m: 1, width: '100%' },
+                                    }}
+                                    noValidate
+                                    autoComplete="off"
+                                    >
+                                        <TextField id="outlined-basic" label={calendly?calendly:"calendly.com/_______"} variant="outlined" onChange={(e)=>{setCalendly(e.target.value)}} />
                                          
                                     </Box>
                                 </ComponentWrapper>

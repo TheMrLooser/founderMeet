@@ -51,7 +51,7 @@ export const Navbar = () => {
                 <MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={"/profile"}><MenuElement>Profile <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>
                 </>
                 : 
-                <MenuElementContainer><MenuElement  onClick={() => loginWithPopup()}> SignUpWith <img height={'20px'} width={'20px'} style={{marginLeft:'-7px',marginBottom:'-3px'}} src={LinkedinLogo}/> <ArrowForwardIcon/></MenuElement></MenuElementContainer>
+                <MenuElementContainer><MenuElement style={{maxWidth:'max-content'}} onClick={() => loginWithPopup()}> Signup With <img height={'20px'} width={'20px'} style={{marginLeft:'-7px',marginBottom:'-3px'}} src={LinkedinLogo}/> <ArrowForwardIcon/></MenuElement></MenuElementContainer>
               }
              
               {(isAuthenticated && !isLoading) ?<MenuElementContainer><Link onClick={()=>setOpenMenuBar(false)} className='Links inheritProperty' to={userData?.gender?"/right-match-for-friendship-dating-matrimony":null}><MenuElement>FindMatch <ArrowForwardIcon/></MenuElement></Link></MenuElementContainer>:null}
