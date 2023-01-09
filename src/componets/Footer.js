@@ -13,8 +13,8 @@ export const Footer = () => {
         <FooterWrapper> 
             <FooterElementContainer >
                  <div style={{width:'80%'}}><h2 className='font'>Have  Question?</h2></div>
-                <Link className='Links' to={'/contact'}><FooterElement> <FooterElementIcon><LocalPhoneIcon/></FooterElementIcon> Contact Us </FooterElement></Link>
-                <a className='Links' href='mailto:hellomatchmaking24@gmail.com'><FooterElement style={{backgroundColor:'#FF90E8'}}> <FooterElementIcon><EmailIcon/></FooterElementIcon> Send a Mail</FooterElement></a>
+                <Link className='Links' style={{width:'100%'}} to={'/contact'}><FooterElement> <FooterElementIcon><LocalPhoneIcon/></FooterElementIcon> Contact Us </FooterElement></Link>
+                <a className='Links' style={{width:'100%'}} href='mailto:hellomatchmaking24@gmail.com'><FooterElement style={{backgroundColor:'#FF90E8'}}> <FooterElementIcon><EmailIcon/></FooterElementIcon> Send a Mail</FooterElement></a>
             </FooterElementContainer>
             <FooterElementContainer hide={'hide'} style={{alignItems:'flex-end'}}>
             <ImagesCOntainer><FooterImg src={footerSnapImg}/></ImagesCOntainer>

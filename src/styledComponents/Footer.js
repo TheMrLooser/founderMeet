@@ -28,7 +28,7 @@ max-width:30%;
 min-height:inherit;
 display:flex;
 flex-direction:column;
-${'' /* border:1px solid red; */}
+/* border:1px solid red; */
 @media only screen and (max-width:700px){
     display:${(props)=>props.hide=='hide' ? "none":''};
     max-width:90%;
@@ -61,6 +61,9 @@ gap:20px;
 font-size:20px;
 overflow: hidden;
 padding-right: 10px;
+@media only screen and (max-width:700px){
+    margin-left: 10%;
+}
 `
 export const FooterElementIcon = styled.div`
 width:100%;

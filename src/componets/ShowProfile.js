@@ -9,7 +9,7 @@ import { CardProfileName, CardProfileType } from "../styledComponents/Card";
 import { UserProfileData } from "../App";
 import { Link, useNavigate } from "react-router-dom";
 import { BtnsWrapper } from "../styledComponents/Profile";
- 
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
     
 
 
@@ -145,7 +145,7 @@ const ShowProfile = ()=>{
                                 }
 
                                 <BtnsWrapper style={{marginTop:'30px'}}>
-                                    <BtnContainer style={{maxWidth:'200px'}}><Link className="Links" to={'/profile/edit'}> <TopBannarLeftPartBTN style={{maxWidth:'300px'}} >Edit Profile</TopBannarLeftPartBTN></Link></BtnContainer>
+                                    <BtnContainer style={{maxWidth:'200px'}}><Link className="Links" to={'/profile/edit'}> <TopBannarLeftPartBTN style={{maxWidth:'300px'}} >Edit Profile <ArrowForwardIcon/></TopBannarLeftPartBTN></Link></BtnContainer>
                                 </BtnsWrapper>
                             
                             </LowerPartFormWrapper> 
